@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-10-20T15:41:32.3111700+01:00",
+  "worker_pid": 29240,
+  "supervisor_pid": 3852,
+  "executable": "C:\\Users\\Ran\\faiss-rht-20261020\\toolchain\\msys64\\ucrt64\\bin\\python.exe",
+  "command_line": "C:\\Users\\Ran\\faiss-rht-20261020\\toolchain\\msys64\\ucrt64\\bin\\python.exe -u C:\\Users\\Ran\\faiss-rht-20261020\\amumu-evidence\\audit_block64_primary.py",
+  "process_creation": "2026-10-20T15:37:53.000355+01:00",
+  "quality_status": "running",
+  "completed_quality_rows": 278,
+  "primary_completed_rows": 90,
+  "experimental_native_kernel_compiled": false,
+  "speed_results_available": false,
+  "dense_checkpoint": "four completed dense cases preserved; resumed automatically after quality matrix"
+}
