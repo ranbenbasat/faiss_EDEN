@@ -1,0 +1,638 @@
+{
+  "status": "complete",
+  "raw_sha256": "b688a91da79c0f563aaedcbe572a9669676391fffd709e8dee7a27f71d076841",
+  "source_sha256": "fe3f26c221c619121a97b11251535bff447ecfcad9964b97019fe714c2bbaa3d",
+  "purpose": "Independent quality-only canaries, no timing or frozen source/binary modifications",
+  "independence": "Expected centroids/boundaries from Gaussian pdf/cdf integrals and Lloyd iteration, expected nearest assignments brute force; expected transform explicit parity matrix and independently generated signs; native tables/transform/codec used only as comparison targets.",
+  "objectives": "Lloyd-Max minimizes scalar MSE for N(0,1), not worst-case input reconstruction. EDEN uses sqrt64-normalized residuals and an ORIGINAL-unbiased vector scale ||x||\u00b2/<x,q>. The vector MSE-optimal scale is <x,q>/||q||\u00b2; these are different objectives.",
+  "tables": [
+    {
+      "bits": 2,
+      "levels": [
+        -1.5104176084990728,
+        -0.4527800346364809,
+        0.4527800346364809,
+        1.5104176084990728
+      ],
+      "thresholds": [
+        -0.9815988215677769,
+        0.0,
+        0.9815988215677769
+      ],
+      "native_centroid_max_abs_error": 2.7894519583071542e-08,
+      "native_threshold_max_abs_error": 2.710748026046872e-08,
+      "native_threshold_vs_native_centroid_midpoint_max_abs": 0.0,
+      "independent_grid_nearest_vs_threshold": true,
+      "iterations": 58,
+      "last_update": 1.5987211554602254e-14,
+      "gaussian_scalar_mse_integral": 0.11748184782932922
+    },
+    {
+      "bits": 3,
+      "levels": [
+        -2.1519457045368604,
+        -1.3439092785048716,
+        -0.756005281205783,
+        -0.24509417894418714,
+        0.24509417894418714,
+        0.756005281205783,
+        1.3439092785048716,
+        2.1519457045368604
+      ],
+      "thresholds": [
+        -1.747927491520866,
+        -1.0499572798553274,
+        -0.500549730074985,
+        0.0,
+        0.500549730074985,
+        1.0499572798553274,
+        1.747927491520866
+      ],
+      "native_centroid_max_abs_error": 1.1356396001360736e-07,
+      "native_threshold_max_abs_error": 5.498029365114121e-08,
+      "native_threshold_vs_native_centroid_midpoint_max_abs": 1.1920928955078125e-07,
+      "independent_grid_nearest_vs_threshold": true,
+      "iterations": 217,
+      "last_update": 1.9095836023552692e-14,
+      "gaussian_scalar_mse_integral": 0.03454776078850377
+    },
+    {
+      "bits": 4,
+      "levels": [
+        -2.7325895709946755,
+        -2.069017226530849,
+        -1.6180463860213297,
+        -1.2562311973466609,
+        -0.9423404564865141,
+        -0.6567591185321193,
+        -0.3880482994900733,
+        -0.1283950298510728,
+        0.1283950298510728,
+        0.3880482994900733,
+        0.6567591185321193,
+        0.9423404564865141,
+        1.2562311973466609,
+        1.6180463860213297,
+        2.069017226530849,
+        2.7325895709946755
+      ],
+      "thresholds": [
+        -2.400803398762762,
+        -1.8435318062760893,
+        -1.4371387916839953,
+        -1.0992858269165875,
+        -0.7995497875093167,
+        -0.5224037090110963,
+        -0.25822166467057306,
+        0.0,
+        0.25822166467057306,
+        0.5224037090110963,
+        0.7995497875093167,
+        1.0992858269165875,
+        1.4371387916839953,
+        1.8435318062760893,
+        2.400803398762762
+      ],
+      "native_centroid_max_abs_error": 8.77335670779189e-08,
+      "native_threshold_max_abs_error": 7.120233735946613e-08,
+      "native_threshold_vs_native_centroid_midpoint_max_abs": 5.960464477539063e-08,
+      "independent_grid_nearest_vs_threshold": true,
+      "iterations": 788,
+      "last_update": 1.9984014443252818e-14,
+      "gaussian_scalar_mse_integral": 0.009501008008191526
+    }
+  ],
+  "gaussian_paired_summary": [
+    {
+      "bits": 2,
+      "format": "fp32",
+      "paired_seeds": 20,
+      "vectors_per_round": 81920,
+      "two_minus_one_nmse_mean": 1.7258661668843878e-05,
+      "paired_seed_sem": 0.00014907547297974657,
+      "approx_t19_95_interval": [
+        -0.0002947563032777657,
+        0.00032927362661545347
+      ],
+      "deltas_by_seed": [
+        -0.0006854974259895008,
+        0.000695510055330778,
+        1.777359434929071e-05,
+        -0.00032983854048648786,
+        -0.0003873212436489304,
+        0.0002368013449858819,
+        0.0003489086831967303,
+        0.0007635274490878641,
+        0.00011409041275839416,
+        -0.00014749435868358085,
+        -0.0009496737672495537,
+        0.0014911909943740587,
+        -0.0009120042237972248,
+        -3.8144854519167604e-05,
+        -0.0010646387371961996,
+        0.00018929968785844076,
+        0.000982131810682213,
+        -0.00042522758711749375,
+        0.0004096672454205197,
+        3.6112694020845604e-05
+      ]
+    },
+    {
+      "bits": 2,
+      "format": "bf16",
+      "paired_seeds": 20,
+      "vectors_per_round": 81920,
+      "two_minus_one_nmse_mean": 1.5677363229296693e-05,
+      "paired_seed_sem": 0.00014874239983497027,
+      "approx_t19_95_interval": [
+        -0.0002956404796252961,
+        0.0003269952060838895
+      ],
+      "deltas_by_seed": [
+        -0.0006705845593651116,
+        0.0006998036078235681,
+        1.974113248198739e-05,
+        -0.0003267165235593117,
+        -0.00038350394706124225,
+        0.00022157286801377518,
+        0.00036213908470345,
+        0.0007428928641853294,
+        9.168992581262692e-05,
+        -0.00014830796392925616,
+        -0.0009669799107190347,
+        0.0014977119710246345,
+        -0.0009043067235373625,
+        -5.613732431680729e-05,
+        -0.0010497000948808122,
+        0.0001785811585892083,
+        0.0009789841621652973,
+        -0.0004307732227740724,
+        0.0004217552825101778,
+        3.568547741888972e-05
+      ]
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "paired_seeds": 20,
+      "vectors_per_round": 81920,
+      "two_minus_one_nmse_mean": -1.2434089585920683e-06,
+      "paired_seed_sem": 4.875911116391356e-05,
+      "approx_t19_95_interval": [
+        -0.00010329622862466315,
+        0.00010080941070747903
+      ],
+      "deltas_by_seed": [
+        -0.0005598901735556078,
+        9.042974885128952e-05,
+        0.00011401045053662656,
+        -8.651925364304425e-05,
+        -2.098966393923596e-05,
+        9.190007131234385e-05,
+        1.255065142549694e-05,
+        0.00020266691032670703,
+        -2.036697760859907e-05,
+        -0.00015074249427782932,
+        -0.0002754204681355704,
+        0.0002564865805542438,
+        -0.00017829307498767183,
+        0.00018393722734118267,
+        -0.00024516780045684416,
+        -0.0001113660851841114,
+        0.00028202585392683027,
+        -8.658463217699891e-05,
+        0.00030048349335902447,
+        0.00017598145715992664
+      ]
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "paired_seeds": 20,
+      "vectors_per_round": 81920,
+      "two_minus_one_nmse_mean": -4.778023188115044e-07,
+      "paired_seed_sem": 4.8666332779776396e-05,
+      "approx_t19_95_interval": [
+        -0.0001023364368268835,
+        0.00010138083218926049
+      ],
+      "deltas_by_seed": [
+        -0.0005592312879515449,
+        9.067787944547212e-05,
+        0.0001103149464170422,
+        -8.284126261378505e-05,
+        -2.0021206842087136e-05,
+        9.46720006931856e-05,
+        1.4543750238939224e-05,
+        0.00020553739309837893,
+        -1.6904765783934406e-05,
+        -0.00014670067256566943,
+        -0.0002730801088402651,
+        0.00025206814916024084,
+        -0.00017702806036814372,
+        0.00018209574633743647,
+        -0.00024672257029637046,
+        -0.00011146376541157355,
+        0.00028399895076648,
+        -8.851054371399741e-05,
+        0.0002997082326200856,
+        0.00017933114923388005
+      ]
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "paired_seeds": 20,
+      "vectors_per_round": 81920,
+      "two_minus_one_nmse_mean": 5.590574846936654e-06,
+      "paired_seed_sem": 8.891829006169801e-06,
+      "approx_t19_95_interval": [
+        -1.3020023262976739e-05,
+        2.420117295685005e-05
+      ],
+      "deltas_by_seed": [
+        -2.5464354243949494e-05,
+        2.1780711046543583e-05,
+        5.157440999002498e-05,
+        5.609416155839993e-05,
+        1.6629518197613935e-06,
+        -4.69430485440861e-06,
+        -2.2704952522037067e-05,
+        5.959539638082309e-06,
+        6.892442970651141e-07,
+        -1.860486119175872e-05,
+        -5.826775374918533e-05,
+        8.333024891895094e-05,
+        -4.738562441690408e-05,
+        -2.7292546089421887e-05,
+        -3.7905174722728877e-05,
+        -1.8955428422531145e-05,
+        4.086824129185401e-05,
+        7.06820653547692e-06,
+        6.873494089978602e-05,
+        3.532384115571309e-05
+      ]
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "paired_seeds": 20,
+      "vectors_per_round": 81920,
+      "two_minus_one_nmse_mean": 5.925041272018036e-06,
+      "paired_seed_sem": 8.850039878006042e-06,
+      "approx_t19_95_interval": [
+        -1.259809219264861e-05,
+        2.444817473668468e-05
+      ],
+      "deltas_by_seed": [
+        -2.5007014690355336e-05,
+        2.2827808844296665e-05,
+        5.2178685976388486e-05,
+        5.5474580202909823e-05,
+        1.8174195615394684e-06,
+        -4.693976381378584e-06,
+        -2.2027787977298846e-05,
+        5.647979996793034e-06,
+        1.2322668225591554e-06,
+        -1.7827037005820057e-05,
+        -5.780826829236002e-05,
+        8.45050997284498e-05,
+        -4.748359926803371e-05,
+        -2.7066899630294808e-05,
+        -3.5866172599763324e-05,
+        -1.852610079565789e-05,
+        4.043072538128904e-05,
+        7.095976101576668e-06,
+        6.769918941962848e-05,
+        3.589795004589266e-05
+      ]
+    }
+  ],
+  "basis_summary": [
+    {
+      "bits": 2,
+      "format": "fp32",
+      "rounds": 1,
+      "native_nmse_mean": 0.0,
+      "independent_exact_nmse_mean": 0.0,
+      "native_nmse_by_seed": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bits": 2,
+      "format": "fp32",
+      "rounds": 2,
+      "native_nmse_mean": 0.12015196275937105,
+      "independent_exact_nmse_mean": 0.12015196303242874,
+      "native_nmse_by_seed": [
+        0.11181089167349656,
+        0.1663927673813539,
+        0.0822522292232627
+      ]
+    },
+    {
+      "bits": 2,
+      "format": "bf16",
+      "rounds": 1,
+      "native_nmse_mean": 8.342747580769583e-06,
+      "independent_exact_nmse_mean": 0.0,
+      "native_nmse_by_seed": [
+        8.342747580769583e-06,
+        8.342747580769583e-06,
+        8.342747580769583e-06
+      ]
+    },
+    {
+      "bits": 2,
+      "format": "bf16",
+      "rounds": 2,
+      "native_nmse_mean": 0.11995072925438344,
+      "independent_exact_nmse_mean": 0.12015196303242874,
+      "native_nmse_by_seed": [
+        0.1118893664233046,
+        0.16602846646309113,
+        0.0819343548767546
+      ]
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "rounds": 1,
+      "native_nmse_mean": 0.0,
+      "independent_exact_nmse_mean": 0.0,
+      "native_nmse_by_seed": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "rounds": 2,
+      "native_nmse_mean": 0.024133350247184177,
+      "independent_exact_nmse_mean": 0.024133351239909142,
+      "native_nmse_by_seed": [
+        0.01670689807293041,
+        0.04748326932480678,
+        0.008209883343815338
+      ]
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "rounds": 1,
+      "native_nmse_mean": 3.3737487683538347e-06,
+      "independent_exact_nmse_mean": 0.0,
+      "native_nmse_by_seed": [
+        3.3737487683538347e-06,
+        3.3737487683538347e-06,
+        3.3737487683538347e-06
+      ]
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "rounds": 2,
+      "native_nmse_mean": 0.024103842531625425,
+      "independent_exact_nmse_mean": 0.024133351239909142,
+      "native_nmse_by_seed": [
+        0.016754021783354223,
+        0.0473520572919247,
+        0.008205448519597341
+      ]
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "rounds": 1,
+      "native_nmse_mean": 0.0,
+      "independent_exact_nmse_mean": 0.0,
+      "native_nmse_by_seed": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "rounds": 2,
+      "native_nmse_mean": 0.009181146862445255,
+      "independent_exact_nmse_mean": 0.009181147579458931,
+      "native_nmse_by_seed": [
+        0.00698728682760337,
+        0.013036770493006763,
+        0.007519383266725632
+      ]
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "rounds": 1,
+      "native_nmse_mean": 1.529370422304055e-06,
+      "independent_exact_nmse_mean": 0.0,
+      "native_nmse_by_seed": [
+        1.529370422304055e-06,
+        1.529370422304055e-06,
+        1.529370422304055e-06
+      ]
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "rounds": 2,
+      "native_nmse_mean": 0.009147142566618771,
+      "independent_exact_nmse_mean": 0.009181147579458931,
+      "native_nmse_by_seed": [
+        0.006963078327216781,
+        0.01299166363138157,
+        0.007486685741257965
+      ]
+    }
+  ],
+  "msong_group0_summary": [
+    {
+      "bits": 2,
+      "format": "fp32",
+      "rounds": 1,
+      "native_residual_pooled_nmse_10000": 0.10708926081251793,
+      "independent_dense_pooled_nmse_10000": 0.10708935896728981,
+      "native_residual_pooled_nmse_20000": 0.10866397087462656,
+      "independent_dense_pooled_nmse_20000": 0.10866402230146818,
+      "max_abs_independent_vs_native_pooled_delta": 2.0485392243640987e-07,
+      "assignment_mismatches": 0,
+      "assignment_total": 6400000,
+      "far_threshold_mismatches": 0
+    },
+    {
+      "bits": 2,
+      "format": "fp32",
+      "rounds": 2,
+      "native_residual_pooled_nmse_10000": 0.12294574245812065,
+      "independent_dense_pooled_nmse_10000": 0.1229457459187137,
+      "native_residual_pooled_nmse_20000": 0.12296202096641029,
+      "independent_dense_pooled_nmse_20000": 0.12296202030299437,
+      "max_abs_independent_vs_native_pooled_delta": 2.6722083767971583e-08,
+      "assignment_mismatches": 0,
+      "assignment_total": 6400000,
+      "far_threshold_mismatches": 0
+    },
+    {
+      "bits": 2,
+      "format": "bf16",
+      "rounds": 1,
+      "native_residual_pooled_nmse_10000": 0.10709188472346942,
+      "independent_dense_pooled_nmse_10000": 0.10709195050769886,
+      "native_residual_pooled_nmse_20000": 0.10865257581835686,
+      "independent_dense_pooled_nmse_20000": 0.10865260837408366,
+      "max_abs_independent_vs_native_pooled_delta": 1.4607203238647948e-07,
+      "assignment_mismatches": 0,
+      "assignment_total": 6400000,
+      "far_threshold_mismatches": 0
+    },
+    {
+      "bits": 2,
+      "format": "bf16",
+      "rounds": 2,
+      "native_residual_pooled_nmse_10000": 0.12293021255716234,
+      "independent_dense_pooled_nmse_10000": 0.12293021647560001,
+      "native_residual_pooled_nmse_20000": 0.1229483004686694,
+      "independent_dense_pooled_nmse_20000": 0.12294830217681925,
+      "max_abs_independent_vs_native_pooled_delta": 2.235399518268899e-08,
+      "assignment_mismatches": 0,
+      "assignment_total": 6400000,
+      "far_threshold_mismatches": 0
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "rounds": 1,
+      "native_residual_pooled_nmse_10000": 0.028680133278093867,
+      "independent_dense_pooled_nmse_10000": 0.02868012802682392,
+      "native_residual_pooled_nmse_20000": 0.028986816088902266,
+      "independent_dense_pooled_nmse_20000": 0.028986810370592316,
+      "max_abs_independent_vs_native_pooled_delta": 1.310757750949687e-08,
+      "assignment_mismatches": 1,
+      "assignment_total": 6400000,
+      "far_threshold_mismatches": 0
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "rounds": 2,
+      "native_residual_pooled_nmse_10000": 0.03157733818370538,
+      "independent_dense_pooled_nmse_10000": 0.03157734688417313,
+      "native_residual_pooled_nmse_20000": 0.03137959351934583,
+      "independent_dense_pooled_nmse_20000": 0.03137959667618392,
+      "max_abs_independent_vs_native_pooled_delta": 2.4359673701790374e-08,
+      "assignment_mismatches": 0,
+      "assignment_total": 6400000,
+      "far_threshold_mismatches": 0
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "rounds": 1,
+      "native_residual_pooled_nmse_10000": 0.028684847583817657,
+      "independent_dense_pooled_nmse_10000": 0.02868484575795932,
+      "native_residual_pooled_nmse_20000": 0.028990411794086866,
+      "independent_dense_pooled_nmse_20000": 0.028990404204026692,
+      "max_abs_independent_vs_native_pooled_delta": 2.4544980624374713e-08,
+      "assignment_mismatches": 1,
+      "assignment_total": 6400000,
+      "far_threshold_mismatches": 0
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "rounds": 2,
+      "native_residual_pooled_nmse_10000": 0.0315884288870885,
+      "independent_dense_pooled_nmse_10000": 0.031588460029147364,
+      "native_residual_pooled_nmse_20000": 0.031384593741269895,
+      "independent_dense_pooled_nmse_20000": 0.03138459660180097,
+      "max_abs_independent_vs_native_pooled_delta": 7.605272175220668e-08,
+      "assignment_mismatches": 0,
+      "assignment_total": 6400000,
+      "far_threshold_mismatches": 0
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "rounds": 1,
+      "native_residual_pooled_nmse_10000": 0.007369562572296473,
+      "independent_dense_pooled_nmse_10000": 0.007369522653051364,
+      "native_residual_pooled_nmse_20000": 0.007371482816715158,
+      "independent_dense_pooled_nmse_20000": 0.007371462408565887,
+      "max_abs_independent_vs_native_pooled_delta": 1.0236669599483772e-07,
+      "assignment_mismatches": 0,
+      "assignment_total": 6400000,
+      "far_threshold_mismatches": 0
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "rounds": 2,
+      "native_residual_pooled_nmse_10000": 0.008598867474350626,
+      "independent_dense_pooled_nmse_10000": 0.008598869093484127,
+      "native_residual_pooled_nmse_20000": 0.008542553708457992,
+      "independent_dense_pooled_nmse_20000": 0.008542554942244054,
+      "max_abs_independent_vs_native_pooled_delta": 4.471180365187011e-09,
+      "assignment_mismatches": 0,
+      "assignment_total": 6400000,
+      "far_threshold_mismatches": 0
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "rounds": 1,
+      "native_residual_pooled_nmse_10000": 0.007372567095954245,
+      "independent_dense_pooled_nmse_10000": 0.007372525408332585,
+      "native_residual_pooled_nmse_20000": 0.007374379991297761,
+      "independent_dense_pooled_nmse_20000": 0.007374358131891412,
+      "max_abs_independent_vs_native_pooled_delta": 1.0015918362055176e-07,
+      "assignment_mismatches": 0,
+      "assignment_total": 6400000,
+      "far_threshold_mismatches": 0
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "rounds": 2,
+      "native_residual_pooled_nmse_10000": 0.008601445994825633,
+      "independent_dense_pooled_nmse_10000": 0.00860144998305181,
+      "native_residual_pooled_nmse_20000": 0.008544694932245555,
+      "independent_dense_pooled_nmse_20000": 0.00854469708720863,
+      "max_abs_independent_vs_native_pooled_delta": 6.1314667492567976e-09,
+      "assignment_mismatches": 0,
+      "assignment_total": 6400000,
+      "far_threshold_mismatches": 0
+    }
+  ],
+  "no_broad_matrix_or_speed_or_OS_changes": true,
+  "limitations": [
+    "Bounded canaries do not prove absence of every implementation issue.",
+    "Gaussian-invariance control does not prove paper and fixed64 results are identical experiments.",
+    "MSong check covers only dominant first64 group, all20k base vectors, five seeds.",
+    "Independent dense centering uses FP64 training mean while archived native uses FP32 centering; comparison explicitly reports finite precision differences."
+  ],
+  "total_assignment_checks": 139862016,
+  "assignment_mismatches": 5768,
+  "mismatches_farther_than5e-5_from_threshold": 0,
+  "all_global_norms_match_independent_fp32_accumulation": true,
+  "max_fp32_same_assignment_relative_scale_error": 7.460817466053982e-07,
+  "tie_policy_note": "Brute force argmin chooses lower-index centroid for exact equal-distance ties; native upper_bound chooses upper interval. Basis two-round outputs include exact zeros, hence assignment mismatches at threshold0 without error/scale disagreement. All mismatches farther than5e-5 from an independent threshold are rejected.",
+  "frozen_binary_checks": {
+    "experimental-kernel/eden_group_fixed64.dll": {
+      "sha256": "875e2e701f56b049b828017e1d2092e77fb15b5b093694b17d504bb5b7209ab0",
+      "matches_expected": true
+    },
+    "runtime/faiss/_swigfaiss_avx2.pyd": {
+      "sha256": "10ed67de00233a013af049273950f2eccfdc9dd41dadd41b3947bcec1439d9f6",
+      "matches_expected": true
+    }
+  }
+}
