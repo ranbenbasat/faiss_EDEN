@@ -1,0 +1,783 @@
+{
+  "status": "primary90_cases_complete_full_quality_matrix_running",
+  "prototype": "experimental BLOCK64/448 TWO rounds versus actual frozen full512 ONE round",
+  "quality_implementation": "dense/native linear-transform oracle for experimental block map; native frozen RaBitQ/EDEN quantizers and searches",
+  "experimental_block_kernel_native_compiled": false,
+  "speed_results_available": false,
+  "no_proxy_speed_claims": true,
+  "observed_complete_cases_in_source": 200,
+  "source_snapshot_sha256": "4b07147bea0530c265065a5efe62c00f163ae10f467856412d26ee9a40424942",
+  "script_sha256": "37a60936aae5cf1075ef01f7b84f64da3a2e9eda12d69bc91ff0e9be8eb1b94c",
+  "oracle_sha256": "3682239445335245aeb3f19f560ea9e4477caf1659a2f50bcb37b76d3ef0dade",
+  "primary_rows": 90,
+  "seeds": [
+    12345,
+    12346,
+    12347,
+    12348,
+    12349
+  ],
+  "shapes": {
+    "xt": [
+      4096,
+      420
+    ],
+    "xb": [
+      20000,
+      420
+    ],
+    "xq": [
+      200,
+      420
+    ]
+  },
+  "norm_inverse_scalar_checks": "passed for every completed block64 plan",
+  "frozen_full512_replay": "all30 primary baseline cases exactly match original per-query recall",
+  "limitations": [
+    "row-disjoint prefix split, not value-disjoint",
+    "single fixed dataset; conditional paired seed/query CIs",
+    "no full-RHT concentration theory assumed for this block construction",
+    "native optimized experimental kernel required before any speed benchmark"
+  ],
+  "groups": [
+    {
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "block64",
+      "dimension": 448,
+      "rounds": 2,
+      "permute": false,
+      "recall100": 0.79533,
+      "recall100_by_seed": [
+        0.7835,
+        0.8057000000000001,
+        0.79895,
+        0.79845,
+        0.7900500000000001
+      ],
+      "native_code_size_bytes": [
+        120
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": -0.09149000000000002,
+        "ci95": [
+          -0.10149150000000001,
+          -0.082489
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        -0.1011,
+        -0.08460000000000001,
+        -0.08505000000000001,
+        -0.09185,
+        -0.09485000000000002
+      ],
+      "nmse": 0.5334339964170374,
+      "vnmse": 0.2836998210845258
+    },
+    {
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "block64",
+      "dimension": 448,
+      "rounds": 2,
+      "permute": true,
+      "recall100": 0.88109,
+      "recall100_by_seed": [
+        0.879,
+        0.8803,
+        0.883,
+        0.8815500000000001,
+        0.8815999999999999
+      ],
+      "native_code_size_bytes": [
+        120
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": -0.00573,
+        "ci95": [
+          -0.009920250000000002,
+          -0.0019180000000000043
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        -0.005599999999999998,
+        -0.009999999999999998,
+        -0.0010000000000000015,
+        -0.00875,
+        -0.0033000000000000013
+      ],
+      "nmse": 0.13178122417538782,
+      "vnmse": 0.1320156218387007
+    },
+    {
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "full512_native",
+      "dimension": 512,
+      "rounds": 1,
+      "permute": false,
+      "recall100": 0.8868199999999999,
+      "recall100_by_seed": [
+        0.8846,
+        0.8903,
+        0.884,
+        0.8903,
+        0.8848999999999999
+      ],
+      "native_code_size_bytes": [
+        136
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nmse": 0.11028421715170962,
+      "vnmse": 0.11916429289282729
+    },
+    {
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "block64",
+      "dimension": 448,
+      "rounds": 2,
+      "permute": false,
+      "recall100": 0.8785799999999999,
+      "recall100_by_seed": [
+        0.86685,
+        0.88775,
+        0.8815000000000001,
+        0.878,
+        0.8787999999999999
+      ],
+      "native_code_size_bytes": [
+        176
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": -0.06203999999999998,
+        "ci95": [
+          -0.07000049999999998,
+          -0.05447774999999998
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        -0.07154999999999999,
+        -0.05309999999999998,
+        -0.057849999999999985,
+        -0.06379999999999998,
+        -0.06389999999999998
+      ],
+      "nmse": 0.15474347036808445,
+      "vnmse": 0.09080109245647297
+    },
+    {
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "block64",
+      "dimension": 448,
+      "rounds": 2,
+      "permute": true,
+      "recall100": 0.93499,
+      "recall100_by_seed": [
+        0.93405,
+        0.93405,
+        0.9344499999999999,
+        0.935,
+        0.9373999999999999
+      ],
+      "native_code_size_bytes": [
+        176
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": -0.005629999999999997,
+        "ci95": [
+          -0.007901499999999997,
+          -0.0036199999999999987
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        -0.004349999999999995,
+        -0.006799999999999998,
+        -0.004899999999999997,
+        -0.006799999999999996,
+        -0.005299999999999999
+      ],
+      "nmse": 0.03553185769306605,
+      "vnmse": 0.03531857041625102
+    },
+    {
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "full512_native",
+      "dimension": 512,
+      "rounds": 1,
+      "permute": false,
+      "recall100": 0.94062,
+      "recall100_by_seed": [
+        0.9384,
+        0.94085,
+        0.93935,
+        0.9418,
+        0.9427000000000001
+      ],
+      "native_code_size_bytes": [
+        200
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nmse": 0.031162488153206224,
+      "vnmse": 0.03279470492021616
+    },
+    {
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "block64",
+      "dimension": 448,
+      "rounds": 2,
+      "permute": false,
+      "recall100": 0.92375,
+      "recall100_by_seed": [
+        0.9131999999999999,
+        0.93285,
+        0.92295,
+        0.9270999999999999,
+        0.92265
+      ],
+      "native_code_size_bytes": [
+        232
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": -0.04481999999999998,
+        "ci95": [
+          -0.05189249999999999,
+          -0.038147749999999994
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        -0.05519999999999998,
+        -0.03649999999999999,
+        -0.045249999999999985,
+        -0.04104999999999999,
+        -0.046099999999999974
+      ],
+      "nmse": 0.06660668616139484,
+      "vnmse": 0.0357974812210205
+    },
+    {
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "block64",
+      "dimension": 448,
+      "rounds": 2,
+      "permute": true,
+      "recall100": 0.9648300000000001,
+      "recall100_by_seed": [
+        0.9651,
+        0.9648,
+        0.9645,
+        0.96435,
+        0.9653999999999999
+      ],
+      "native_code_size_bytes": [
+        232
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": -0.0037400000000000003,
+        "ci95": [
+          -0.005089999999999999,
+          -0.0023900000000000015
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        -0.003299999999999999,
+        -0.00455,
+        -0.0037000000000000028,
+        -0.0038000000000000013,
+        -0.0033499999999999975
+      ],
+      "nmse": 0.009441093041256208,
+      "vnmse": 0.00942857071813553
+    },
+    {
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "full512_native",
+      "dimension": 512,
+      "rounds": 1,
+      "permute": false,
+      "recall100": 0.9685700000000002,
+      "recall100_by_seed": [
+        0.9684,
+        0.96935,
+        0.9682,
+        0.96815,
+        0.96875
+      ],
+      "native_code_size_bytes": [
+        264
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nmse": 0.00837445389581604,
+      "vnmse": 0.008850824059776512
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "block64",
+      "dimension": 448,
+      "rounds": 2,
+      "permute": false,
+      "recall100": 0.7964600000000001,
+      "recall100_by_seed": [
+        0.78755,
+        0.8042000000000001,
+        0.80035,
+        0.7968999999999999,
+        0.7933
+      ],
+      "native_code_size_bytes": [
+        132
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": -0.07011000000000002,
+        "ci95": [
+          -0.07791175,
+          -0.06238900000000001
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        -0.07470000000000002,
+        -0.06455,
+        -0.06865,
+        -0.06975,
+        -0.0729
+      ],
+      "nmse": 0.6069659675115184,
+      "vnmse": 0.30276889407053664
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "block64",
+      "dimension": 448,
+      "rounds": 2,
+      "permute": true,
+      "recall100": 0.88097,
+      "recall100_by_seed": [
+        0.87995,
+        0.8799000000000001,
+        0.8811,
+        0.8818,
+        0.8821000000000001
+      ],
+      "native_code_size_bytes": [
+        132
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": 0.0144,
+        "ci95": [
+          0.008399250000000002,
+          0.0207305
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.017699999999999997,
+        0.011150000000000007,
+        0.012100000000000001,
+        0.015149999999999997,
+        0.015900000000000004
+      ],
+      "nmse": 0.13907716635365353,
+      "vnmse": 0.13970964138315373
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "full512_native",
+      "dimension": 512,
+      "rounds": 1,
+      "permute": false,
+      "recall100": 0.8665700000000001,
+      "recall100_by_seed": [
+        0.86225,
+        0.86875,
+        0.8689999999999999,
+        0.86665,
+        0.8662000000000001
+      ],
+      "native_code_size_bytes": [
+        148
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nmse": 0.09466492710343591,
+      "vnmse": 0.12449748562207322
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "block64",
+      "dimension": 448,
+      "rounds": 2,
+      "permute": false,
+      "recall100": 0.88228,
+      "recall100_by_seed": [
+        0.8745499999999999,
+        0.88905,
+        0.88445,
+        0.8792500000000001,
+        0.8841
+      ],
+      "native_code_size_bytes": [
+        188
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": -0.05810999999999999,
+        "ci95": [
+          -0.06657524999999999,
+          -0.050059249999999986
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        -0.06679999999999998,
+        -0.05009999999999999,
+        -0.05454999999999998,
+        -0.062349999999999996,
+        -0.05674999999999999
+      ],
+      "nmse": 0.16209837574285088,
+      "vnmse": 0.08807335704521613
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "block64",
+      "dimension": 448,
+      "rounds": 2,
+      "permute": true,
+      "recall100": 0.93303,
+      "recall100_by_seed": [
+        0.9334,
+        0.9334499999999999,
+        0.9316,
+        0.9310499999999999,
+        0.93565
+      ],
+      "native_code_size_bytes": [
+        188
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": -0.007359999999999996,
+        "ci95": [
+          -0.009940249999999996,
+          -0.004758999999999998
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        -0.007949999999999992,
+        -0.005699999999999998,
+        -0.007399999999999998,
+        -0.010549999999999995,
+        -0.005199999999999997
+      ],
+      "nmse": 0.03801629071664582,
+      "vnmse": 0.03794773521237764
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "full512_native",
+      "dimension": 512,
+      "rounds": 1,
+      "permute": false,
+      "recall100": 0.9403899999999998,
+      "recall100_by_seed": [
+        0.94135,
+        0.9391499999999999,
+        0.939,
+        0.9416,
+        0.9408500000000001
+      ],
+      "native_code_size_bytes": [
+        212
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nmse": 0.023286235403932886,
+      "vnmse": 0.0324297564613376
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "block64",
+      "dimension": 448,
+      "rounds": 2,
+      "permute": false,
+      "recall100": 0.91509,
+      "recall100_by_seed": [
+        0.9138,
+        0.9200999999999999,
+        0.912,
+        0.9138999999999998,
+        0.91565
+      ],
+      "native_code_size_bytes": [
+        244
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": -0.049689999999999984,
+        "ci95": [
+          -0.05851299999999999,
+          -0.041756499999999995
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        -0.05084999999999998,
+        -0.045649999999999996,
+        -0.053999999999999986,
+        -0.05004999999999999,
+        -0.047899999999999984
+      ],
+      "nmse": 0.047184499923585976,
+      "vnmse": 0.02765866589737666
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "block64",
+      "dimension": 448,
+      "rounds": 2,
+      "permute": true,
+      "recall100": 0.9622,
+      "recall100_by_seed": [
+        0.9603499999999999,
+        0.9624000000000001,
+        0.9628,
+        0.9621999999999999,
+        0.96325
+      ],
+      "native_code_size_bytes": [
+        244
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": -0.0025799999999999985,
+        "ci95": [
+          -0.004450749999999999,
+          -0.0007299999999999984
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        -0.004299999999999997,
+        -0.00335,
+        -0.0031999999999999997,
+        -0.0017499999999999987,
+        -0.000299999999999998
+      ],
+      "nmse": 0.012295711896938743,
+      "vnmse": 0.012194492356972505
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "full512_native",
+      "dimension": 512,
+      "rounds": 1,
+      "permute": false,
+      "recall100": 0.96478,
+      "recall100_by_seed": [
+        0.96465,
+        0.96575,
+        0.966,
+        0.9639500000000001,
+        0.9635500000000001
+      ],
+      "native_code_size_bytes": [
+        276
+      ],
+      "paired_recall_delta_vs_full512_1round": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nmse": 0.008473915851670222,
+      "vnmse": 0.01045205090139598
+    }
+  ],
+  "primary_raw_sha256": "834a9a32cb472b30db8ac7bb81c44a7264061dff4bea7962a34ae217e780236f"
+}
