@@ -21,7 +21,7 @@ The 2-bit RaBitQ improvement has a positive paired interval for both added depth
 
 ## Reconstruction and provisional full-search speed
 
-Pooled residual NMSE and mean per-vector residual vNMSE are measured in transformed coordinates. They include padded off-subspace error. Full-search QPS includes query preprocessing and Python batching. Its qualification is provisional for every row in this pilot; no speedup claim is established here.
+Pooled residual NMSE and mean per-vector residual vNMSE are measured on the first 10,000 searched vectors in transformed coordinates. They include padded off-subspace error. These use the actual native reconstruction scale, which differs from the paper's best-scalar residual reconstruction diagnostic. Full-search QPS includes query preprocessing and Python batching. Its qualification is provisional for every row in this pilot; no speedup claim is established here.
 
 | Quantizer | Bits | Mode | Recall@100 % | NMSE | vNMSE | Provisional QPS | Output dimension | Code bytes/vector |
 |---|---:|---|---:|---:|---:|---:|---:|---:|
@@ -69,4 +69,4 @@ For both quantizers, 2/3RHT pooled NMSE and vNMSE are worse than 1RHT at all thr
 
 [Machine-readable paired comparisons](first-pilot-summary.json), [capsule transfer manifest](transfer-manifest.json), [exact portability patch](mingw-portability.patch), and [base64 tar.xz evidence capsule](evidence.tar.xz.base64) are retained on this evidence branch. The capsule contains the full raw report, split/build/dependency manifests, tuning/correctness logs and ANN driver source. The coordinator downloaded, decoded and independently verified both archive and raw-result hashes.
 
-The IVF/EDEN, IVF/RaBitQ and IVF/RaBitQFastScan nprobe sweeps are running separately on the same native build. Matched-padding, GIST/Word2Vec, one-bit, randomized-split/larger-data validation, and quieter timing repeats remain required evidence. Flat results above are labeled independently of those ANN results.
+The native-dimension IVF/EDEN, IVF/RaBitQ and IVF/RaBitQFastScan nprobe sweeps have completed separately on the same build; matched-padding sweeps are running. Source audit confirms that this flat pilot differs from the historical MSong figure in transform construction, database quantizer scaling, residual centers, query precision, data population and reconstruction metric. Controlled quality ablations are queued on Amumu before interpreting that discrepancy. GIST/Word2Vec, one-bit, randomized-split/larger-data validation and quieter timing repeats remain required evidence. Flat results above are labeled independently of ANN results.
