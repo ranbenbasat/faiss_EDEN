@@ -1,0 +1,4014 @@
+{
+  "status": "complete",
+  "no_speed_claims": true,
+  "historical_replication": false,
+  "sources": [
+    {
+      "file": "msong-equal512-geometry-audit.json",
+      "sha256": "0c6dea6181387ad5836eb6802070bfd3b8489c34cf910ad76c3ea4e24e437f16",
+      "rows": 108,
+      "limitations": [
+        "prefix20k base/200 queries; two NumPy sign seeds",
+        "512 partial256 construction is mechanism control, NOT historical448 replay",
+        "Native RNG full512 controls are separately reported in msong-pairwise-layer-audit.json"
+      ]
+    },
+    {
+      "file": "msong-pairwise-layer-audit.json",
+      "sha256": "ce34897d3d8781637e01ed270f9c9e871936d2739cd4186136334801591ef791",
+      "rows": 117,
+      "limitations": [
+        "prefix20k base and200 queries, not full dataset",
+        "two NumPy sign seeds for isolated448 comparison",
+        "missing frozen historical sign/FWHT helper remains unauthenticated",
+        "native full512 uses its own actual RNG and separate five-seed control; not same signs as NumPy448"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.868975,
+      "recall100_by_seed": [
+        0.87035,
+        0.8676
+      ],
+      "unbiased_nmse": 0.09589972319993462,
+      "unbiased_vnmse": 0.12471078781699324,
+      "best_scalar_vnmse": 0.1106110699647815
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9404250000000001,
+      "recall100_by_seed": [
+        0.94025,
+        0.9406
+      ],
+      "unbiased_nmse": 0.02340362221195702,
+      "unbiased_vnmse": 0.03230542764261787,
+      "best_scalar_vnmse": 0.03125571620262086
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9661750000000001,
+      "recall100_by_seed": [
+        0.9667500000000001,
+        0.9656
+      ],
+      "unbiased_nmse": 0.008569114157116977,
+      "unbiased_vnmse": 0.010409611727062307,
+      "best_scalar_vnmse": 0.010298423112884963
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.8901000000000002,
+      "recall100_by_seed": [
+        0.8895500000000002,
+        0.8906500000000002
+      ],
+      "unbiased_nmse": 0.14101278722090538,
+      "unbiased_vnmse": 0.1409840912511736,
+      "best_scalar_vnmse": 0.12349057772277325,
+      "paired_depth_minus_1": {
+        "delta": 0.021124999999999998,
+        "ci95": [
+          0.013924374999999998,
+          0.0289025
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.0192,
+        0.023049999999999998
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9385999999999999,
+      "recall100_by_seed": [
+        0.93675,
+        0.9404499999999999
+      ],
+      "unbiased_nmse": 0.03890926267043695,
+      "unbiased_vnmse": 0.038671672387837516,
+      "best_scalar_vnmse": 0.03721454619248718,
+      "paired_depth_minus_1": {
+        "delta": -0.0018250000000000002,
+        "ci95": [
+          -0.005251250000000001,
+          0.0014256249999999983
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        -0.0035000000000000014,
+        -0.000149999999999999
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.965275,
+      "recall100_by_seed": [
+        0.96335,
+        0.9672
+      ],
+      "unbiased_nmse": 0.012458057133603602,
+      "unbiased_vnmse": 0.012313813095567599,
+      "best_scalar_vnmse": 0.012161393745758746,
+      "paired_depth_minus_1": {
+        "delta": -0.0008999999999999983,
+        "ci95": [
+          -0.004901249999999998,
+          0.0030500000000000006
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        -0.0033999999999999976,
+        0.001600000000000001
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.8886,
+      "recall100_by_seed": [
+        0.88935,
+        0.8878499999999999
+      ],
+      "unbiased_nmse": 0.14291198132874006,
+      "unbiased_vnmse": 0.13978216671845323,
+      "best_scalar_vnmse": 0.12257623445215479,
+      "paired_depth_minus_1": {
+        "delta": 0.019624999999999993,
+        "ci95": [
+          0.012749374999999993,
+          0.026756874999999992
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.019000000000000003,
+        0.02024999999999999
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9381499999999999,
+      "recall100_by_seed": [
+        0.9388999999999998,
+        0.9374000000000001
+      ],
+      "unbiased_nmse": 0.040499362461309446,
+      "unbiased_vnmse": 0.038418177717191304,
+      "best_scalar_vnmse": 0.036977450853475466,
+      "paired_depth_minus_1": {
+        "delta": -0.002274999999999998,
+        "ci95": [
+          -0.005450625000000006,
+          0.0005256250000000011
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        -0.001349999999999995,
+        -0.003200000000000001
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.964825,
+      "recall100_by_seed": [
+        0.9649500000000001,
+        0.9647
+      ],
+      "unbiased_nmse": 0.013465782991085237,
+      "unbiased_vnmse": 0.012340089288285635,
+      "best_scalar_vnmse": 0.012185969223153882,
+      "paired_depth_minus_1": {
+        "delta": -0.0013499999999999983,
+        "ci95": [
+          -0.0033999999999999946,
+          0.0007512500000000033
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        -0.0017999999999999971,
+        -0.0008999999999999997
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.7787999999999999,
+      "recall100_by_seed": [
+        0.78165,
+        0.77595
+      ],
+      "unbiased_nmse": 0.20744892037664292,
+      "unbiased_vnmse": 0.24797730717578098,
+      "best_scalar_vnmse": 0.19565114307939857
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.8786250000000001,
+      "recall100_by_seed": [
+        0.8799000000000001,
+        0.87735
+      ],
+      "unbiased_nmse": 0.05991107106748704,
+      "unbiased_vnmse": 0.08199393043938541,
+      "best_scalar_vnmse": 0.07467286012044566
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9279,
+      "recall100_by_seed": [
+        0.92875,
+        0.9270499999999998
+      ],
+      "unbiased_nmse": 0.021046440431816124,
+      "unbiased_vnmse": 0.029454678244047836,
+      "best_scalar_vnmse": 0.02838512501668082
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.8548249999999998,
+      "recall100_by_seed": [
+        0.85705,
+        0.8525999999999999
+      ],
+      "unbiased_nmse": 0.12968253770753818,
+      "unbiased_vnmse": 0.13731794052941565,
+      "best_scalar_vnmse": 0.12050208568575008,
+      "paired_depth_minus_1": {
+        "delta": 0.076025,
+        "ci95": [
+          0.066043125,
+          0.086404375
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.0754,
+        0.07665
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9357499999999999,
+      "recall100_by_seed": [
+        0.9351499999999998,
+        0.9363499999999999
+      ],
+      "unbiased_nmse": 0.02957623013571842,
+      "unbiased_vnmse": 0.03558900836397899,
+      "best_scalar_vnmse": 0.03433364026537311,
+      "paired_depth_minus_1": {
+        "delta": 0.05712499999999999,
+        "ci95": [
+          0.05174874999999999,
+          0.06280124999999999
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.05524999999999999,
+        0.05899999999999998
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9613499999999999,
+      "recall100_by_seed": [
+        0.9614,
+        0.9612999999999999
+      ],
+      "unbiased_nmse": 0.010701674048402665,
+      "unbiased_vnmse": 0.011479298569645385,
+      "best_scalar_vnmse": 0.01134567433071626,
+      "paired_depth_minus_1": {
+        "delta": 0.03344999999999998,
+        "ci95": [
+          0.02914874999999998,
+          0.037951249999999985
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.03264999999999998,
+        0.03424999999999998
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.8703,
+      "recall100_by_seed": [
+        0.8718,
+        0.8688000000000001
+      ],
+      "unbiased_nmse": 0.2052554261736493,
+      "unbiased_vnmse": 0.158620208928706,
+      "best_scalar_vnmse": 0.13643582751745142,
+      "paired_depth_minus_1": {
+        "delta": 0.09149999999999998,
+        "ci95": [
+          0.08335,
+          0.1003
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.09015,
+        0.09285
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9319,
+      "recall100_by_seed": [
+        0.93105,
+        0.93275
+      ],
+      "unbiased_nmse": 0.05366618493212708,
+      "unbiased_vnmse": 0.04425471582326781,
+      "best_scalar_vnmse": 0.04232037126872967,
+      "paired_depth_minus_1": {
+        "delta": 0.05327499999999999,
+        "ci95": [
+          0.04764874999999999,
+          0.059053749999999974
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.05114999999999999,
+        0.055399999999999984
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9614999999999999,
+      "recall100_by_seed": [
+        0.9613499999999999,
+        0.9616499999999999
+      ],
+      "unbiased_nmse": 0.01654939947954688,
+      "unbiased_vnmse": 0.014208769670253838,
+      "best_scalar_vnmse": 0.01400123209724767,
+      "paired_depth_minus_1": {
+        "delta": 0.033599999999999984,
+        "ci95": [
+          0.029324374999999986,
+          0.037799999999999986
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.03259999999999998,
+        0.034599999999999985
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.8261250000000001,
+      "recall100_by_seed": [
+        0.8292,
+        0.8230500000000001
+      ],
+      "unbiased_nmse": 0.11079440778562366,
+      "unbiased_vnmse": 0.16175494648766572,
+      "best_scalar_vnmse": 0.13736914371671605,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.04732499999999999,
+        "ci95": [
+          0.041696875,
+          0.05285249999999999
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.04754999999999999,
+        0.04709999999999999
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9063,
+      "recall100_by_seed": [
+        0.9072499999999999,
+        0.90535
+      ],
+      "unbiased_nmse": 0.03604055773260774,
+      "unbiased_vnmse": 0.05305821172838897,
+      "best_scalar_vnmse": 0.0499722451879833,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.027675,
+        "ci95": [
+          0.023950000000000006,
+          0.0315
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.027350000000000003,
+        0.028000000000000004
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9447,
+      "recall100_by_seed": [
+        0.94465,
+        0.94475
+      ],
+      "unbiased_nmse": 0.012764763706711223,
+      "unbiased_vnmse": 0.018138654113535213,
+      "best_scalar_vnmse": 0.01775569144244779,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.01679999999999999,
+        "ci95": [
+          0.013849999999999994,
+          0.020101249999999987
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.015899999999999984,
+        0.01769999999999999
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.879525,
+      "recall100_by_seed": [
+        0.88055,
+        0.8785
+      ],
+      "unbiased_nmse": 0.13657665384719664,
+      "unbiased_vnmse": 0.14579070453399387,
+      "best_scalar_vnmse": 0.12704319056859878,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.024700000000000003,
+        "ci95": [
+          0.015099374999999996,
+          0.03435
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.023500000000000007,
+        0.0259
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.053399999999999996,
+        "ci95": [
+          0.04749625000000001,
+          0.05955062500000001
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.05135000000000001,
+        0.05545
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9325999999999999,
+      "recall100_by_seed": [
+        0.9338500000000001,
+        0.9313499999999999
+      ],
+      "unbiased_nmse": 0.03838722804080719,
+      "unbiased_vnmse": 0.04241266638153482,
+      "best_scalar_vnmse": 0.040619032110338495,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.003149999999999995,
+        "ci95": [
+          -0.006901249999999994,
+          0.0005
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        -0.0012999999999999973,
+        -0.004999999999999993
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.02629999999999999,
+        "ci95": [
+          0.022974999999999985,
+          0.029550624999999987
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.026599999999999985,
+        0.025999999999999992
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9604250000000002,
+      "recall100_by_seed": [
+        0.9607500000000002,
+        0.9601000000000001
+      ],
+      "unbiased_nmse": 0.01243714979390898,
+      "unbiased_vnmse": 0.013891013554780082,
+      "best_scalar_vnmse": 0.013687937907329594,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.0009250000000000008,
+        "ci95": [
+          -0.0036012500000000003,
+          0.0016525000000000012
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        -0.0006500000000000006,
+        -0.001200000000000001
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.015724999999999996,
+        "ci95": [
+          0.013299999999999996,
+          0.017999999999999988
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.016099999999999993,
+        0.015349999999999997
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.88625,
+      "recall100_by_seed": [
+        0.8869,
+        0.8856
+      ],
+      "unbiased_nmse": 0.14340567383683223,
+      "unbiased_vnmse": 0.14262914701167823,
+      "best_scalar_vnmse": 0.12474906505856385,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.015950000000000002,
+        "ci95": [
+          0.011150000000000002,
+          0.020751249999999995
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.015099999999999997,
+        0.016800000000000002
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.060125000000000005,
+        "ci95": [
+          0.05315000000000001,
+          0.06727562500000002
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.057699999999999994,
+        0.06255000000000001
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.93585,
+      "recall100_by_seed": [
+        0.9373999999999998,
+        0.9343
+      ],
+      "unbiased_nmse": 0.03935929886897832,
+      "unbiased_vnmse": 0.03999304451179595,
+      "best_scalar_vnmse": 0.0384328848858958,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.003949999999999996,
+        "ci95": [
+          -0.00039999999999999823,
+          0.008249999999999992
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.006349999999999994,
+        0.0015499999999999986
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.029549999999999983,
+        "ci95": [
+          0.026049999999999986,
+          0.032901249999999986
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.03014999999999998,
+        0.028949999999999983
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 1,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.962975,
+      "recall100_by_seed": [
+        0.96375,
+        0.9621999999999999
+      ],
+      "unbiased_nmse": 0.012552727340605072,
+      "unbiased_vnmse": 0.012819026065340695,
+      "best_scalar_vnmse": 0.012652766360490314,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.001475,
+        "ci95": [
+          -0.0010768750000000017,
+          0.0038500000000000027
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.002400000000000002,
+        0.0005499999999999978
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.018274999999999993,
+        "ci95": [
+          0.0157,
+          0.020751249999999992
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.019099999999999995,
+        0.017449999999999993
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9353,
+      "recall100_by_seed": [
+        0.93535,
+        0.9352499999999999
+      ],
+      "unbiased_nmse": 0.1254591537186221,
+      "unbiased_vnmse": 0.13474395311334353,
+      "best_scalar_vnmse": 0.11864422251747124
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.96625,
+      "recall100_by_seed": [
+        0.9662000000000001,
+        0.9662999999999999
+      ],
+      "unbiased_nmse": 0.03166757056009925,
+      "unbiased_vnmse": 0.036037641247830605,
+      "best_scalar_vnmse": 0.03476365203064305
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9806750000000001,
+      "recall100_by_seed": [
+        0.9807000000000002,
+        0.98065
+      ],
+      "unbiased_nmse": 0.010474810767498587,
+      "unbiased_vnmse": 0.011495546879947294,
+      "best_scalar_vnmse": 0.011362163242245371
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9388500000000001,
+      "recall100_by_seed": [
+        0.9396000000000001,
+        0.9381
+      ],
+      "unbiased_nmse": 0.13970581641654353,
+      "unbiased_vnmse": 0.13920781646668925,
+      "best_scalar_vnmse": 0.12213200280789023,
+      "paired_depth_minus_1": {
+        "delta": 0.003549999999999994,
+        "ci95": [
+          0.0004500000000000009,
+          0.00639999999999999
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.004249999999999992,
+        0.0028499999999999975
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.96695,
+      "recall100_by_seed": [
+        0.96705,
+        0.96685
+      ],
+      "unbiased_nmse": 0.0381357121362121,
+      "unbiased_vnmse": 0.03813929854265206,
+      "best_scalar_vnmse": 0.03672259006451771,
+      "paired_depth_minus_1": {
+        "delta": 0.0007000000000000003,
+        "ci95": [
+          -0.0010999999999999994,
+          0.0024999999999999996
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.0008500000000000007,
+        0.0005499999999999999
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9808500000000001,
+      "recall100_by_seed": [
+        0.9805000000000001,
+        0.9812000000000001
+      ],
+      "unbiased_nmse": 0.012171480485524425,
+      "unbiased_vnmse": 0.012170579527701597,
+      "best_scalar_vnmse": 0.012021693609201776,
+      "paired_depth_minus_1": {
+        "delta": 0.00017500000000000016,
+        "ci95": [
+          -0.0014500000000000012,
+          0.0016512500000000004
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        -0.00020000000000000017,
+        0.0005500000000000005
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9394499999999999,
+      "recall100_by_seed": [
+        0.9397999999999999,
+        0.9390999999999999
+      ],
+      "unbiased_nmse": 0.14053439993449846,
+      "unbiased_vnmse": 0.1395800135138956,
+      "best_scalar_vnmse": 0.12241940618835088,
+      "paired_depth_minus_1": {
+        "delta": 0.004149999999999992,
+        "ci95": [
+          0.001424374999999994,
+          0.006651249999999995
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.004449999999999991,
+        0.0038499999999999945
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9673250000000002,
+      "recall100_by_seed": [
+        0.9676000000000002,
+        0.96705
+      ],
+      "unbiased_nmse": 0.0389294737968037,
+      "unbiased_vnmse": 0.03830156415146339,
+      "best_scalar_vnmse": 0.036873112758274776,
+      "paired_depth_minus_1": {
+        "delta": 0.0010750000000000002,
+        "ci95": [
+          -0.0007999999999999996,
+          0.002850625000000001
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.0014000000000000006,
+        0.0007499999999999996
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "full512_HD",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.980875,
+      "recall100_by_seed": [
+        0.9812500000000002,
+        0.9805000000000001
+      ],
+      "unbiased_nmse": 0.012501223608386488,
+      "unbiased_vnmse": 0.012214483359360453,
+      "best_scalar_vnmse": 0.012064532529065544,
+      "paired_depth_minus_1": {
+        "delta": 0.00020000000000000017,
+        "ci95": [
+          -0.0013000000000000012,
+          0.0016000000000000014
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.0005500000000000005,
+        -0.00015000000000000012
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.8676499999999998,
+      "recall100_by_seed": [
+        0.86765,
+        0.8676499999999998
+      ],
+      "unbiased_nmse": 0.28001790912238916,
+      "unbiased_vnmse": 0.3038640378710895,
+      "best_scalar_vnmse": 0.22970706106335165
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9217750000000001,
+      "recall100_by_seed": [
+        0.92125,
+        0.9223
+      ],
+      "unbiased_nmse": 0.08997183442623716,
+      "unbiased_vnmse": 0.10732838267279604,
+      "best_scalar_vnmse": 0.09535195548913153
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9527500000000001,
+      "recall100_by_seed": [
+        0.9520000000000001,
+        0.9534999999999999
+      ],
+      "unbiased_nmse": 0.031618552516937806,
+      "unbiased_vnmse": 0.039013707056036566,
+      "best_scalar_vnmse": 0.03720780652475689
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9333750000000001,
+      "recall100_by_seed": [
+        0.9319,
+        0.93485
+      ],
+      "unbiased_nmse": 0.15514472864748036,
+      "unbiased_vnmse": 0.14288213319754856,
+      "best_scalar_vnmse": 0.12485011121811915,
+      "paired_depth_minus_1": {
+        "delta": 0.06572499999999999,
+        "ci95": [
+          0.06055,
+          0.07115
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.06424999999999999,
+        0.06720000000000001
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9662999999999999,
+      "recall100_by_seed": [
+        0.9662999999999999,
+        0.9662999999999999
+      ],
+      "unbiased_nmse": 0.03860549387862868,
+      "unbiased_vnmse": 0.03855438422875291,
+      "best_scalar_vnmse": 0.03709572741564976,
+      "paired_depth_minus_1": {
+        "delta": 0.04452499999999997,
+        "ci95": [
+          0.04089874999999997,
+          0.04809999999999997
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.04504999999999997,
+        0.04399999999999997
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9805250000000001,
+      "recall100_by_seed": [
+        0.9806,
+        0.9804500000000002
+      ],
+      "unbiased_nmse": 0.012417488827109205,
+      "unbiased_vnmse": 0.012292545856228219,
+      "best_scalar_vnmse": 0.012139598755783392,
+      "paired_depth_minus_1": {
+        "delta": 0.027775000000000005,
+        "ci95": [
+          0.024850000000000004,
+          0.03045062500000001
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.028600000000000004,
+        0.02695
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.93305,
+      "recall100_by_seed": [
+        0.93305,
+        0.93305
+      ],
+      "unbiased_nmse": 0.1803853854935642,
+      "unbiased_vnmse": 0.1493457126071289,
+      "best_scalar_vnmse": 0.12968767757913313,
+      "paired_depth_minus_1": {
+        "delta": 0.06540000000000001,
+        "ci95": [
+          0.060498750000000004,
+          0.07055
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.06540000000000001,
+        0.0654
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9668000000000001,
+      "recall100_by_seed": [
+        0.96545,
+        0.96815
+      ],
+      "unbiased_nmse": 0.0489682069927739,
+      "unbiased_vnmse": 0.041677354285912974,
+      "best_scalar_vnmse": 0.03996690180814763,
+      "paired_depth_minus_1": {
+        "delta": 0.04502499999999997,
+        "ci95": [
+          0.04134874999999996,
+          0.04889999999999997
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.04419999999999996,
+        0.045849999999999974
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_no_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9793000000000001,
+      "recall100_by_seed": [
+        0.9787,
+        0.9799000000000001
+      ],
+      "unbiased_nmse": 0.015195551482008804,
+      "unbiased_vnmse": 0.013321458532424339,
+      "best_scalar_vnmse": 0.013140372538110595,
+      "paired_depth_minus_1": {
+        "delta": 0.026550000000000004,
+        "ci95": [
+          0.023975000000000003,
+          0.029025625
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.026699999999999998,
+        0.0264
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.8938749999999999,
+      "recall100_by_seed": [
+        0.8947999999999999,
+        0.89295
+      ],
+      "unbiased_nmse": 0.16923674120675936,
+      "unbiased_vnmse": 0.19954748354904822,
+      "best_scalar_vnmse": 0.1642812501574486,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.02622500000000001,
+        "ci95": [
+          0.023000000000000007,
+          0.029652500000000005
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.027150000000000007,
+        0.02530000000000001
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9417999999999997,
+      "recall100_by_seed": [
+        0.9414499999999998,
+        0.9421499999999999
+      ],
+      "unbiased_nmse": 0.05397893652617764,
+      "unbiased_vnmse": 0.06727107058714814,
+      "best_scalar_vnmse": 0.06247541963563012,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.02002499999999998,
+        "ci95": [
+          0.017599999999999987,
+          0.02265124999999998
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.02019999999999998,
+        0.01984999999999999
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.96565,
+      "recall100_by_seed": [
+        0.96575,
+        0.96555
+      ],
+      "unbiased_nmse": 0.01839309358619325,
+      "unbiased_vnmse": 0.022824620817473686,
+      "best_scalar_vnmse": 0.022232427873127143,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.012899999999999993,
+        "ci95": [
+          0.010648749999999995,
+          0.015199999999999991
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.013749999999999993,
+        0.012049999999999995
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.92975,
+      "recall100_by_seed": [
+        0.92935,
+        0.93015
+      ],
+      "unbiased_nmse": 0.1480520632191476,
+      "unbiased_vnmse": 0.15550422115494494,
+      "best_scalar_vnmse": 0.13429009030295264,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.0036249999999999937,
+        "ci95": [
+          -0.007049999999999994,
+          -0.0004743750000000009
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        -0.0025499999999999932,
+        -0.004699999999999995
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.035875,
+        "ci95": [
+          0.03214875,
+          0.03960125
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.03455,
+        0.0372
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.961575,
+      "recall100_by_seed": [
+        0.9610499999999998,
+        0.9621000000000001
+      ],
+      "unbiased_nmse": 0.043313129426094395,
+      "unbiased_vnmse": 0.04725624509871704,
+      "best_scalar_vnmse": 0.04501567289178399,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.004725,
+        "ci95": [
+          -0.006800625000000001,
+          -0.002598749999999998
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        -0.005250000000000001,
+        -0.004199999999999999
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.019774999999999984,
+        "ci95": [
+          0.01739999999999999,
+          0.022249999999999978
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.019599999999999982,
+        0.01994999999999998
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9763500000000002,
+      "recall100_by_seed": [
+        0.9764000000000002,
+        0.9763000000000001
+      ],
+      "unbiased_nmse": 0.014275377344200074,
+      "unbiased_vnmse": 0.015681720192573443,
+      "best_scalar_vnmse": 0.015419392058657394,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.004175000000000003,
+        "ci95": [
+          -0.005750000000000005,
+          -0.002650000000000002
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        -0.004200000000000004,
+        -0.0041500000000000035
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.010700000000000008,
+        "ci95": [
+          0.008800000000000004,
+          0.012451250000000007
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.010650000000000007,
+        0.010750000000000006
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9377249999999999,
+      "recall100_by_seed": [
+        0.9381999999999999,
+        0.9372499999999999
+      ],
+      "unbiased_nmse": 0.14189290151958095,
+      "unbiased_vnmse": 0.1434026808688834,
+      "best_scalar_vnmse": 0.1253253131580249,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.004674999999999998,
+        "ci95": [
+          0.0020000000000000018,
+          0.007249999999999994
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.005149999999999997,
+        0.0042
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.04385,
+        "ci95": [
+          0.04044937499999998,
+          0.04764999999999999
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.0434,
+        0.044299999999999985
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9661,
+      "recall100_by_seed": [
+        0.9664,
+        0.9658
+      ],
+      "unbiased_nmse": 0.03969829647323286,
+      "unbiased_vnmse": 0.0406037037922061,
+      "best_scalar_vnmse": 0.03898985411934573,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.0007000000000000014,
+        "ci95": [
+          -0.003801250000000002,
+          0.0022012499999999983
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.0009499999999999986,
+        -0.0023500000000000014
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.024299999999999978,
+        "ci95": [
+          0.021598749999999983,
+          0.026949999999999984
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.024949999999999983,
+        0.02364999999999998
+      ]
+    },
+    {
+      "source": "msong-equal512-geometry-audit.json",
+      "centers": 128,
+      "mode": "partial256_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.98065,
+      "recall100_by_seed": [
+        0.9809500000000001,
+        0.9803499999999999
+      ],
+      "unbiased_nmse": 0.012771902819637289,
+      "unbiased_vnmse": 0.013099941289479347,
+      "best_scalar_vnmse": 0.012924951664052749,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.001350000000000001,
+        "ci95": [
+          -0.0006000000000000011,
+          0.003301250000000002
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.002250000000000002,
+        0.0004499999999999998
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.015000000000000008,
+        "ci95": [
+          0.013200000000000007,
+          0.016701250000000008
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.015200000000000009,
+        0.01480000000000001
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 448,
+      "rounds": 1,
+      "bits": 2,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 112,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.87165,
+      "recall100_by_seed": [
+        0.8715,
+        0.8718
+      ],
+      "unbiased_nmse": 0.2251790950838337,
+      "unbiased_vnmse": 0.24698351472949986,
+      "best_scalar_vnmse": 0.19485660730646728
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 448,
+      "rounds": 1,
+      "bits": 3,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 168,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9281999999999999,
+      "recall100_by_seed": [
+        0.92745,
+        0.9289499999999999
+      ],
+      "unbiased_nmse": 0.0830475436585968,
+      "unbiased_vnmse": 0.09162784641365909,
+      "best_scalar_vnmse": 0.08275200181917809
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 448,
+      "rounds": 1,
+      "bits": 4,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 224,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.938725,
+      "recall100_by_seed": [
+        0.9383000000000001,
+        0.9391499999999999
+      ],
+      "unbiased_nmse": 0.03349414628478005,
+      "unbiased_vnmse": 0.042612337381211854,
+      "best_scalar_vnmse": 0.03992643939047885
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 448,
+      "rounds": 2,
+      "bits": 2,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 112,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9358999999999998,
+      "recall100_by_seed": [
+        0.9353999999999999,
+        0.9363999999999999
+      ],
+      "unbiased_nmse": 0.128298703063815,
+      "unbiased_vnmse": 0.1315902572244581,
+      "best_scalar_vnmse": 0.11617078078564128,
+      "paired_depth_minus_1": {
+        "delta": 0.06425,
+        "ci95": [
+          0.0594,
+          0.06935
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.0639,
+        0.0646
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 448,
+      "rounds": 2,
+      "bits": 3,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 168,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.960625,
+      "recall100_by_seed": [
+        0.9609000000000001,
+        0.9603499999999999
+      ],
+      "unbiased_nmse": 0.04887538507114595,
+      "unbiased_vnmse": 0.04913344775797055,
+      "best_scalar_vnmse": 0.04682530983948017,
+      "paired_depth_minus_1": {
+        "delta": 0.03242499999999997,
+        "ci95": [
+          0.02889937499999997,
+          0.03630124999999997
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.033449999999999966,
+        0.03139999999999997
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 448,
+      "rounds": 2,
+      "bits": 4,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 224,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9805750000000001,
+      "recall100_by_seed": [
+        0.9798500000000001,
+        0.9813000000000001
+      ],
+      "unbiased_nmse": 0.01143437723741006,
+      "unbiased_vnmse": 0.011650393231258414,
+      "best_scalar_vnmse": 0.011514217569907746,
+      "paired_depth_minus_1": {
+        "delta": 0.041849999999999984,
+        "ci95": [
+          0.03854874999999999,
+          0.04534999999999998
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.04155,
+        0.04214999999999999
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 448,
+      "rounds": 3,
+      "bits": 2,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 112,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9363999999999999,
+      "recall100_by_seed": [
+        0.9357999999999999,
+        0.937
+      ],
+      "unbiased_nmse": 0.1466788793582296,
+      "unbiased_vnmse": 0.13680735947138925,
+      "best_scalar_vnmse": 0.12022947985377846,
+      "paired_depth_minus_1": {
+        "delta": 0.06475,
+        "ci95": [
+          0.059598750000000006,
+          0.06945
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.0643,
+        0.06520000000000001
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 448,
+      "rounds": 3,
+      "bits": 3,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 168,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9606,
+      "recall100_by_seed": [
+        0.9606,
+        0.9606
+      ],
+      "unbiased_nmse": 0.05170837693892044,
+      "unbiased_vnmse": 0.04985890477781121,
+      "best_scalar_vnmse": 0.04748150025769854,
+      "paired_depth_minus_1": {
+        "delta": 0.03239999999999997,
+        "ci95": [
+          0.029148749999999973,
+          0.03582687499999997
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.03314999999999997,
+        0.03164999999999998
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 448,
+      "rounds": 3,
+      "bits": 4,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 224,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.978975,
+      "recall100_by_seed": [
+        0.9790000000000001,
+        0.9789500000000001
+      ],
+      "unbiased_nmse": 0.013588930282591918,
+      "unbiased_vnmse": 0.012202382299227005,
+      "best_scalar_vnmse": 0.012051481723960117,
+      "paired_depth_minus_1": {
+        "delta": 0.04024999999999999,
+        "ci95": [
+          0.036849999999999994,
+          0.04394999999999999
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.040699999999999986,
+        0.039799999999999995
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 2,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.87165,
+      "recall100_by_seed": [
+        0.8715,
+        0.8718
+      ],
+      "unbiased_nmse": 0.27960158226172344,
+      "unbiased_vnmse": 0.3044202256142351,
+      "best_scalar_vnmse": 0.22999582523862977
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 3,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9281999999999999,
+      "recall100_by_seed": [
+        0.92745,
+        0.9289499999999999
+      ],
+      "unbiased_nmse": 0.1059926929723926,
+      "unbiased_vnmse": 0.11551266904515939,
+      "best_scalar_vnmse": 0.10227064619856566
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 4,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.938725,
+      "recall100_by_seed": [
+        0.9383000000000001,
+        0.9391499999999999
+      ],
+      "unbiased_nmse": 0.03858159756023956,
+      "unbiased_vnmse": 0.04791356428606519,
+      "best_scalar_vnmse": 0.0447560752436514
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 2,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9358999999999998,
+      "recall100_by_seed": [
+        0.9353999999999999,
+        0.9363999999999999
+      ],
+      "unbiased_nmse": 0.1733680080134909,
+      "unbiased_vnmse": 0.176923542564148,
+      "best_scalar_vnmse": 0.1501931349473693,
+      "paired_depth_minus_1": {
+        "delta": 0.06425,
+        "ci95": [
+          0.0594,
+          0.06935
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.0639,
+        0.0646
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 3,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.960625,
+      "recall100_by_seed": [
+        0.9609000000000001,
+        0.9603499999999999
+      ],
+      "unbiased_nmse": 0.0696353735911221,
+      "unbiased_vnmse": 0.06991220121410277,
+      "best_scalar_vnmse": 0.06533570954264242,
+      "paired_depth_minus_1": {
+        "delta": 0.03242499999999997,
+        "ci95": [
+          0.02889937499999997,
+          0.03630124999999997
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.033449999999999966,
+        0.03139999999999997
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 4,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9805750000000001,
+      "recall100_by_seed": [
+        0.9798500000000001,
+        0.9813000000000001
+      ],
+      "unbiased_nmse": 0.01604348785578324,
+      "unbiased_vnmse": 0.016268569765698168,
+      "best_scalar_vnmse": 0.0160060273123731,
+      "paired_depth_minus_1": {
+        "delta": 0.041849999999999984,
+        "ci95": [
+          0.03854874999999999,
+          0.04534999999999998
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.04155,
+        0.04214999999999999
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 2,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9363999999999999,
+      "recall100_by_seed": [
+        0.9357999999999999,
+        0.937
+      ],
+      "unbiased_nmse": 0.19413998847558625,
+      "unbiased_vnmse": 0.18286507850886669,
+      "best_scalar_vnmse": 0.15446714228041752,
+      "paired_depth_minus_1": {
+        "delta": 0.06475,
+        "ci95": [
+          0.059598750000000006,
+          0.06945
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.0643,
+        0.06520000000000001
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 3,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9606,
+      "recall100_by_seed": [
+        0.9606,
+        0.9606
+      ],
+      "unbiased_nmse": 0.07276990840599597,
+      "unbiased_vnmse": 0.07073136042975342,
+      "best_scalar_vnmse": 0.06604798332332565,
+      "paired_depth_minus_1": {
+        "delta": 0.03239999999999997,
+        "ci95": [
+          0.029148749999999973,
+          0.03582687499999997
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.03314999999999997,
+        0.03164999999999998
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_no_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 4,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.978975,
+      "recall100_by_seed": [
+        0.9790000000000001,
+        0.9789500000000001
+      ],
+      "unbiased_nmse": 0.018274714358548043,
+      "unbiased_vnmse": 0.016841636382515488,
+      "best_scalar_vnmse": 0.016558720473165194,
+      "paired_depth_minus_1": {
+        "delta": 0.04024999999999999,
+        "ci95": [
+          0.036849999999999994,
+          0.04394999999999999
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.040699999999999986,
+        0.039799999999999995
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 448,
+      "rounds": 1,
+      "bits": 2,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 112,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.8973,
+      "recall100_by_seed": [
+        0.89715,
+        0.8974500000000001
+      ],
+      "unbiased_nmse": 0.1771984293182548,
+      "unbiased_vnmse": 0.19574204903304224,
+      "best_scalar_vnmse": 0.16206329338102105,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.025650000000000003,
+        "ci95": [
+          0.022750000000000003,
+          0.028550000000000006
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.02565000000000001,
+        0.025650000000000003
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 448,
+      "rounds": 1,
+      "bits": 3,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 168,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.944875,
+      "recall100_by_seed": [
+        0.94475,
+        0.945
+      ],
+      "unbiased_nmse": 0.06303850079719178,
+      "unbiased_vnmse": 0.06781371019834784,
+      "best_scalar_vnmse": 0.06311461933837903,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.01667499999999998,
+        "ci95": [
+          0.01409874999999998,
+          0.019575624999999982
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.017299999999999982,
+        0.01604999999999998
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 448,
+      "rounds": 1,
+      "bits": 4,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 224,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9593250000000001,
+      "recall100_by_seed": [
+        0.95905,
+        0.9595999999999999
+      ],
+      "unbiased_nmse": 0.022471554705124228,
+      "unbiased_vnmse": 0.026684658135734694,
+      "best_scalar_vnmse": 0.02569183218762891,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.02059999999999998,
+        "ci95": [
+          0.018299999999999986,
+          0.023149999999999973
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.02074999999999998,
+        0.020449999999999982
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 448,
+      "rounds": 2,
+      "bits": 2,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 112,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9316,
+      "recall100_by_seed": [
+        0.93125,
+        0.93195
+      ],
+      "unbiased_nmse": 0.14317222526609133,
+      "unbiased_vnmse": 0.14878238199460278,
+      "best_scalar_vnmse": 0.12923650332664513,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.004299999999999995,
+        "ci95": [
+          -0.006799999999999992,
+          -0.0017999999999999978
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        -0.004149999999999994,
+        -0.0044499999999999965
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.0343,
+        "ci95": [
+          0.030448750000000004,
+          0.038050625
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.0341,
+        0.0345
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 448,
+      "rounds": 2,
+      "bits": 3,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 168,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.958075,
+      "recall100_by_seed": [
+        0.9589,
+        0.9572499999999999
+      ],
+      "unbiased_nmse": 0.05182692419011469,
+      "unbiased_vnmse": 0.05321489645504621,
+      "best_scalar_vnmse": 0.05048362558010264,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.0025499999999999967,
+        "ci95": [
+          -0.004899999999999991,
+          -0.0002499999999999991
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        -0.0019999999999999966,
+        -0.0030999999999999973
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.01319999999999999,
+        "ci95": [
+          0.010549999999999997,
+          0.016000624999999984
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.014149999999999987,
+        0.012249999999999992
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 448,
+      "rounds": 2,
+      "bits": 4,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 224,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9764750000000002,
+      "recall100_by_seed": [
+        0.9766500000000002,
+        0.9763000000000003
+      ],
+      "unbiased_nmse": 0.013796867006859016,
+      "unbiased_vnmse": 0.014871765602585255,
+      "best_scalar_vnmse": 0.01462500926327402,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.004100000000000004,
+        "ci95": [
+          -0.0060000000000000045,
+          -0.002250000000000002
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        -0.0032000000000000028,
+        -0.0050000000000000044
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.017150000000000006,
+        "ci95": [
+          0.015100000000000004,
+          0.019501250000000005
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.017600000000000008,
+        0.016700000000000003
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 448,
+      "rounds": 3,
+      "bits": 2,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 112,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.934775,
+      "recall100_by_seed": [
+        0.9349000000000001,
+        0.93465
+      ],
+      "unbiased_nmse": 0.1352036158869687,
+      "unbiased_vnmse": 0.1375929854313654,
+      "best_scalar_vnmse": 0.12084479056434747,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.0016249999999999975,
+        "ci95": [
+          -0.004199999999999997,
+          0.0014000000000000035
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        -0.000899999999999993,
+        -0.0023500000000000023
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.037474999999999994,
+        "ci95": [
+          0.0337,
+          0.04155
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.03774999999999999,
+        0.0372
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 448,
+      "rounds": 3,
+      "bits": 3,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 168,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.960875,
+      "recall100_by_seed": [
+        0.96065,
+        0.9611000000000002
+      ],
+      "unbiased_nmse": 0.04966771518432174,
+      "unbiased_vnmse": 0.05015003552687261,
+      "best_scalar_vnmse": 0.047744665568912124,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.00027499999999999996,
+        "ci95": [
+          -0.001775625,
+          0.002199999999999995
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        5.00000000000006e-05,
+        0.0004999999999999994
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.015999999999999986,
+        "ci95": [
+          0.013649999999999989,
+          0.018599999999999985
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.015899999999999984,
+        0.016099999999999993
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 448,
+      "rounds": 3,
+      "bits": 4,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 224,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9797499999999999,
+      "recall100_by_seed": [
+        0.9793999999999999,
+        0.9801000000000001
+      ],
+      "unbiased_nmse": 0.012126621561931093,
+      "unbiased_vnmse": 0.012431462387852473,
+      "best_scalar_vnmse": 0.012274215788000073,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.000775000000000001,
+        "ci95": [
+          -0.0009499999999999998,
+          0.002450000000000002
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.0004000000000000009,
+        0.001150000000000001
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.02042500000000001,
+        "ci95": [
+          0.01824937500000001,
+          0.022700625000000012
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.02035000000000001,
+        0.020500000000000008
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 2,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.8973,
+      "recall100_by_seed": [
+        0.89715,
+        0.8974500000000001
+      ],
+      "unbiased_nmse": 0.22773121997563536,
+      "unbiased_vnmse": 0.24876366331149868,
+      "best_scalar_vnmse": 0.1974243635971034,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.025650000000000003,
+        "ci95": [
+          0.022750000000000003,
+          0.028550000000000006
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.02565000000000001,
+        0.025650000000000003
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 3,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.944875,
+      "recall100_by_seed": [
+        0.94475,
+        0.945
+      ],
+      "unbiased_nmse": 0.08514746263573043,
+      "unbiased_vnmse": 0.09053795556428551,
+      "best_scalar_vnmse": 0.08258495358111569,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.01667499999999998,
+        "ci95": [
+          0.01409874999999998,
+          0.019575624999999982
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.017299999999999982,
+        0.01604999999999998
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 4,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9593250000000001,
+      "recall100_by_seed": [
+        0.95905,
+        0.9595999999999999
+      ],
+      "unbiased_nmse": 0.027405409129765954,
+      "unbiased_vnmse": 0.03172544793625468,
+      "best_scalar_vnmse": 0.030441053128962663,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.02059999999999998,
+        "ci95": [
+          0.018299999999999986,
+          0.023149999999999973
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.02074999999999998,
+        0.020449999999999982
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 2,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9316,
+      "recall100_by_seed": [
+        0.93125,
+        0.93195
+      ],
+      "unbiased_nmse": 0.18984102134028313,
+      "unbiased_vnmse": 0.19618035619198204,
+      "best_scalar_vnmse": 0.16370392760573307,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.004299999999999995,
+        "ci95": [
+          -0.006799999999999992,
+          -0.0017999999999999978
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        -0.004149999999999994,
+        -0.0044499999999999965
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.0343,
+        "ci95": [
+          0.030448750000000004,
+          0.038050625
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.0341,
+        0.0345
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 3,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.958075,
+      "recall100_by_seed": [
+        0.9589,
+        0.9572499999999999
+      ],
+      "unbiased_nmse": 0.07289748856313145,
+      "unbiased_vnmse": 0.07444711506136038,
+      "best_scalar_vnmse": 0.06924099559472523,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.0025499999999999967,
+        "ci95": [
+          -0.004899999999999991,
+          -0.0002499999999999991
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        -0.0019999999999999966,
+        -0.0030999999999999973
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.01319999999999999,
+        "ci95": [
+          0.010549999999999997,
+          0.016000624999999984
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.014149999999999987,
+        0.012249999999999992
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 4,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9764750000000002,
+      "recall100_by_seed": [
+        0.9766500000000002,
+        0.9763000000000003
+      ],
+      "unbiased_nmse": 0.01848311113536378,
+      "unbiased_vnmse": 0.019588323090626955,
+      "best_scalar_vnmse": 0.01918215336257904,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.004100000000000004,
+        "ci95": [
+          -0.0060000000000000045,
+          -0.002250000000000002
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        -0.0032000000000000028,
+        -0.0050000000000000044
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.017150000000000006,
+        "ci95": [
+          0.015100000000000004,
+          0.019501250000000005
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.017600000000000008,
+        0.016700000000000003
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 2,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.934775,
+      "recall100_by_seed": [
+        0.9349000000000001,
+        0.93465
+      ],
+      "unbiased_nmse": 0.18093699115877182,
+      "unbiased_vnmse": 0.18370023986770198,
+      "best_scalar_vnmse": 0.15507370134016701,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": -0.0016249999999999975,
+        "ci95": [
+          -0.004199999999999997,
+          0.0014000000000000035
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        -0.000899999999999993,
+        -0.0023500000000000023
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.037474999999999994,
+        "ci95": [
+          0.0337,
+          0.04155
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.03774999999999999,
+        0.0372
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 3,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.960875,
+      "recall100_by_seed": [
+        0.96065,
+        0.9611000000000002
+      ],
+      "unbiased_nmse": 0.07051158890718985,
+      "unbiased_vnmse": 0.07105190008346686,
+      "best_scalar_vnmse": 0.06632653474284073,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.00027499999999999996,
+        "ci95": [
+          -0.001775625,
+          0.002199999999999995
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        5.00000000000006e-05,
+        0.0004999999999999994
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.015999999999999986,
+        "ci95": [
+          0.013649999999999989,
+          0.018599999999999985
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.015899999999999984,
+        0.016099999999999993
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "block448_pairwise",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 4,
+      "quantizer": "historical_fixed_t",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        202605170,
+        202605171
+      ],
+      "recall100": 0.9797499999999999,
+      "recall100_by_seed": [
+        0.9793999999999999,
+        0.9801000000000001
+      ],
+      "unbiased_nmse": 0.016763252390216796,
+      "unbiased_vnmse": 0.017076767837370593,
+      "best_scalar_vnmse": 0.016785250796143868,
+      "paired_pairwise_minus_no_pairwise": {
+        "delta": 0.000775000000000001,
+        "ci95": [
+          -0.0009499999999999998,
+          0.002450000000000002
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "paired_delta_by_seed": [
+        0.0004000000000000009,
+        0.001150000000000001
+      ],
+      "paired_depth_minus_1": {
+        "delta": 0.02042500000000001,
+        "ci95": [
+          0.01824937500000001,
+          0.022700625000000012
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "depth_delta_by_seed": [
+        0.02035000000000001,
+        0.020500000000000008
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "native_full512_RNG",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        12345,
+        12346,
+        12347,
+        12348,
+        12349
+      ],
+      "recall100": 0.93501,
+      "recall100_by_seed": [
+        0.9329500000000001,
+        0.9357499999999999,
+        0.93675,
+        0.93565,
+        0.9339499999999998
+      ],
+      "unbiased_nmse": 0.12338487701359661,
+      "unbiased_vnmse": 0.13473274221474968,
+      "best_scalar_vnmse": 0.11863187997052345
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "native_full512_RNG",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        12345,
+        12346,
+        12347,
+        12348,
+        12349
+      ],
+      "recall100": 0.9672000000000001,
+      "recall100_by_seed": [
+        0.9666499999999999,
+        0.96685,
+        0.96685,
+        0.96785,
+        0.9678
+      ],
+      "unbiased_nmse": 0.031481654595679295,
+      "unbiased_vnmse": 0.03602370382837169,
+      "best_scalar_vnmse": 0.03475020885809864
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "native_full512_RNG",
+      "dimension": 512,
+      "rounds": 1,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        12345,
+        12346,
+        12347,
+        12348,
+        12349
+      ],
+      "recall100": 0.9803200000000002,
+      "recall100_by_seed": [
+        0.9802000000000001,
+        0.9815,
+        0.9797500000000001,
+        0.9798500000000001,
+        0.9803000000000002
+      ],
+      "unbiased_nmse": 0.010432059658535645,
+      "unbiased_vnmse": 0.011492733018141063,
+      "best_scalar_vnmse": 0.011359350451625642
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "native_full512_RNG",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        12345,
+        12346,
+        12347,
+        12348,
+        12349
+      ],
+      "recall100": 0.9388899999999999,
+      "recall100_by_seed": [
+        0.93785,
+        0.9388,
+        0.9382499999999999,
+        0.9399500000000001,
+        0.9396000000000001
+      ],
+      "unbiased_nmse": 0.13914845665198855,
+      "unbiased_vnmse": 0.13930776537536552,
+      "best_scalar_vnmse": 0.12220882231541681,
+      "paired_depth_minus_1": {
+        "delta": 0.003879999999999995,
+        "ci95": [
+          0.0017192499999999936,
+          0.006120249999999993
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "depth_delta_by_seed": [
+        0.004900000000000001,
+        0.0030499999999999946,
+        0.0014999999999999953,
+        0.004299999999999994,
+        0.005649999999999991
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "native_full512_RNG",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        12345,
+        12346,
+        12347,
+        12348,
+        12349
+      ],
+      "recall100": 0.9677100000000001,
+      "recall100_by_seed": [
+        0.9663,
+        0.96705,
+        0.96875,
+        0.96795,
+        0.9684999999999999
+      ],
+      "unbiased_nmse": 0.03829606200972128,
+      "unbiased_vnmse": 0.038245847436324434,
+      "best_scalar_vnmse": 0.03682118391886365,
+      "paired_depth_minus_1": {
+        "delta": 0.0005100000000000011,
+        "ci95": [
+          -0.0009799999999999993,
+          0.0019509999999999996
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "depth_delta_by_seed": [
+        -0.00034999999999999696,
+        0.00019999999999999963,
+        0.0019,
+        0.00010000000000000009,
+        0.0007000000000000028
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "native_full512_RNG",
+      "dimension": 512,
+      "rounds": 2,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        12345,
+        12346,
+        12347,
+        12348,
+        12349
+      ],
+      "recall100": 0.9807200000000001,
+      "recall100_by_seed": [
+        0.9805000000000001,
+        0.9811500000000001,
+        0.98155,
+        0.9798500000000001,
+        0.98055
+      ],
+      "unbiased_nmse": 0.012206375434972504,
+      "unbiased_vnmse": 0.012201411065001907,
+      "best_scalar_vnmse": 0.012051714164916415,
+      "paired_depth_minus_1": {
+        "delta": 0.00040000000000000056,
+        "ci95": [
+          -0.0007402499999999996,
+          0.0017200000000000015
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "depth_delta_by_seed": [
+        0.00030000000000000024,
+        -0.0003499999999999998,
+        0.0018000000000000017,
+        5.551115123125783e-19,
+        0.0002500000000000002
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "native_full512_RNG",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 2,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 128,
+      "seeds": [
+        12345,
+        12346,
+        12347,
+        12348,
+        12349
+      ],
+      "recall100": 0.93878,
+      "recall100_by_seed": [
+        0.939,
+        0.9369999999999998,
+        0.9385499999999999,
+        0.9402499999999999,
+        0.9390999999999999
+      ],
+      "unbiased_nmse": 0.13903138787414931,
+      "unbiased_vnmse": 0.13918993422389964,
+      "best_scalar_vnmse": 0.12211933045420131,
+      "paired_depth_minus_1": {
+        "delta": 0.0037699999999999947,
+        "ci95": [
+          0.0012297499999999943,
+          0.006270249999999993
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "depth_delta_by_seed": [
+        0.006049999999999997,
+        0.0012499999999999955,
+        0.001799999999999995,
+        0.004599999999999994,
+        0.005149999999999992
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "native_full512_RNG",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 3,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 192,
+      "seeds": [
+        12345,
+        12346,
+        12347,
+        12348,
+        12349
+      ],
+      "recall100": 0.96767,
+      "recall100_by_seed": [
+        0.9684,
+        0.96695,
+        0.9678999999999999,
+        0.9678,
+        0.9672999999999999
+      ],
+      "unbiased_nmse": 0.03807136653175075,
+      "unbiased_vnmse": 0.03815386032649915,
+      "best_scalar_vnmse": 0.03673654742407173,
+      "paired_depth_minus_1": {
+        "delta": 0.0004700000000000002,
+        "ci95": [
+          -0.0010802499999999979,
+          0.0019800000000000013
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "depth_delta_by_seed": [
+        0.0017500000000000016,
+        9.999999999999953e-05,
+        0.0010499999999999986,
+        -5.000000000000004e-05,
+        -0.0004999999999999988
+      ]
+    },
+    {
+      "source": "msong-pairwise-layer-audit.json",
+      "centers": 128,
+      "mode": "native_full512_RNG",
+      "dimension": 512,
+      "rounds": 3,
+      "bits": 4,
+      "quantizer": "native_per_residual",
+      "raw_payload_bytes": 256,
+      "seeds": [
+        12345,
+        12346,
+        12347,
+        12348,
+        12349
+      ],
+      "recall100": 0.9812100000000001,
+      "recall100_by_seed": [
+        0.9808500000000001,
+        0.9812000000000001,
+        0.9806,
+        0.9819000000000001,
+        0.9815
+      ],
+      "unbiased_nmse": 0.012122795689230526,
+      "unbiased_vnmse": 0.012165436806300894,
+      "best_scalar_vnmse": 0.012016762273052107,
+      "paired_depth_minus_1": {
+        "delta": 0.0008900000000000009,
+        "ci95": [
+          -0.00031999999999999986,
+          0.0021602500000000016
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "depth_delta_by_seed": [
+        0.0006500000000000006,
+        -0.00030000000000000024,
+        0.0008500000000000014,
+        0.002050000000000002,
+        0.001200000000000001
+      ]
+    }
+  ]
+}
