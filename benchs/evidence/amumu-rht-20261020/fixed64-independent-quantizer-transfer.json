@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "raw_sha256": "b688a91da79c0f563aaedcbe572a9669676391fffd709e8dee7a27f71d076841",
+  "capsule_sha256": "45e55f1a6db8c15371e44f6ea5e32d9902e94f477fd4d7b86c533f949ac69b22",
+  "capsule_bytes": 26076,
+  "base64_characters": 34768,
+  "files": {
+    "canary_fixed64_quantizer_independent.py": {
+      "sha256": "fe3f26c221c619121a97b11251535bff447ecfcad9964b97019fe714c2bbaa3d",
+      "bytes": 13625
+    },
+    "export_fixed64_independent_canaries.py": {
+      "sha256": "b773a100a9b191d7a3d8e9a137da813d3943d61b2132bc780343b4d63138c1a2",
+      "bytes": 5433
+    },
+    "fixed64-independent-quantizer-canaries.json": {
+      "sha256": "b688a91da79c0f563aaedcbe572a9669676391fffd709e8dee7a27f71d076841",
+      "bytes": 234397
+    },
+    "fixed64-independent-quantizer-summary.json": {
+      "sha256": "18fc93ad69527467eaec057640d8db6861846d10d8450f8385fdfe005b9506da",
+      "bytes": 21488
+    },
+    "independent-quantizer-canaries.log": {
+      "sha256": "9c62c227d29c07a342a0f96108066af623748101dc1a15fba54da9a2dad0a1bb",
+      "bytes": 894
+    },
+    "independent-quantizer-canaries.err": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}
