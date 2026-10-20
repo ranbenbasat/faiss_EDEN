@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "cases": [
+    {
+      "base": 17,
+      "k": 10,
+      "chunk": 7,
+      "exact_distance_id_order": true
+    },
+    {
+      "base": 211,
+      "k": 100,
+      "chunk": 43,
+      "exact_distance_id_order": true
+    },
+    {
+      "base": 400,
+      "k": 100,
+      "chunk": 100,
+      "exact_distance_id_order": true
+    },
+    {
+      "base": 203,
+      "k": 100,
+      "chunk": 103,
+      "exact_distance_id_order": true
+    }
+  ]
+}
