@@ -1,0 +1,315 @@
+{
+  "status": "complete",
+  "corrected_no_permutation": true,
+  "routing": "codekind2=>modefull512,rounds1; kinds0/1/3=>modefixed64,rounds2; permutation pointer null",
+  "cases": [
+    {
+      "bits": 2,
+      "kind": 2,
+      "dimension": 512,
+      "expected_rounds": 1,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 136,
+      "strict_same_stride": false,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 2,
+      "kind": 3,
+      "dimension": 448,
+      "expected_rounds": 2,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 120,
+      "strict_same_stride": false,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 2,
+      "kind": 0,
+      "dimension": 448,
+      "expected_rounds": 2,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 130,
+      "strict_same_stride": false,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 2,
+      "kind": 0,
+      "dimension": 448,
+      "expected_rounds": 2,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 136,
+      "strict_same_stride": true,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 2,
+      "kind": 1,
+      "dimension": 448,
+      "expected_rounds": 2,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 144,
+      "strict_same_stride": false,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 2,
+      "actual_frozen_FAISS_Index_search_primary_comparator": true,
+      "full512_ONE_round": true
+    },
+    {
+      "bits": 3,
+      "kind": 2,
+      "dimension": 512,
+      "expected_rounds": 1,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 200,
+      "strict_same_stride": false,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 3,
+      "kind": 3,
+      "dimension": 448,
+      "expected_rounds": 2,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 176,
+      "strict_same_stride": false,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 3,
+      "kind": 0,
+      "dimension": 448,
+      "expected_rounds": 2,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 186,
+      "strict_same_stride": false,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 3,
+      "kind": 0,
+      "dimension": 448,
+      "expected_rounds": 2,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 200,
+      "strict_same_stride": true,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 3,
+      "kind": 1,
+      "dimension": 448,
+      "expected_rounds": 2,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 200,
+      "strict_same_stride": false,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 3,
+      "actual_frozen_FAISS_Index_search_primary_comparator": true,
+      "full512_ONE_round": true
+    },
+    {
+      "bits": 4,
+      "kind": 2,
+      "dimension": 512,
+      "expected_rounds": 1,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 264,
+      "strict_same_stride": false,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 4,
+      "kind": 3,
+      "dimension": 448,
+      "expected_rounds": 2,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 232,
+      "strict_same_stride": false,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 4,
+      "kind": 0,
+      "dimension": 448,
+      "expected_rounds": 2,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 242,
+      "strict_same_stride": false,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 4,
+      "kind": 0,
+      "dimension": 448,
+      "expected_rounds": 2,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 264,
+      "strict_same_stride": true,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 4,
+      "kind": 1,
+      "dimension": 448,
+      "expected_rounds": 2,
+      "permutation_pointer_null": true,
+      "actual_code_stride": 256,
+      "strict_same_stride": false,
+      "native_timed_pipeline_matches_explicit_projected_search": true,
+      "tested_batches": [
+        1,
+        3,
+        32,
+        256
+      ]
+    },
+    {
+      "bits": 4,
+      "actual_frozen_FAISS_Index_search_primary_comparator": true,
+      "full512_ONE_round": true
+    }
+  ],
+  "case_count": 18,
+  "near_clamp_differential": [
+    {
+      "bits": 2,
+      "native_scores": [
+        0.00390625,
+        0.003173828125,
+        0.0030517578125
+      ],
+      "oracle_scores": [
+        0.0034357183903921396,
+        0.0034357173208263703,
+        0.0034357182375970297
+      ],
+      "max_abs_difference": 0.00047053160960786045,
+      "conservative_fp32_absolute_error_bound": 0.031190544366836548,
+      "exact_unbiasedness_or_zero_self_distance_claimed": false
+    },
+    {
+      "bits": 3,
+      "native_scores": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "oracle_scores": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_difference": 0.0,
+      "conservative_fp32_absolute_error_bound": 0.031190544366836548,
+      "exact_unbiasedness_or_zero_self_distance_claimed": false
+    },
+    {
+      "bits": 4,
+      "native_scores": [
+        1.629150390625,
+        1.629638671875,
+        1.626708984375
+      ],
+      "oracle_scores": [
+        1.628027179831406,
+        1.6280288456164271,
+        1.6280303851799545
+      ],
+      "max_abs_difference": 0.0016098262585728662,
+      "conservative_fp32_absolute_error_bound": 0.031190544366836548,
+      "exact_unbiasedness_or_zero_self_distance_claimed": false
+    }
+  ],
+  "not_performance_evidence": true,
+  "dll_sha256": "875e2e701f56b049b828017e1d2092e77fb15b5b093694b17d504bb5b7209ab0"
+}
