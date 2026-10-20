@@ -1,0 +1,98 @@
+{
+  "status": "complete",
+  "capsule_sha256": "d0b2293a915edcd3a7e4c81112021025aaa8e436d1f26a38be6e055c14356888",
+  "capsule_bytes": 75884,
+  "base64_characters": 101180,
+  "files": {
+    "audit_fixed64_rounds_matched.py": {
+      "bytes": 10405,
+      "sha256": "52ee44b89ce7ab2e10733dda407988f852df3efb9a3277b21b5da4fc9f7f794a"
+    },
+    "audit_fixed64_rounds_archivedcenter.py": {
+      "bytes": 8228,
+      "sha256": "903cd900aa8a6fda3f99ddfe1d3f4b879739364bc817a4bc50f2ff87439c1321"
+    },
+    "summarize_fixed64_rounds_matched.py": {
+      "bytes": 6095,
+      "sha256": "55a201fb3750ae040fa7f2c575ee788cd252c55f3491dd40c9c72d0f526ef478"
+    },
+    "export_fixed64_rounds_quality.py": {
+      "bytes": 2513,
+      "sha256": "a55c01e47f7ba6a011eec8cf115a3d300c5d883f87cd9dfa7e87c5e8de874c69"
+    },
+    "fixed64-rounds-archivedcenter-quality.json": {
+      "bytes": 623566,
+      "sha256": "5107b36f18e50fe8ba804dfc9aa8777f3422ba1c166b4205f6c925e559cdfc06"
+    },
+    "fixed64-rounds-archivedcenter-summary.json": {
+      "bytes": 45488,
+      "sha256": "932701234c8e044044a67aefdf3c28b5fb4b09ff674dc26aa1f699d09f14a313"
+    },
+    "fixed64-rounds-archivedcenter-detail-manifest.json": {
+      "bytes": 9243,
+      "sha256": "a6efdc385f5f272fb17f5784cef71fa06162b19677e55034270e3e8f474e61da"
+    },
+    "fixed64-rounds-matched-quality.json": {
+      "bytes": 547553,
+      "sha256": "69a64e8b1010d2ef6085c492a66c9a7de20fc1ef8e03e714bd2c37a9e0f2e4a4"
+    },
+    "fixed64-rounds-matched-summary.json": {
+      "bytes": 34143,
+      "sha256": "d2cee782cd675be4e7dfabd13550cc20efbce639f7b793f901ba218ccafc348f"
+    },
+    "fixed64-rounds-matched-detail-manifest.json": {
+      "bytes": 9243,
+      "sha256": "1c592eb1ffcf00cc5ac4aa66b44a76941c099bac9a208dcdf5023a0585588b81"
+    },
+    "audit-fixed64-rounds-matched.log": {
+      "bytes": 5680,
+      "sha256": "2f72c310e19533373dc31b0641b4f92350d38e451d77ab2531fcb89363826bbf"
+    },
+    "audit-fixed64-rounds-matched.err": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit-fixed64-rounds-archivedcenter.log": {
+      "bytes": 6148,
+      "sha256": "aeabf557161ae035c8245c603a0b8d6ec8475f847ba50d8f8506b0c7badefd46"
+    },
+    "audit-fixed64-rounds-archivedcenter.err": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native_block64_fixed64.py": {
+      "bytes": 4194,
+      "sha256": "73d4e639abca5667d33536de93aca44e1a826e5dde59979fb7627b35afbdb24f"
+    },
+    "native_eden_group.py": {
+      "bytes": 2937,
+      "sha256": "c1903a86ce0f13021fe0a91af1a1470055dee46eef2a088a46fc5e1fa3060130"
+    },
+    "native_eden_search_fixed64.py": {
+      "bytes": 3395,
+      "sha256": "40604f523f2591cc21432ef598ab7d370890a7242dc5af4460b753b0b8ddc845"
+    },
+    "experimental_block32.py": {
+      "bytes": 4022,
+      "sha256": "3682239445335245aeb3f19f560ea9e4477caf1659a2f50bcb37b76d3ef0dade"
+    },
+    "experimental-kernel/block_transform_fixed64.cpp": {
+      "bytes": 10047,
+      "sha256": "250bfa37cebc110834979c599183085f8de8d2cab272831fcc8c1a30d537c0fe"
+    },
+    "experimental-kernel/eden_group.cpp": {
+      "bytes": 5467,
+      "sha256": "7b241cc606e3721f3b977e09ee5226511a40f90645fe2e81a8f37ef9540ae732"
+    },
+    "experimental-kernel/eden_group_search.cpp": {
+      "bytes": 8708,
+      "sha256": "ba433b5d10a5bf53d63624a6f1a1023fe249630b3c6039dba48a7655758ca47f"
+    },
+    "fixed64-rounds-quality-report.md": {
+      "bytes": 2894,
+      "sha256": "654eb3bbc96e6a44f5ea2409364e78ee0ff28154c281b7b48cbb76e0b40c6fe3"
+    }
+  },
+  "large_paired_detail": "Saved locally in fixed64-rounds-archivedcenter-detail (primary272996365B) and fixed64-rounds-matched-detail (sharedcenter diagnostic82017784B); not embedded in compact capsule. Per-file hashes in corresponding manifests. Detail includes stored scales/signs, IDs/distances, perqueryrecall/pervectorerrors; primary additionally group errors/energies.",
+  "no_speed_results": true
+}
