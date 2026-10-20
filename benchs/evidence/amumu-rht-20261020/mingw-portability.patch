@@ -1,0 +1,102 @@
+diff --git a/faiss/CMakeLists.txt b/faiss/CMakeLists.txt
+index 4e591b53..75e436da 100644
+--- a/faiss/CMakeLists.txt
++++ b/faiss/CMakeLists.txt
+@@ -482,7 +482,7 @@ add_library(faiss_avx2 ${FAISS_SRC})
+ if(NOT FAISS_OPT_LEVEL STREQUAL "avx2" AND NOT FAISS_OPT_LEVEL STREQUAL "avx512" AND NOT FAISS_OPT_LEVEL STREQUAL "avx512_spr")
+   set_target_properties(faiss_avx2 PROPERTIES EXCLUDE_FROM_ALL TRUE)
+ endif()
+-if(NOT WIN32)
++if(NOT MSVC)
+   target_compile_options(faiss_avx2 PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-mavx2 -mfma -mf16c -mpopcnt ${FAISS_BMI2_FLAGS}>)
+ else()
+   # MSVC enables FMA with /arch:AVX2; no separate flags for F16C, POPCNT
+@@ -500,7 +500,7 @@ add_library(faiss_avx512 ${FAISS_SRC})
+ if(NOT FAISS_OPT_LEVEL STREQUAL "avx512")
+   set_target_properties(faiss_avx512 PROPERTIES EXCLUDE_FROM_ALL TRUE)
+ endif()
+-if(NOT WIN32)
++if(NOT MSVC)
+   # All modern CPUs support F, CD, VL, DQ, BW extensions.
+   # Ref: https://en.wikipedia.org/wiki/AVX512
+   target_compile_options(faiss_avx512 PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-mavx2 -mfma -mf16c -mavx512f -mavx512cd -mavx512vl -mavx512dq -mavx512bw -mpopcnt ${FAISS_BMI2_FLAGS}>)
+@@ -516,7 +516,7 @@ add_library(faiss_avx512_spr ${FAISS_SRC})
+ if(NOT FAISS_OPT_LEVEL STREQUAL "avx512_spr")
+   set_target_properties(faiss_avx512_spr PROPERTIES EXCLUDE_FROM_ALL TRUE)
+ endif()
+-if(NOT WIN32)
++if(NOT MSVC)
+   # Architecture mode to support AVX512 extensions available since Intel(R) Sapphire Rapids.
+   # Ref: https://networkbuilders.intel.com/solutionslibrary/intel-avx-512-fp16-instruction-set-for-intel-xeon-processor-based-products-technology-guide
+   target_compile_options(faiss_avx512_spr PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-mavx2 -mfma -mf16c -mavx512f -mavx512cd -mavx512vl -mavx512dq -mavx512bw -mavx512vnni -mavx512vpopcntdq -mavx512bitalg -mpopcnt -mavx512fp16 -mavx512bf16 -mprefer-vector-width=512 ${FAISS_BMI2_FLAGS}>)
+@@ -734,6 +734,12 @@ if(WIN32)
+   set_target_properties(faiss PROPERTIES LINK_FLAGS "-Wl,--export-all-symbols")
+ endif()
+ 
++if(MINGW)
++  foreach(target faiss_avx2 faiss_avx512 faiss_avx512_spr faiss_sve)
++    target_link_options(${target} PRIVATE "-Wl,--export-all-symbols")
++  endforeach()
++endif()
++
+ string(FIND "${CMAKE_CXX_FLAGS}" "FINTEGER" finteger_idx)
+ if (${finteger_idx} EQUAL -1)
+   target_compile_definitions(faiss PRIVATE FINTEGER=int)
+diff --git a/faiss/impl/platform_macros.h b/faiss/impl/platform_macros.h
+index 4ab263fe..2dc072f0 100644
+--- a/faiss/impl/platform_macros.h
++++ b/faiss/impl/platform_macros.h
+@@ -110,8 +110,13 @@ inline int __builtin_clzll(uint64_t x) {
+ // Use FAISS_PACK_STRUCTS_BEGIN/END to wrap packed structure definitions
+ #define FAISS_PACKED
+ #define FAISS_RESTRICT __restrict
++#ifdef _MSC_VER
+ #define FAISS_PACK_STRUCTS_BEGIN __pragma(pack(push, 1))
+ #define FAISS_PACK_STRUCTS_END __pragma(pack(pop))
++#else
++#define FAISS_PACK_STRUCTS_BEGIN _Pragma("pack(push, 1)")
++#define FAISS_PACK_STRUCTS_END _Pragma("pack(pop)")
++#endif
+ 
+ #else
+ /*******************************************************
+diff --git a/faiss/python/CMakeLists.txt b/faiss/python/CMakeLists.txt
+index 6c5544e8..10c03d71 100644
+--- a/faiss/python/CMakeLists.txt
++++ b/faiss/python/CMakeLists.txt
+@@ -189,7 +189,7 @@ set_property(TARGET faiss_example_external_module PROPERTY SWIG_COMPILE_OPTIONS
+ if(AIX)
+   set_target_properties(swigfaiss PROPERTIES SUFFIX .a)
+   set_target_properties(faiss_example_external_module PROPERTIES SUFFIX .a)
+-elseif(WIN32)
++elseif(MSVC)
+   # we need bigobj for the swig wrapper
+   target_compile_options(swigfaiss PRIVATE /bigobj)
+   target_compile_options(swigfaiss_avx2 PRIVATE /bigobj)
+@@ -197,7 +197,7 @@ elseif(WIN32)
+   target_compile_options(swigfaiss_avx512_spr PRIVATE /bigobj)
+   target_compile_options(swigfaiss_sve PRIVATE /bigobj)
+   target_compile_options(faiss_example_external_module PRIVATE /bigobj)
+-elseif(NOT SKBUILD_SABI_VERSION)
++elseif(NOT WIN32 AND NOT SKBUILD_SABI_VERSION)
+   # NOTE: Python does not recognize the dylib extension.
+   # When building abi3, the suffix is set to .abi3.so below.
+   set_target_properties(swigfaiss PROPERTIES SUFFIX .so)
+@@ -300,7 +300,6 @@ target_link_libraries(swigfaiss PRIVATE
+ )
+ 
+ target_link_libraries(swigfaiss_avx2 PRIVATE
+-  faiss_avx2
+   ${FAISS_PYTHON_MODULE_TARGET}
+   Python::NumPy
+   OpenMP::OpenMP_CXX
+@@ -365,7 +364,7 @@ target_include_directories(faiss_python_callbacks PRIVATE ${PROJECT_SOURCE_DIR}/
+ target_include_directories(faiss_python_callbacks PRIVATE ${Python_INCLUDE_DIRS})
+ 
+ target_link_libraries(swigfaiss PRIVATE faiss_python_callbacks)
+-target_link_libraries(swigfaiss_avx2 PRIVATE faiss_python_callbacks)
++target_link_libraries(swigfaiss_avx2 PRIVATE faiss_python_callbacks faiss_avx2)
+ target_link_libraries(swigfaiss_avx512 PRIVATE faiss_python_callbacks)
+ target_link_libraries(swigfaiss_avx512_spr PRIVATE faiss_python_callbacks)
+ target_link_libraries(swigfaiss_sve PRIVATE faiss_python_callbacks)
+
