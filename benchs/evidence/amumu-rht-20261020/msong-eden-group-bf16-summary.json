@@ -1,0 +1,1349 @@
+{
+  "status": "complete",
+  "scope": "EDEN grouped BF16 first QUALITY pilot, speed unavailable",
+  "raw_sha256": "1eb85f996144c79256b69adb2e7464331e5ee7558c7bdbb0e36edd7ccdc47190",
+  "codec_sha256": "20bc9bf4cdb33c9005b0ae2749506e4c2073717f8638a82d6ddf631b3232c1f9",
+  "script_sha256": "af5d0d37789398d77b81096cc50f1daaed404023aebd2db203a35051e7d5c720",
+  "seeds": [
+    12345,
+    12346,
+    12347,
+    12348,
+    12349
+  ],
+  "shapes": {
+    "xt": [
+      4096,
+      420
+    ],
+    "xb": [
+      20000,
+      420
+    ],
+    "xq": [
+      200,
+      420
+    ]
+  },
+  "speed_results_available": false,
+  "layout": "448*b/8 scalar bytes, seven BF16 scales RNE(14B), one original whole-residual FP32 norm2(4B); strict-same-stride suffix reserved zero",
+  "norm_convention": "whole UNQUANTIZED transformed residual norm2, sequential FP32 summation across448 coordinates; orthogonal original-space equivalent, not reconstructed norm",
+  "zero_rule": "whole norm2<=floatEPS gives zero vector/norm metadata; when whole passes, each group uses original EDEN64 epsilon policy, without erasing the original whole norm",
+  "centering": "group BF16 and global448 controls share frozen native EDEN448 trained centroid exactly; full512 baseline retains its frozen native centroid",
+  "score_rule": "one max(total L2 estimate,0) clamp after summing all groups; never per-group clamps; stable distance/ID ordering",
+  "limits": [
+    "prefix20k/200 on one fixed dataset",
+    "conditional paired seed/query intervals",
+    "no native grouped speed claims until native codec/search is implemented and validated"
+  ],
+  "groups": [
+    {
+      "mode": "block448_global",
+      "bits": 2,
+      "code_bytes_per_vector": [
+        120
+      ],
+      "budget_cap_bytes": 136,
+      "within_cap": true,
+      "k": {
+        "10": {
+          "recall": 0.8091,
+          "by_seed": [
+            0.8085,
+            0.804,
+            0.8005,
+            0.8125,
+            0.8200000000000002
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.013400000000000002,
+            "ci95": [
+              -0.026500000000000006,
+              -0.0006975000000000042
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "100": {
+          "recall": 0.88109,
+          "by_seed": [
+            0.879,
+            0.8803,
+            0.883,
+            0.8815500000000001,
+            0.8815999999999999
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.00573,
+            "ci95": [
+              -0.009920250000000002,
+              -0.0019180000000000043
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      },
+      "reconstruction": {
+        "reconstruction_10k": {
+          "pooled_nmse": 0.1317812218551968,
+          "mean_vector_vnmse": 0.13201561836017844,
+          "vectors_per_seed": 10000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.021497004704316133,
+            "vnmse": 0.012851325467351155,
+            "ci95_by_metric": [
+              [
+                0.019466322330949234,
+                0.023614907548117667
+              ],
+              [
+                0.011901828250418425,
+                0.01356934496030697
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        },
+        "reconstruction_full20k": {
+          "pooled_nmse": 0.13160168240814585,
+          "mean_vector_vnmse": 0.13206032791888178,
+          "vectors_per_seed": 20000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.020563508992554172,
+            "vnmse": 0.012968435964527417,
+            "ci95_by_metric": [
+              [
+                0.01861433670957527,
+                0.02269475486916349
+              ],
+              [
+                0.012054819195927338,
+                0.013686312126350686
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        }
+      }
+    },
+    {
+      "mode": "block448_global",
+      "bits": 3,
+      "code_bytes_per_vector": [
+        176
+      ],
+      "budget_cap_bytes": 200,
+      "within_cap": true,
+      "k": {
+        "10": {
+          "recall": 0.8918000000000001,
+          "by_seed": [
+            0.8855000000000001,
+            0.8965000000000001,
+            0.8820000000000001,
+            0.8980000000000001,
+            0.8970000000000001
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.0055,
+            "ci95": [
+              -0.017200000000000003,
+              0.005507499999999994
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "100": {
+          "recall": 0.93501,
+          "by_seed": [
+            0.93405,
+            0.9340999999999999,
+            0.9344999999999999,
+            0.935,
+            0.9373999999999999
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.005609999999999998,
+            "ci95": [
+              -0.007900749999999996,
+              -0.0035999999999999986
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      },
+      "reconstruction": {
+        "reconstruction_10k": {
+          "pooled_nmse": 0.0355318532250796,
+          "mean_vector_vnmse": 0.03531856575254329,
+          "vectors_per_seed": 10000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.004369365071869708,
+            "vnmse": 0.0025238608323271267,
+            "ci95_by_metric": [
+              [
+                0.003432396806063609,
+                0.005226952730298211
+              ],
+              [
+                0.0023920697946204494,
+                0.002652831977367015
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        },
+        "reconstruction_full20k": {
+          "pooled_nmse": 0.035519392494868594,
+          "mean_vector_vnmse": 0.035340499357820736,
+          "vectors_per_seed": 20000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.004192996427233517,
+            "vnmse": 0.0025681270088375313,
+            "ci95_by_metric": [
+              [
+                0.0032709889827042538,
+                0.005000714408982393
+              ],
+              [
+                0.0024340767621388315,
+                0.002702177255536231
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        }
+      }
+    },
+    {
+      "mode": "block448_global",
+      "bits": 4,
+      "code_bytes_per_vector": [
+        232
+      ],
+      "budget_cap_bytes": 264,
+      "within_cap": true,
+      "k": {
+        "10": {
+          "recall": 0.9396000000000001,
+          "by_seed": [
+            0.9425,
+            0.94,
+            0.9390000000000001,
+            0.9365000000000001,
+            0.94
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.005899999999999999,
+            "ci95": [
+              -0.013799999999999996,
+              0.001202499999999997
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "100": {
+          "recall": 0.96484,
+          "by_seed": [
+            0.9651,
+            0.9648500000000001,
+            0.9645,
+            0.96435,
+            0.9653999999999999
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.00373,
+            "ci95": [
+              -0.0050599999999999985,
+              -0.0023900000000000015
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      },
+      "reconstruction": {
+        "reconstruction_10k": {
+          "pooled_nmse": 0.009441091061706096,
+          "mean_vector_vnmse": 0.009428571108129669,
+          "vectors_per_seed": 10000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.0010666371659593405,
+            "vnmse": 0.0005777470483531565,
+            "ci95_by_metric": [
+              [
+                0.0008323078052552505,
+                0.0013130183806976514
+              ],
+              [
+                0.0005392264105601017,
+                0.0006056958069760136
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        },
+        "reconstruction_full20k": {
+          "pooled_nmse": 0.009437692148754616,
+          "mean_vector_vnmse": 0.00943765787909071,
+          "vectors_per_seed": 20000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.001051357035046498,
+            "vnmse": 0.0005919246633146816,
+            "ci95_by_metric": [
+              [
+                0.000822323014886106,
+                0.0012803910551597818
+              ],
+              [
+                0.0005475048303294812,
+                0.0006256538070434237
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        }
+      }
+    },
+    {
+      "mode": "block448_group_bf16_compact",
+      "bits": 2,
+      "code_bytes_per_vector": [
+        130
+      ],
+      "budget_cap_bytes": 136,
+      "within_cap": true,
+      "k": {
+        "10": {
+          "recall": 0.8182,
+          "by_seed": [
+            0.8160000000000001,
+            0.8145,
+            0.8230000000000001,
+            0.811,
+            0.8265
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.004300000000000003,
+            "ci95": [
+              -0.017705000000000002,
+              0.00900749999999999
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "100": {
+          "recall": 0.88341,
+          "by_seed": [
+            0.8828,
+            0.8835999999999999,
+            0.8860499999999999,
+            0.8821499999999999,
+            0.8824500000000001
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.0034100000000000003,
+            "ci95": [
+              -0.007800499999999999,
+              0.000750499999999991
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      },
+      "reconstruction": {
+        "reconstruction_10k": {
+          "pooled_nmse": 0.12147499535824752,
+          "mean_vector_vnmse": 0.12458818226101982,
+          "vectors_per_seed": 10000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.011190778207366844,
+            "vnmse": 0.005423889368192533,
+            "ci95_by_metric": [
+              [
+                0.009941493680268795,
+                0.012683814808781432
+              ],
+              [
+                0.004522163177103841,
+                0.006327080941507177
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        },
+        "reconstruction_full20k": {
+          "pooled_nmse": 0.12146601664161406,
+          "mean_vector_vnmse": 0.12460593256475741,
+          "vectors_per_seed": 20000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.010427843226022387,
+            "vnmse": 0.005514040610403045,
+            "ci95_by_metric": [
+              [
+                0.00909422797047187,
+                0.011927459099918103
+              ],
+              [
+                0.004634736575322734,
+                0.006339976966221378
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        }
+      },
+      "tiny_group_count_by_seed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "whole_zero_count_by_seed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reserved_padding_bytes": [
+        0
+      ]
+    },
+    {
+      "mode": "block448_group_bf16_compact",
+      "bits": 3,
+      "code_bytes_per_vector": [
+        186
+      ],
+      "budget_cap_bytes": 200,
+      "within_cap": true,
+      "k": {
+        "10": {
+          "recall": 0.8928000000000001,
+          "by_seed": [
+            0.8875000000000002,
+            0.8985000000000001,
+            0.8965000000000001,
+            0.8870000000000001,
+            0.8945000000000002
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.0045,
+            "ci95": [
+              -0.0145025,
+              0.0052999999999999966
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "100": {
+          "recall": 0.9365699999999999,
+          "by_seed": [
+            0.93765,
+            0.9353,
+            0.9357000000000001,
+            0.9360499999999999,
+            0.9381499999999999
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.004049999999999999,
+            "ci95": [
+              -0.006350249999999998,
+              -0.0015694999999999993
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      },
+      "reconstruction": {
+        "reconstruction_10k": {
+          "pooled_nmse": 0.03221625095233455,
+          "mean_vector_vnmse": 0.03276426616622811,
+          "vectors_per_seed": 10000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.0010537627991246586,
+            "vnmse": -3.0438753988053235e-05,
+            "ci95_by_metric": [
+              [
+                0.00011937439231280572,
+                0.0021929056836563696
+              ],
+              [
+                -0.000179155010314902,
+                0.00018502129175704957
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        },
+        "reconstruction_full20k": {
+          "pooled_nmse": 0.03222176022740513,
+          "mean_vector_vnmse": 0.03277792491112099,
+          "vectors_per_seed": 20000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.000895364159770054,
+            "vnmse": 5.552562137786654e-06,
+            "ci95_by_metric": [
+              [
+                2.8517424899836274e-05,
+                0.001965653049519983
+              ],
+              [
+                -0.0001462393878864031,
+                0.0002156179471657499
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        }
+      },
+      "tiny_group_count_by_seed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "whole_zero_count_by_seed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reserved_padding_bytes": [
+        0
+      ]
+    },
+    {
+      "mode": "block448_group_bf16_compact",
+      "bits": 4,
+      "code_bytes_per_vector": [
+        242
+      ],
+      "budget_cap_bytes": 264,
+      "within_cap": true,
+      "k": {
+        "10": {
+          "recall": 0.9376000000000001,
+          "by_seed": [
+            0.9345000000000002,
+            0.9380000000000002,
+            0.9430000000000001,
+            0.9430000000000001,
+            0.9295000000000002
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.007899999999999999,
+            "ci95": [
+              -0.017102499999999993,
+              0.00019999999999999952
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "100": {
+          "recall": 0.96488,
+          "by_seed": [
+            0.9643,
+            0.9657000000000001,
+            0.9647500000000001,
+            0.9651,
+            0.96455
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.0036899999999999997,
+            "ci95": [
+              -0.005009999999999997,
+              -0.0024097500000000004
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      },
+      "reconstruction": {
+        "reconstruction_10k": {
+          "pooled_nmse": 0.008651926541937407,
+          "mean_vector_vnmse": 0.008737652538204447,
+          "vectors_per_seed": 10000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.00027747264619065216,
+            "vnmse": -0.0001131715215720655,
+            "ci95_by_metric": [
+              [
+                0.0001876837955171167,
+                0.00036726149668995026
+              ],
+              [
+                -0.0001678839080290536,
+                -5.858025545311084e-05
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        },
+        "reconstruction_full20k": {
+          "pooled_nmse": 0.008655754856573383,
+          "mean_vector_vnmse": 0.008739496348553153,
+          "vectors_per_seed": 20000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.00026941974286526574,
+            "vnmse": -0.00010623686722287598,
+            "ci95_by_metric": [
+              [
+                0.0001953698757794272,
+                0.00033659482201146493
+              ],
+              [
+                -0.00016067112056376848,
+                -5.404074522699295e-05
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        }
+      },
+      "tiny_group_count_by_seed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "whole_zero_count_by_seed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reserved_padding_bytes": [
+        0
+      ]
+    },
+    {
+      "mode": "block448_group_bf16_samestride",
+      "bits": 2,
+      "code_bytes_per_vector": [
+        136
+      ],
+      "budget_cap_bytes": 136,
+      "within_cap": true,
+      "k": {
+        "10": {
+          "recall": 0.8182,
+          "by_seed": [
+            0.8160000000000001,
+            0.8145,
+            0.8230000000000001,
+            0.811,
+            0.8265
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.004300000000000003,
+            "ci95": [
+              -0.017705000000000002,
+              0.00900749999999999
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "100": {
+          "recall": 0.88341,
+          "by_seed": [
+            0.8828,
+            0.8835999999999999,
+            0.8860499999999999,
+            0.8821499999999999,
+            0.8824500000000001
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.0034100000000000003,
+            "ci95": [
+              -0.007800499999999999,
+              0.000750499999999991
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      },
+      "reconstruction": {
+        "reconstruction_10k": {
+          "pooled_nmse": 0.12147499535824752,
+          "mean_vector_vnmse": 0.12458818226101982,
+          "vectors_per_seed": 10000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.011190778207366844,
+            "vnmse": 0.005423889368192533,
+            "ci95_by_metric": [
+              [
+                0.009941493680268795,
+                0.012683814808781432
+              ],
+              [
+                0.004522163177103841,
+                0.006327080941507177
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        },
+        "reconstruction_full20k": {
+          "pooled_nmse": 0.12146601664161406,
+          "mean_vector_vnmse": 0.12460593256475741,
+          "vectors_per_seed": 20000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.010427843226022387,
+            "vnmse": 0.005514040610403045,
+            "ci95_by_metric": [
+              [
+                0.00909422797047187,
+                0.011927459099918103
+              ],
+              [
+                0.004634736575322734,
+                0.006339976966221378
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        }
+      },
+      "tiny_group_count_by_seed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "whole_zero_count_by_seed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reserved_padding_bytes": [
+        6
+      ]
+    },
+    {
+      "mode": "block448_group_bf16_samestride",
+      "bits": 3,
+      "code_bytes_per_vector": [
+        200
+      ],
+      "budget_cap_bytes": 200,
+      "within_cap": true,
+      "k": {
+        "10": {
+          "recall": 0.8928000000000001,
+          "by_seed": [
+            0.8875000000000002,
+            0.8985000000000001,
+            0.8965000000000001,
+            0.8870000000000001,
+            0.8945000000000002
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.0045,
+            "ci95": [
+              -0.0145025,
+              0.0052999999999999966
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "100": {
+          "recall": 0.9365699999999999,
+          "by_seed": [
+            0.93765,
+            0.9353,
+            0.9357000000000001,
+            0.9360499999999999,
+            0.9381499999999999
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.004049999999999999,
+            "ci95": [
+              -0.006350249999999998,
+              -0.0015694999999999993
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      },
+      "reconstruction": {
+        "reconstruction_10k": {
+          "pooled_nmse": 0.03221625095233455,
+          "mean_vector_vnmse": 0.03276426616622811,
+          "vectors_per_seed": 10000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.0010537627991246586,
+            "vnmse": -3.0438753988053235e-05,
+            "ci95_by_metric": [
+              [
+                0.00011937439231280572,
+                0.0021929056836563696
+              ],
+              [
+                -0.000179155010314902,
+                0.00018502129175704957
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        },
+        "reconstruction_full20k": {
+          "pooled_nmse": 0.03222176022740513,
+          "mean_vector_vnmse": 0.03277792491112099,
+          "vectors_per_seed": 20000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.000895364159770054,
+            "vnmse": 5.552562137786654e-06,
+            "ci95_by_metric": [
+              [
+                2.8517424899836274e-05,
+                0.001965653049519983
+              ],
+              [
+                -0.0001462393878864031,
+                0.0002156179471657499
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        }
+      },
+      "tiny_group_count_by_seed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "whole_zero_count_by_seed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reserved_padding_bytes": [
+        14
+      ]
+    },
+    {
+      "mode": "block448_group_bf16_samestride",
+      "bits": 4,
+      "code_bytes_per_vector": [
+        264
+      ],
+      "budget_cap_bytes": 264,
+      "within_cap": true,
+      "k": {
+        "10": {
+          "recall": 0.9376000000000001,
+          "by_seed": [
+            0.9345000000000002,
+            0.9380000000000002,
+            0.9430000000000001,
+            0.9430000000000001,
+            0.9295000000000002
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.007899999999999999,
+            "ci95": [
+              -0.017102499999999993,
+              0.00019999999999999952
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "100": {
+          "recall": 0.96488,
+          "by_seed": [
+            0.9643,
+            0.9657000000000001,
+            0.9647500000000001,
+            0.9651,
+            0.96455
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": -0.0036899999999999997,
+            "ci95": [
+              -0.005009999999999997,
+              -0.0024097500000000004
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      },
+      "reconstruction": {
+        "reconstruction_10k": {
+          "pooled_nmse": 0.008651926541937407,
+          "mean_vector_vnmse": 0.008737652538204447,
+          "vectors_per_seed": 10000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.00027747264619065216,
+            "vnmse": -0.0001131715215720655,
+            "ci95_by_metric": [
+              [
+                0.0001876837955171167,
+                0.00036726149668995026
+              ],
+              [
+                -0.0001678839080290536,
+                -5.858025545311084e-05
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        },
+        "reconstruction_full20k": {
+          "pooled_nmse": 0.008655754856573383,
+          "mean_vector_vnmse": 0.008739496348553153,
+          "vectors_per_seed": 20000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.00026941974286526574,
+            "vnmse": -0.00010623686722287598,
+            "ci95_by_metric": [
+              [
+                0.0001953698757794272,
+                0.00033659482201146493
+              ],
+              [
+                -0.00016067112056376848,
+                -5.404074522699295e-05
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        }
+      },
+      "tiny_group_count_by_seed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "whole_zero_count_by_seed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reserved_padding_bytes": [
+        22
+      ]
+    },
+    {
+      "mode": "full512_global",
+      "bits": 2,
+      "code_bytes_per_vector": [
+        136
+      ],
+      "budget_cap_bytes": 136,
+      "within_cap": true,
+      "k": {
+        "10": {
+          "recall": 0.8225000000000001,
+          "by_seed": [
+            0.8170000000000002,
+            0.815,
+            0.8275,
+            0.8325,
+            0.8205000000000001
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "100": {
+          "recall": 0.8868199999999999,
+          "by_seed": [
+            0.8846,
+            0.8903,
+            0.884,
+            0.8903,
+            0.8848999999999999
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      },
+      "reconstruction": {
+        "reconstruction_10k": {
+          "pooled_nmse": 0.11028421715088067,
+          "mean_vector_vnmse": 0.11916429289282729,
+          "vectors_per_seed": 10000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.0,
+            "vnmse": 0.0,
+            "ci95_by_metric": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        },
+        "reconstruction_full20k": {
+          "pooled_nmse": 0.11103817341559168,
+          "mean_vector_vnmse": 0.11909189195435436,
+          "vectors_per_seed": 20000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.0,
+            "vnmse": 0.0,
+            "ci95_by_metric": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        }
+      }
+    },
+    {
+      "mode": "full512_global",
+      "bits": 3,
+      "code_bytes_per_vector": [
+        200
+      ],
+      "budget_cap_bytes": 200,
+      "within_cap": true,
+      "k": {
+        "10": {
+          "recall": 0.8973000000000002,
+          "by_seed": [
+            0.8995000000000002,
+            0.8970000000000001,
+            0.8975000000000002,
+            0.9010000000000001,
+            0.8915000000000001
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "100": {
+          "recall": 0.94062,
+          "by_seed": [
+            0.9384,
+            0.94085,
+            0.93935,
+            0.9418,
+            0.9427000000000001
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      },
+      "reconstruction": {
+        "reconstruction_10k": {
+          "pooled_nmse": 0.031162488153209895,
+          "mean_vector_vnmse": 0.03279470492021616,
+          "vectors_per_seed": 10000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.0,
+            "vnmse": 0.0,
+            "ci95_by_metric": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        },
+        "reconstruction_full20k": {
+          "pooled_nmse": 0.03132639606763508,
+          "mean_vector_vnmse": 0.032772372348983204,
+          "vectors_per_seed": 20000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.0,
+            "vnmse": 0.0,
+            "ci95_by_metric": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        }
+      }
+    },
+    {
+      "mode": "full512_global",
+      "bits": 4,
+      "code_bytes_per_vector": [
+        264
+      ],
+      "budget_cap_bytes": 264,
+      "within_cap": true,
+      "k": {
+        "10": {
+          "recall": 0.9455000000000001,
+          "by_seed": [
+            0.9425,
+            0.9425,
+            0.9525000000000001,
+            0.9415,
+            0.9485000000000001
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "100": {
+          "recall": 0.9685700000000002,
+          "by_seed": [
+            0.9684,
+            0.96935,
+            0.9682,
+            0.96815,
+            0.96875
+          ],
+          "paired_delta_vs_frozen_full512": {
+            "delta": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 1000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      },
+      "reconstruction": {
+        "reconstruction_10k": {
+          "pooled_nmse": 0.008374453895746755,
+          "mean_vector_vnmse": 0.008850824059776512,
+          "vectors_per_seed": 10000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.0,
+            "vnmse": 0.0,
+            "ci95_by_metric": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        },
+        "reconstruction_full20k": {
+          "pooled_nmse": 0.008386335113708118,
+          "mean_vector_vnmse": 0.008845733215776029,
+          "vectors_per_seed": 20000,
+          "paired_seed_delta_vs_frozen_full512": {
+            "nmse": 0.0,
+            "vnmse": 0.0,
+            "ci95_by_metric": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ],
+            "method": "paired seed bootstrap; conditional on fixed diagnostic vectors, NOT a base-vector bootstrap"
+          }
+        }
+      }
+    }
+  ],
+  "strict_same_stride_accuracy_identical_to_compact": true,
+  "group_fp32_reference_budget_if_run": {
+    "2": {
+      "bytes": 144,
+      "cap": 136,
+      "within_cap": false
+    },
+    "3": {
+      "bytes": 200,
+      "cap": 200,
+      "within_cap": true
+    },
+    "4": {
+      "bytes": 256,
+      "cap": 264,
+      "within_cap": true
+    }
+  }
+}
