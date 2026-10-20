@@ -1,0 +1,3989 @@
+{
+  "status": "complete",
+  "raw_sha256": "9cd57245e2ed2d6838617ae642ed4967e5f2912dfbcbadc56e60daf6469e6f48",
+  "purpose": "quality-only bounded factor diagnostic; NOT Figure2 replication",
+  "no_speed_claims": true,
+  "shapes": {
+    "xt": [
+      4096,
+      420
+    ],
+    "xb": [
+      20000,
+      420
+    ],
+    "xq": [
+      200,
+      420
+    ]
+  },
+  "limitations": [
+    "prefix 20k rather than full 994185 base",
+    "200 rather than 1000 queries",
+    "128 centers trained on pilot xt, not full base",
+    "description-derived legacy transform; exact historical source/RNG not yet obtained",
+    "fixed448 t used unchanged at512 to isolate transform without recalibration",
+    "Original ZIP omitted imported rht_glove_ann_search.py; surviving helper is NOT historically authenticated.",
+    "128 pilot centers use frozen native Faiss Lloyd training, not historical Torch Lloyd.",
+    "NumPy diagnostic signs are not historical Torch/GPU RNG replay.",
+    "Two transform seeds only in geometry/calibration diagnostic; intervals are exploratory.",
+    "Native per-residual factor includes its code/float32 conventions; do not attribute differences solely to t."
+  ],
+  "qb4_replay_validation": {
+    "cases": 45,
+    "max_per_query_recall_difference_vs_original_pilot": 0.0
+  },
+  "historical_source_manifest": {
+    "historical_zip_sha256": "20b5c1b33f836e625c033be30ff2acbfda0a6faa09f6c5acd5a691365e8eda9f",
+    "missing_frozen_dependency": "experiments/rht_glove_ann_search.py",
+    "current_dependency_full_source_sha256": "2799dd31ebd8326742f53fa976b9ec2d66900a10ec9f242543db6b98c0567d52",
+    "note": "Source/data for audit only. Missing dependency excerpt reflects surviving current code, not an authenticated historical snapshot. No dataset or timing measurements included. Historical result source paths omitted. Fixed seeds202605170,202605171. Non-power2 MSong path unchanged between frozen and current helper.",
+    "files": {
+      "frozen/rht_rabitq_multibit_distance_probe.py": "08e1494bcdaefe4a6260da390ecac648ee3a67e62e79d1701c987131b37f068f",
+      "frozen/rht_rabitq_sift_distance_probe.py": "6542423c4a460aa6d3ceec74d79945a1af22713ed131dbc64b902f719346d5d4",
+      "current_dependency_excerpt.py": "c70a700206276629bba45b97e5a486e367e592b7b28b7d77d64267e84859cb5a",
+      "historical-msong-results.json": "45b763f0f70a882652418cd2b787650a82f7734610e793abea5e63333eba351b"
+    }
+  },
+  "replayed_historical_calibration": {
+    "2": 21.213143893483906,
+    "3": 27.900015208538278,
+    "4": 59.20726108563196
+  },
+  "corrected_fixed_t_448": {
+    "2": 21.213143893483906,
+    "3": 35.97739997891893,
+    "4": 63.866708572910404
+  },
+  "calibration_counterexample": {
+    "historical": {
+      "t": 10.677078252031311,
+      "cosine": 0.9819515027242627
+    },
+    "corrected": {
+      "t": 9.43853717479568,
+      "cosine": 0.9990548840121628
+    }
+  },
+  "transform_checks": [
+    {
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "seed": 202605170,
+      "orthogonality_max_abs_error": 2.220446049250313e-16,
+      "basis_e300_nonzeros": 2,
+      "basis_e300_norm2": 0.9999999999999998,
+      "matrix_sha256_float64": "145780ab1a3752ec0b3bc5844db0f29735834a121ea492f1e364357ba794ba6b"
+    },
+    {
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "seed": 202605170,
+      "orthogonality_max_abs_error": 1.1102230246251565e-16,
+      "basis_e300_nonzeros": 512,
+      "basis_e300_norm2": 0.9999999999999999,
+      "matrix_sha256_float64": "28d0c7fd7bf4e738cf1be798dfcbfedec36060907241b0d88f924586f155bbe6"
+    },
+    {
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "seed": 202605170,
+      "orthogonality_max_abs_error": 2.220446049250313e-16,
+      "basis_e300_nonzeros": 416,
+      "basis_e300_norm2": 0.9999999999999998,
+      "matrix_sha256_float64": "3090261112825cba2677239a356f0cf21e4ab52458dd804fe6201312c30431e4"
+    },
+    {
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "seed": 202605170,
+      "orthogonality_max_abs_error": 2.220446049250313e-16,
+      "basis_e300_nonzeros": 512,
+      "basis_e300_norm2": 0.9999999999999997,
+      "matrix_sha256_float64": "1693b9dee0a86f46e0ab05cc28cfbd09e66323bc0e57016c6e1aa4a57950fbe8"
+    },
+    {
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "seed": 202605170,
+      "orthogonality_max_abs_error": 4.440892098500626e-16,
+      "basis_e300_nonzeros": 421,
+      "basis_e300_norm2": 0.9999999999999997,
+      "matrix_sha256_float64": "07244762cb161b3c70fed2e79e1b99e66f41baf92efe1e2d83a05d838a44062c"
+    },
+    {
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "seed": 202605170,
+      "orthogonality_max_abs_error": 3.3306690738754696e-16,
+      "basis_e300_nonzeros": 506,
+      "basis_e300_norm2": 0.9999999999999997,
+      "matrix_sha256_float64": "789217b8ab4c5a19ed3a80436e7d653e2e2dfa0460ea9e0abf1e9ea1ac259b5c"
+    },
+    {
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "seed": 202605171,
+      "orthogonality_max_abs_error": 2.220446049250313e-16,
+      "basis_e300_nonzeros": 2,
+      "basis_e300_norm2": 0.9999999999999998,
+      "matrix_sha256_float64": "a16387a0a90dd10a6ad446f63c44a2a167f52ba74ed62fea87df6c4eb4a0f806"
+    },
+    {
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "seed": 202605171,
+      "orthogonality_max_abs_error": 1.1102230246251565e-16,
+      "basis_e300_nonzeros": 512,
+      "basis_e300_norm2": 0.9999999999999999,
+      "matrix_sha256_float64": "5df3b56714a612cba9ff507d4ba4fb0489cdade914cf944d5589d82dc251a26d"
+    },
+    {
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "seed": 202605171,
+      "orthogonality_max_abs_error": 2.220446049250313e-16,
+      "basis_e300_nonzeros": 416,
+      "basis_e300_norm2": 0.9999999999999998,
+      "matrix_sha256_float64": "eb34c4254539b7f9a7e7b5c8661ed3feab5df928d94beb79d5011158b9bb0665"
+    },
+    {
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "seed": 202605171,
+      "orthogonality_max_abs_error": 2.220446049250313e-16,
+      "basis_e300_nonzeros": 469,
+      "basis_e300_norm2": 0.9999999999999998,
+      "matrix_sha256_float64": "a793b0951dd40caeab08e0687f497d15d7b29fdbbcabde15d4581619f9f46e8e"
+    },
+    {
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "seed": 202605171,
+      "orthogonality_max_abs_error": 4.440892098500626e-16,
+      "basis_e300_nonzeros": 448,
+      "basis_e300_norm2": 0.9999999999999997,
+      "matrix_sha256_float64": "409aef5348487abe4bf899725f4cf83e393601505b5f8177319d9e637b9436f5"
+    },
+    {
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "seed": 202605171,
+      "orthogonality_max_abs_error": 3.3306690738754696e-16,
+      "basis_e300_nonzeros": 512,
+      "basis_e300_norm2": 0.9999999999999996,
+      "matrix_sha256_float64": "635dbce4443a6634d8b47f9038d3a5293a6b9eba4599b852828f9c7942d8155a"
+    },
+    {
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "seed": 202605170,
+      "orthogonality_max_abs_error": 2.220446049250313e-16,
+      "basis_e300_nonzeros": 2,
+      "basis_e300_norm2": 0.9999999999999998,
+      "matrix_sha256_float64": "145780ab1a3752ec0b3bc5844db0f29735834a121ea492f1e364357ba794ba6b"
+    },
+    {
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "seed": 202605170,
+      "orthogonality_max_abs_error": 1.1102230246251565e-16,
+      "basis_e300_nonzeros": 512,
+      "basis_e300_norm2": 0.9999999999999999,
+      "matrix_sha256_float64": "28d0c7fd7bf4e738cf1be798dfcbfedec36060907241b0d88f924586f155bbe6"
+    },
+    {
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "seed": 202605170,
+      "orthogonality_max_abs_error": 2.220446049250313e-16,
+      "basis_e300_nonzeros": 416,
+      "basis_e300_norm2": 0.9999999999999998,
+      "matrix_sha256_float64": "3090261112825cba2677239a356f0cf21e4ab52458dd804fe6201312c30431e4"
+    },
+    {
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "seed": 202605170,
+      "orthogonality_max_abs_error": 2.220446049250313e-16,
+      "basis_e300_nonzeros": 512,
+      "basis_e300_norm2": 0.9999999999999997,
+      "matrix_sha256_float64": "1693b9dee0a86f46e0ab05cc28cfbd09e66323bc0e57016c6e1aa4a57950fbe8"
+    },
+    {
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "seed": 202605170,
+      "orthogonality_max_abs_error": 4.440892098500626e-16,
+      "basis_e300_nonzeros": 421,
+      "basis_e300_norm2": 0.9999999999999997,
+      "matrix_sha256_float64": "07244762cb161b3c70fed2e79e1b99e66f41baf92efe1e2d83a05d838a44062c"
+    },
+    {
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "seed": 202605170,
+      "orthogonality_max_abs_error": 3.3306690738754696e-16,
+      "basis_e300_nonzeros": 506,
+      "basis_e300_norm2": 0.9999999999999997,
+      "matrix_sha256_float64": "789217b8ab4c5a19ed3a80436e7d653e2e2dfa0460ea9e0abf1e9ea1ac259b5c"
+    },
+    {
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "seed": 202605171,
+      "orthogonality_max_abs_error": 2.220446049250313e-16,
+      "basis_e300_nonzeros": 2,
+      "basis_e300_norm2": 0.9999999999999998,
+      "matrix_sha256_float64": "a16387a0a90dd10a6ad446f63c44a2a167f52ba74ed62fea87df6c4eb4a0f806"
+    },
+    {
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "seed": 202605171,
+      "orthogonality_max_abs_error": 1.1102230246251565e-16,
+      "basis_e300_nonzeros": 512,
+      "basis_e300_norm2": 0.9999999999999999,
+      "matrix_sha256_float64": "5df3b56714a612cba9ff507d4ba4fb0489cdade914cf944d5589d82dc251a26d"
+    },
+    {
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "seed": 202605171,
+      "orthogonality_max_abs_error": 2.220446049250313e-16,
+      "basis_e300_nonzeros": 416,
+      "basis_e300_norm2": 0.9999999999999998,
+      "matrix_sha256_float64": "eb34c4254539b7f9a7e7b5c8661ed3feab5df928d94beb79d5011158b9bb0665"
+    },
+    {
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "seed": 202605171,
+      "orthogonality_max_abs_error": 2.220446049250313e-16,
+      "basis_e300_nonzeros": 469,
+      "basis_e300_norm2": 0.9999999999999998,
+      "matrix_sha256_float64": "a793b0951dd40caeab08e0687f497d15d7b29fdbbcabde15d4581619f9f46e8e"
+    },
+    {
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "seed": 202605171,
+      "orthogonality_max_abs_error": 4.440892098500626e-16,
+      "basis_e300_nonzeros": 448,
+      "basis_e300_norm2": 0.9999999999999997,
+      "matrix_sha256_float64": "409aef5348487abe4bf899725f4cf83e393601505b5f8177319d9e637b9436f5"
+    },
+    {
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "seed": 202605171,
+      "orthogonality_max_abs_error": 3.3306690738754696e-16,
+      "basis_e300_nonzeros": 512,
+      "basis_e300_norm2": 0.9999999999999996,
+      "matrix_sha256_float64": "635dbce4443a6634d8b47f9038d3a5293a6b9eba4599b852828f9c7942d8155a"
+    }
+  ],
+  "factor_summaries": [
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.884325,
+      "recall100_by_seed": [
+        0.8837,
+        0.88495
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.1214234323583529,
+      "unbiased_vnmse": 0.12275083547015904,
+      "best_scalar_vnmse": 0.10917988854568808
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.886725,
+      "recall100_by_seed": [
+        0.8854,
+        0.8880500000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0023999999999999963,
+        "ci95": [
+          -0.0014999999999999992,
+          0.006349999999999998
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.001699999999999996,
+        0.003099999999999997
+      ],
+      "unbiased_nmse": 0.13662589843885373,
+      "unbiased_vnmse": 0.13708815598276064,
+      "best_scalar_vnmse": 0.12047792084391215
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.8879249999999999,
+      "recall100_by_seed": [
+        0.8879499999999999,
+        0.8879
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0035999999999999977,
+        "ci95": [
+          -0.00045062500000000473,
+          0.007349999999999996
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.004249999999999999,
+        0.0029499999999999978
+      ],
+      "unbiased_nmse": 0.1395265181323054,
+      "unbiased_vnmse": 0.1359130268021892,
+      "best_scalar_vnmse": 0.11957380906562701
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.8364499999999999,
+      "recall100_by_seed": [
+        0.83845,
+        0.8344499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.15350921794813868,
+      "unbiased_vnmse": 0.1667576334333702,
+      "best_scalar_vnmse": 0.14176261920646277
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.8756999999999999,
+      "recall100_by_seed": [
+        0.87725,
+        0.8741500000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.03925000000000001,
+        "ci95": [
+          0.03449875000000001,
+          0.04375125000000002
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.038800000000000015,
+        0.039700000000000006
+      ],
+      "unbiased_nmse": 0.13290836011637558,
+      "unbiased_vnmse": 0.14165375900069144,
+      "best_scalar_vnmse": 0.1238886511684356
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.88075,
+      "recall100_by_seed": [
+        0.8797,
+        0.8818
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.04430000000000001,
+        "ci95": [
+          0.03722437500000001,
+          0.05105125000000001
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.04125000000000001,
+        0.04735000000000001
+      ],
+      "unbiased_nmse": 0.12964864671074183,
+      "unbiased_vnmse": 0.1339725771923755,
+      "best_scalar_vnmse": 0.11806109790024036
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.9359999999999999,
+      "recall100_by_seed": [
+        0.9356,
+        0.9363999999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.03354756631427801,
+      "unbiased_vnmse": 0.036203450273279564,
+      "best_scalar_vnmse": 0.03492804355684673
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.9373249999999999,
+      "recall100_by_seed": [
+        0.93695,
+        0.9377
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0013249999999999965,
+        "ci95": [
+          -0.0014512500000000035,
+          0.004052499999999994
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.001349999999999995,
+        0.0012999999999999978
+      ],
+      "unbiased_nmse": 0.03998129142224027,
+      "unbiased_vnmse": 0.039817343126347826,
+      "best_scalar_vnmse": 0.03827925771967088
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.9357249999999999,
+      "recall100_by_seed": [
+        0.9351999999999998,
+        0.93625
+      ],
+      "delta_vs_1rht": {
+        "delta": -0.00027500000000000164,
+        "ci95": [
+          -0.0029500000000000047,
+          0.0022012499999999875
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.00039999999999999866,
+        -0.00015000000000000457
+      ],
+      "unbiased_nmse": 0.04155197964574024,
+      "unbiased_vnmse": 0.03967220505617084,
+      "best_scalar_vnmse": 0.03814318722741622
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.9007999999999999,
+      "recall100_by_seed": [
+        0.9031,
+        0.8985
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.04446058421557675,
+      "unbiased_vnmse": 0.05542176574435721,
+      "best_scalar_vnmse": 0.052057386319021653
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.92885,
+      "recall100_by_seed": [
+        0.9296,
+        0.9281
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.028049999999999988,
+        "ci95": [
+          0.023998749999999985,
+          0.03180124999999999
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.026499999999999985,
+        0.029599999999999987
+      ],
+      "unbiased_nmse": 0.03848315688121239,
+      "unbiased_vnmse": 0.042320433590606235,
+      "best_scalar_vnmse": 0.04054399276868841
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.934075,
+      "recall100_by_seed": [
+        0.9358,
+        0.93235
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.033274999999999985,
+        "ci95": [
+          0.029847499999999985,
+          0.03699999999999998
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.032699999999999986,
+        0.03384999999999998
+      ],
+      "unbiased_nmse": 0.03659723898871442,
+      "unbiased_vnmse": 0.038479486366186186,
+      "best_scalar_vnmse": 0.037034613745169184
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.9643,
+      "recall100_by_seed": [
+        0.96455,
+        0.96405
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.010770771313207434,
+      "unbiased_vnmse": 0.010955621558910139,
+      "best_scalar_vnmse": 0.010835943755121773
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.9636,
+      "recall100_by_seed": [
+        0.9627500000000001,
+        0.9644499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": -0.0006999999999999989,
+        "ci95": [
+          -0.0033499999999999992,
+          0.001951249999999998
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.0017999999999999989,
+        0.0004000000000000009
+      ],
+      "unbiased_nmse": 0.011968692910084506,
+      "unbiased_vnmse": 0.011888491237715373,
+      "best_scalar_vnmse": 0.01174654709617042
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.963225,
+      "recall100_by_seed": [
+        0.9627000000000001,
+        0.96375
+      ],
+      "delta_vs_1rht": {
+        "delta": -0.0010750000000000004,
+        "ci95": [
+          -0.003299999999999998,
+          0.0013012499999999956
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.0018500000000000012,
+        -0.0002999999999999997
+      ],
+      "unbiased_nmse": 0.013313663848159824,
+      "unbiased_vnmse": 0.01201172551466795,
+      "best_scalar_vnmse": 0.011865546626855888
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.9382999999999998,
+      "recall100_by_seed": [
+        0.9394499999999999,
+        0.9371499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.01596314530900038,
+      "unbiased_vnmse": 0.021241898232827974,
+      "best_scalar_vnmse": 0.020599131246137607
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.9587749999999999,
+      "recall100_by_seed": [
+        0.9586,
+        0.9589500000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.020474999999999986,
+        "ci95": [
+          0.017149999999999988,
+          0.02410124999999998
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.019149999999999986,
+        0.021799999999999983
+      ],
+      "unbiased_nmse": 0.01188124837392266,
+      "unbiased_vnmse": 0.013497383337713966,
+      "best_scalar_vnmse": 0.013297315057780736
+    },
+    {
+      "centers": 1,
+      "quantizer": "corrected_fixed_t",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.9608500000000001,
+      "recall100_by_seed": [
+        0.9608000000000001,
+        0.9609000000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.022549999999999987,
+        "ci95": [
+          0.01919874999999999,
+          0.025999999999999978
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.02134999999999999,
+        0.023749999999999983
+      ],
+      "unbiased_nmse": 0.010815788718621443,
+      "unbiased_vnmse": 0.0115702962607524,
+      "best_scalar_vnmse": 0.011433127630348653
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.884325,
+      "recall100_by_seed": [
+        0.8837,
+        0.88495
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.1214234323583529,
+      "unbiased_vnmse": 0.12275083547015904,
+      "best_scalar_vnmse": 0.10917988854568808
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.886725,
+      "recall100_by_seed": [
+        0.8854,
+        0.8880500000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0023999999999999963,
+        "ci95": [
+          -0.0014999999999999992,
+          0.006349999999999998
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.001699999999999996,
+        0.003099999999999997
+      ],
+      "unbiased_nmse": 0.13662589843885373,
+      "unbiased_vnmse": 0.13708815598276064,
+      "best_scalar_vnmse": 0.12047792084391215
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.8879249999999999,
+      "recall100_by_seed": [
+        0.8879499999999999,
+        0.8879
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0035999999999999977,
+        "ci95": [
+          -0.00045062500000000473,
+          0.007349999999999996
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.004249999999999999,
+        0.0029499999999999978
+      ],
+      "unbiased_nmse": 0.1395265181323054,
+      "unbiased_vnmse": 0.1359130268021892,
+      "best_scalar_vnmse": 0.11957380906562701
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.8364499999999999,
+      "recall100_by_seed": [
+        0.83845,
+        0.8344499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.15350921794813868,
+      "unbiased_vnmse": 0.1667576334333702,
+      "best_scalar_vnmse": 0.14176261920646277
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.8756999999999999,
+      "recall100_by_seed": [
+        0.87725,
+        0.8741500000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.03925000000000001,
+        "ci95": [
+          0.03449875000000001,
+          0.04375125000000002
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.038800000000000015,
+        0.039700000000000006
+      ],
+      "unbiased_nmse": 0.13290836011637558,
+      "unbiased_vnmse": 0.14165375900069144,
+      "best_scalar_vnmse": 0.1238886511684356
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.88075,
+      "recall100_by_seed": [
+        0.8797,
+        0.8818
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.04430000000000001,
+        "ci95": [
+          0.03722437500000001,
+          0.05105125000000001
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.04125000000000001,
+        0.04735000000000001
+      ],
+      "unbiased_nmse": 0.12964864671074183,
+      "unbiased_vnmse": 0.1339725771923755,
+      "best_scalar_vnmse": 0.11806109790024036
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.9226499999999999,
+      "recall100_by_seed": [
+        0.9219499999999999,
+        0.9233499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.050890410149025664,
+      "unbiased_vnmse": 0.054790706931378635,
+      "best_scalar_vnmse": 0.0519356332699837
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.9230750000000001,
+      "recall100_by_seed": [
+        0.92155,
+        0.9246
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.00042499999999999873,
+        "ci95": [
+          -0.002750625000000002,
+          0.003199999999999992
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.0003999999999999981,
+        0.0012499999999999955
+      ],
+      "unbiased_nmse": 0.05575540526906246,
+      "unbiased_vnmse": 0.05565881870825337,
+      "best_scalar_vnmse": 0.052717835406887154
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.9239999999999999,
+      "recall100_by_seed": [
+        0.9241999999999999,
+        0.9238
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0013499999999999962,
+        "ci95": [
+          -0.0017525000000000008,
+          0.004775624999999994
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.002249999999999996,
+        0.0004499999999999965
+      ],
+      "unbiased_nmse": 0.05723290259091306,
+      "unbiased_vnmse": 0.05585176153147342,
+      "best_scalar_vnmse": 0.05288946223939545
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.9061250000000001,
+      "recall100_by_seed": [
+        0.9070500000000001,
+        0.9052
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.051963350259583235,
+      "unbiased_vnmse": 0.058884108686129186,
+      "best_scalar_vnmse": 0.05541025168245735
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.92175,
+      "recall100_by_seed": [
+        0.92215,
+        0.9213499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.01562499999999999,
+        "ci95": [
+          0.012098749999999983,
+          0.01905124999999999
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.015099999999999988,
+        0.016149999999999987
+      ],
+      "unbiased_nmse": 0.04955287835289636,
+      "unbiased_vnmse": 0.051255339108342055,
+      "best_scalar_vnmse": 0.048734588994964495
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.9216249999999999,
+      "recall100_by_seed": [
+        0.9217,
+        0.92155
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.01549999999999999,
+        "ci95": [
+          0.011748749999999985,
+          0.01915249999999999
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.01464999999999999,
+        0.01634999999999999
+      ],
+      "unbiased_nmse": 0.04864008726730429,
+      "unbiased_vnmse": 0.04954705518450396,
+      "best_scalar_vnmse": 0.047200072554212685
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.9629750000000001,
+      "recall100_by_seed": [
+        0.9626500000000001,
+        0.9633000000000002
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.012225853768710822,
+      "unbiased_vnmse": 0.012354754763411956,
+      "best_scalar_vnmse": 0.012203452732115492
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.9624250000000001,
+      "recall100_by_seed": [
+        0.96285,
+        0.9620000000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": -0.0005499999999999999,
+        "ci95": [
+          -0.0027524999999999997,
+          0.0016999999999999988
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.00020000000000000185,
+        -0.0013000000000000017
+      ],
+      "unbiased_nmse": 0.01289374634952047,
+      "unbiased_vnmse": 0.012836625144004883,
+      "best_scalar_vnmse": 0.01267279180080302
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.9610000000000001,
+      "recall100_by_seed": [
+        0.9609000000000001,
+        0.9611000000000002
+      ],
+      "delta_vs_1rht": {
+        "delta": -0.0019749999999999976,
+        "ci95": [
+          -0.003851250000000004,
+          5.0000000000004556e-05
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.0017499999999999948,
+        -0.0022
+      ],
+      "unbiased_nmse": 0.014069515424855442,
+      "unbiased_vnmse": 0.012986343970065164,
+      "best_scalar_vnmse": 0.012817657142459266
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.9428249999999998,
+      "recall100_by_seed": [
+        0.9441999999999999,
+        0.9414499999999998
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.015434832167150258,
+      "unbiased_vnmse": 0.019523508342043472,
+      "best_scalar_vnmse": 0.019005599626704762
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.9583499999999999,
+      "recall100_by_seed": [
+        0.95785,
+        0.9588499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.015524999999999994,
+        "ci95": [
+          0.011797499999999994,
+          0.019299999999999987
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.013649999999999995,
+        0.017399999999999992
+      ],
+      "unbiased_nmse": 0.01220134908481646,
+      "unbiased_vnmse": 0.013303171235004414,
+      "best_scalar_vnmse": 0.013115553043491343
+    },
+    {
+      "centers": 1,
+      "quantizer": "historical_fixed_t",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.95985,
+      "recall100_by_seed": [
+        0.95905,
+        0.96065
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.01702499999999999,
+        "ci95": [
+          0.0127,
+          0.02124999999999998
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.014849999999999995,
+        0.019199999999999984
+      ],
+      "unbiased_nmse": 0.011460772977923629,
+      "unbiased_vnmse": 0.011927602920598721,
+      "best_scalar_vnmse": 0.011784295246265834
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.868975,
+      "recall100_by_seed": [
+        0.87035,
+        0.8676
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.09589972319993462,
+      "unbiased_vnmse": 0.12471078781699324,
+      "best_scalar_vnmse": 0.1106110699647815
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.8901000000000002,
+      "recall100_by_seed": [
+        0.8895500000000002,
+        0.8906500000000002
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.021124999999999998,
+        "ci95": [
+          0.013924374999999998,
+          0.0289025
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0192,
+        0.023049999999999998
+      ],
+      "unbiased_nmse": 0.14101278722090538,
+      "unbiased_vnmse": 0.1409840912511736,
+      "best_scalar_vnmse": 0.12349057772277325
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.8886,
+      "recall100_by_seed": [
+        0.88935,
+        0.8878499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.019624999999999993,
+        "ci95": [
+          0.012749374999999993,
+          0.026756874999999992
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.019000000000000003,
+        0.02024999999999999
+      ],
+      "unbiased_nmse": 0.14291198132874006,
+      "unbiased_vnmse": 0.13978216671845323,
+      "best_scalar_vnmse": 0.12257623445215479
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.8372999999999999,
+      "recall100_by_seed": [
+        0.841,
+        0.8336
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.1364026012106146,
+      "unbiased_vnmse": 0.16672437168882825,
+      "best_scalar_vnmse": 0.1417669931697422
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.87465,
+      "recall100_by_seed": [
+        0.87625,
+        0.8730500000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.03735,
+        "ci95": [
+          0.031998750000000006,
+          0.0426
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.035250000000000004,
+        0.039450000000000006
+      ],
+      "unbiased_nmse": 0.13888588854035602,
+      "unbiased_vnmse": 0.14563599754627854,
+      "best_scalar_vnmse": 0.1269674862364394
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.8815500000000001,
+      "recall100_by_seed": [
+        0.8811500000000001,
+        0.8819499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.044250000000000005,
+        "ci95": [
+          0.03665,
+          0.05190250000000001
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.040150000000000005,
+        0.04835000000000001
+      ],
+      "unbiased_nmse": 0.1369581914033422,
+      "unbiased_vnmse": 0.13970822636474511,
+      "best_scalar_vnmse": 0.12251230829430101
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.9404250000000001,
+      "recall100_by_seed": [
+        0.94025,
+        0.9406
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.02340362221195702,
+      "unbiased_vnmse": 0.03230542764261787,
+      "best_scalar_vnmse": 0.03125571620262086
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.9385999999999999,
+      "recall100_by_seed": [
+        0.93675,
+        0.9404499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": -0.0018250000000000002,
+        "ci95": [
+          -0.005251250000000001,
+          0.0014256249999999983
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.0035000000000000014,
+        -0.000149999999999999
+      ],
+      "unbiased_nmse": 0.03890926267043695,
+      "unbiased_vnmse": 0.038671672387837516,
+      "best_scalar_vnmse": 0.03721454619248718
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.9381499999999999,
+      "recall100_by_seed": [
+        0.9388999999999998,
+        0.9374000000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": -0.002274999999999998,
+        "ci95": [
+          -0.005450625000000006,
+          0.0005256250000000011
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.001349999999999995,
+        -0.003200000000000001
+      ],
+      "unbiased_nmse": 0.040499362461309446,
+      "unbiased_vnmse": 0.038418177717191304,
+      "best_scalar_vnmse": 0.036977450853475466
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.909225,
+      "recall100_by_seed": [
+        0.91095,
+        0.9075
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.041207034961533134,
+      "unbiased_vnmse": 0.05194871046351643,
+      "best_scalar_vnmse": 0.04910001831374568
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.9281999999999999,
+      "recall100_by_seed": [
+        0.9279000000000001,
+        0.9285
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.01897499999999999,
+        "ci95": [
+          0.014398749999999984,
+          0.02335124999999999
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.01694999999999999,
+        0.020999999999999987
+      ],
+      "unbiased_nmse": 0.03767008002631375,
+      "unbiased_vnmse": 0.04161943845450511,
+      "best_scalar_vnmse": 0.03990690896341925
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.9336249999999999,
+      "recall100_by_seed": [
+        0.9361,
+        0.9311499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.024399999999999988,
+        "ci95": [
+          0.020749999999999994,
+          0.02765062499999998
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.02514999999999999,
+        0.023649999999999984
+      ],
+      "unbiased_nmse": 0.03610719993213243,
+      "unbiased_vnmse": 0.03805616723580152,
+      "best_scalar_vnmse": 0.03664233740673308
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.9661750000000001,
+      "recall100_by_seed": [
+        0.9667500000000001,
+        0.9656
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.008569114157116977,
+      "unbiased_vnmse": 0.010409611727062307,
+      "best_scalar_vnmse": 0.010298423112884963
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.965275,
+      "recall100_by_seed": [
+        0.96335,
+        0.9672
+      ],
+      "delta_vs_1rht": {
+        "delta": -0.0008999999999999983,
+        "ci95": [
+          -0.004901249999999998,
+          0.0030500000000000006
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.0033999999999999976,
+        0.001600000000000001
+      ],
+      "unbiased_nmse": 0.012458057133603602,
+      "unbiased_vnmse": 0.012313813095567599,
+      "best_scalar_vnmse": 0.012161393745758746
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.964825,
+      "recall100_by_seed": [
+        0.9649500000000001,
+        0.9647
+      ],
+      "delta_vs_1rht": {
+        "delta": -0.0013499999999999983,
+        "ci95": [
+          -0.0033999999999999946,
+          0.0007512500000000033
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.0017999999999999971,
+        -0.0008999999999999997
+      ],
+      "unbiased_nmse": 0.013465782991085237,
+      "unbiased_vnmse": 0.012340089288285635,
+      "best_scalar_vnmse": 0.012185969223153882
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.9463749999999999,
+      "recall100_by_seed": [
+        0.9484999999999999,
+        0.9442499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.013987141329522196,
+      "unbiased_vnmse": 0.017292815692785873,
+      "best_scalar_vnmse": 0.016957306317867477
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.9591249999999999,
+      "recall100_by_seed": [
+        0.9592,
+        0.95905
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.012749999999999994,
+        "ci95": [
+          0.008998749999999993,
+          0.016751249999999992
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.010699999999999994,
+        0.014799999999999995
+      ],
+      "unbiased_nmse": 0.012136364372040152,
+      "unbiased_vnmse": 0.0135460869305968,
+      "best_scalar_vnmse": 0.013356660472714419
+    },
+    {
+      "centers": 1,
+      "quantizer": "native_per_residual",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.9616750000000001,
+      "recall100_by_seed": [
+        0.9614,
+        0.9619500000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.015299999999999998,
+        "ci95": [
+          0.010899999999999998,
+          0.019849999999999996
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.012899999999999998,
+        0.017699999999999997
+      ],
+      "unbiased_nmse": 0.011664453125170064,
+      "unbiased_vnmse": 0.012261163109452987,
+      "best_scalar_vnmse": 0.012109544144096417
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.9389,
+      "recall100_by_seed": [
+        0.9390999999999999,
+        0.9387000000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.12171948581009624,
+      "unbiased_vnmse": 0.13042323781842916,
+      "best_scalar_vnmse": 0.11527610376119089
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.9404499999999999,
+      "recall100_by_seed": [
+        0.9408,
+        0.9400999999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0015499999999999976,
+        "ci95": [
+          -0.0007500000000000001,
+          0.0036756249999999953
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0017,
+        0.0013999999999999952
+      ],
+      "unbiased_nmse": 0.1356602220558672,
+      "unbiased_vnmse": 0.13544626267892815,
+      "best_scalar_vnmse": 0.11921851686690094
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.9398249999999999,
+      "recall100_by_seed": [
+        0.9392999999999999,
+        0.94035
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0009249999999999978,
+        "ci95": [
+          -0.001899999999999999,
+          0.003399999999999992
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0001999999999999974,
+        0.001649999999999998
+      ],
+      "unbiased_nmse": 0.13706869233650082,
+      "unbiased_vnmse": 0.1358573321613425,
+      "best_scalar_vnmse": 0.11953736784235214
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.8973,
+      "recall100_by_seed": [
+        0.89715,
+        0.8974500000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.1771984293182548,
+      "unbiased_vnmse": 0.19574204903304224,
+      "best_scalar_vnmse": 0.16206329338102105
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.9316,
+      "recall100_by_seed": [
+        0.93125,
+        0.93195
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0343,
+        "ci95": [
+          0.030448750000000004,
+          0.038050625
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0341,
+        0.0345
+      ],
+      "unbiased_nmse": 0.14317222526609133,
+      "unbiased_vnmse": 0.14878238199460278,
+      "best_scalar_vnmse": 0.1292365033266451
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.934775,
+      "recall100_by_seed": [
+        0.9349000000000001,
+        0.93465
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.037474999999999994,
+        "ci95": [
+          0.0337,
+          0.04155
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.03774999999999999,
+        0.0372
+      ],
+      "unbiased_nmse": 0.1352036158869687,
+      "unbiased_vnmse": 0.1375929854313654,
+      "best_scalar_vnmse": 0.12084479056434747
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.9663250000000001,
+      "recall100_by_seed": [
+        0.96745,
+        0.9652000000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.0362528167359735,
+      "unbiased_vnmse": 0.03798582412096538,
+      "best_scalar_vnmse": 0.03658420081156299
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.966725,
+      "recall100_by_seed": [
+        0.96705,
+        0.9664
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.00040000000000000034,
+        "ci95": [
+          -0.0017512500000000015,
+          0.0026012500000000024
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.00039999999999999866,
+        0.0011999999999999995
+      ],
+      "unbiased_nmse": 0.03942253927530187,
+      "unbiased_vnmse": 0.039413364793220204,
+      "best_scalar_vnmse": 0.037907093102011666
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.96695,
+      "recall100_by_seed": [
+        0.96685,
+        0.96705
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0006250000000000016,
+        "ci95": [
+          -0.002201249999999999,
+          0.0033500000000000036
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.0005999999999999989,
+        0.0018500000000000023
+      ],
+      "unbiased_nmse": 0.04003630172086284,
+      "unbiased_vnmse": 0.039542934208642466,
+      "best_scalar_vnmse": 0.03802687229509859
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.9351999999999999,
+      "recall100_by_seed": [
+        0.9349,
+        0.9355
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.061399407190447106,
+      "unbiased_vnmse": 0.07025322145568666,
+      "best_scalar_vnmse": 0.06487942895886814
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.9604250000000001,
+      "recall100_by_seed": [
+        0.96095,
+        0.9599000000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.025224999999999977,
+        "ci95": [
+          0.02234999999999998,
+          0.028225624999999976
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.026049999999999976,
+        0.024399999999999977
+      ],
+      "unbiased_nmse": 0.043057980078839,
+      "unbiased_vnmse": 0.04585295864191445,
+      "best_scalar_vnmse": 0.04373876770838235
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.965,
+      "recall100_by_seed": [
+        0.96455,
+        0.96545
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.02979999999999998,
+        "ci95": [
+          0.026848124999999976,
+          0.03287812499999997
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.029649999999999982,
+        0.029949999999999973
+      ],
+      "unbiased_nmse": 0.039184994245354945,
+      "unbiased_vnmse": 0.040126694255432166,
+      "best_scalar_vnmse": 0.03855204890397375
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.9812750000000001,
+      "recall100_by_seed": [
+        0.9820500000000001,
+        0.9805000000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.011077686785689284,
+      "unbiased_vnmse": 0.011372262634461887,
+      "best_scalar_vnmse": 0.011242860585630478
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.9815,
+      "recall100_by_seed": [
+        0.9812000000000001,
+        0.9818000000000002
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0002250000000000002,
+        "ci95": [
+          -0.0019000000000000017,
+          0.002250000000000002
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.0008500000000000007,
+        0.0013000000000000012
+      ],
+      "unbiased_nmse": 0.011803855636362198,
+      "unbiased_vnmse": 0.0117966488860291,
+      "best_scalar_vnmse": 0.011656958528855689
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.9820250000000001,
+      "recall100_by_seed": [
+        0.9821500000000001,
+        0.9819000000000002
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0007500000000000007,
+        "ci95": [
+          -0.0008012500000000006,
+          0.002451250000000001
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.00010000000000000009,
+        0.0014000000000000013
+      ],
+      "unbiased_nmse": 0.012137201964182304,
+      "unbiased_vnmse": 0.011826311581794445,
+      "best_scalar_vnmse": 0.011685895507868124
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.954825,
+      "recall100_by_seed": [
+        0.95475,
+        0.9549000000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.024940261990531634,
+      "unbiased_vnmse": 0.03003822468044321,
+      "best_scalar_vnmse": 0.028768350950745935
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.9756999999999999,
+      "recall100_by_seed": [
+        0.9753499999999999,
+        0.9760500000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.020874999999999998,
+        "ci95": [
+          0.018698749999999993,
+          0.023400624999999998
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.020599999999999997,
+        0.021150000000000002
+      ],
+      "unbiased_nmse": 0.014035036482948019,
+      "unbiased_vnmse": 0.015489488428063664,
+      "best_scalar_vnmse": 0.015210562713768723
+    },
+    {
+      "centers": 128,
+      "quantizer": "corrected_fixed_t",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.97945,
+      "recall100_by_seed": [
+        0.9789500000000001,
+        0.9799500000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.024625000000000005,
+        "ci95": [
+          0.022224375,
+          0.027150625000000005
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0242,
+        0.025050000000000006
+      ],
+      "unbiased_nmse": 0.011906028394215888,
+      "unbiased_vnmse": 0.01231413293455388,
+      "best_scalar_vnmse": 0.012156584331056484
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.9389,
+      "recall100_by_seed": [
+        0.9390999999999999,
+        0.9387000000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.12171948581009624,
+      "unbiased_vnmse": 0.13042323781842916,
+      "best_scalar_vnmse": 0.11527610376119089
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.9404499999999999,
+      "recall100_by_seed": [
+        0.9408,
+        0.9400999999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0015499999999999976,
+        "ci95": [
+          -0.0007500000000000001,
+          0.0036756249999999953
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0017,
+        0.0013999999999999952
+      ],
+      "unbiased_nmse": 0.1356602220558672,
+      "unbiased_vnmse": 0.13544626267892815,
+      "best_scalar_vnmse": 0.11921851686690094
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.9398249999999999,
+      "recall100_by_seed": [
+        0.9392999999999999,
+        0.94035
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0009249999999999978,
+        "ci95": [
+          -0.001899999999999999,
+          0.003399999999999992
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0001999999999999974,
+        0.001649999999999998
+      ],
+      "unbiased_nmse": 0.13706869233650082,
+      "unbiased_vnmse": 0.1358573321613425,
+      "best_scalar_vnmse": 0.11953736784235214
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.8973,
+      "recall100_by_seed": [
+        0.89715,
+        0.8974500000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.1771984293182548,
+      "unbiased_vnmse": 0.19574204903304224,
+      "best_scalar_vnmse": 0.16206329338102105
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.9316,
+      "recall100_by_seed": [
+        0.93125,
+        0.93195
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0343,
+        "ci95": [
+          0.030448750000000004,
+          0.038050625
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0341,
+        0.0345
+      ],
+      "unbiased_nmse": 0.14317222526609133,
+      "unbiased_vnmse": 0.14878238199460278,
+      "best_scalar_vnmse": 0.1292365033266451
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.934775,
+      "recall100_by_seed": [
+        0.9349000000000001,
+        0.93465
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.037474999999999994,
+        "ci95": [
+          0.0337,
+          0.04155
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.03774999999999999,
+        0.0372
+      ],
+      "unbiased_nmse": 0.1352036158869687,
+      "unbiased_vnmse": 0.1375929854313654,
+      "best_scalar_vnmse": 0.12084479056434747
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.961875,
+      "recall100_by_seed": [
+        0.96235,
+        0.9613999999999998
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.05494172541834974,
+      "unbiased_vnmse": 0.05524830166364204,
+      "best_scalar_vnmse": 0.052349715080071385
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.9611,
+      "recall100_by_seed": [
+        0.96175,
+        0.96045
+      ],
+      "delta_vs_1rht": {
+        "delta": -0.0007750000000000004,
+        "ci95": [
+          -0.002999999999999999,
+          0.0012000000000000034
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.0006000000000000005,
+        -0.0009500000000000003
+      ],
+      "unbiased_nmse": 0.05560231133210576,
+      "unbiased_vnmse": 0.05555323898024517,
+      "best_scalar_vnmse": 0.05262301489127803
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.9614750000000001,
+      "recall100_by_seed": [
+        0.9628,
+        0.9601500000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": -0.00039999999999999866,
+        "ci95": [
+          -0.002800625,
+          0.0021999999999999975
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0004500000000000004,
+        -0.0012499999999999979
+      ],
+      "unbiased_nmse": 0.05583975683304755,
+      "unbiased_vnmse": 0.055611199611692266,
+      "best_scalar_vnmse": 0.052675032514411704
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.944875,
+      "recall100_by_seed": [
+        0.94475,
+        0.945
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.06303850079719178,
+      "unbiased_vnmse": 0.06781371019834784,
+      "best_scalar_vnmse": 0.06311461933837903
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.958075,
+      "recall100_by_seed": [
+        0.9589,
+        0.9572499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.01319999999999999,
+        "ci95": [
+          0.010549999999999997,
+          0.016000624999999984
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.014149999999999987,
+        0.012249999999999992
+      ],
+      "unbiased_nmse": 0.05182692419011469,
+      "unbiased_vnmse": 0.05321489645504621,
+      "best_scalar_vnmse": 0.05048362558010264
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.960875,
+      "recall100_by_seed": [
+        0.96065,
+        0.9611000000000002
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.015999999999999986,
+        "ci95": [
+          0.013649999999999989,
+          0.018599999999999985
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.015899999999999984,
+        0.016099999999999993
+      ],
+      "unbiased_nmse": 0.04966771518432174,
+      "unbiased_vnmse": 0.05015003552687261,
+      "best_scalar_vnmse": 0.047744665568912124
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.9811,
+      "recall100_by_seed": [
+        0.9812000000000001,
+        0.981
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.012404993427129394,
+      "unbiased_vnmse": 0.012560137514046634,
+      "best_scalar_vnmse": 0.012403553397729694
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.9803750000000001,
+      "recall100_by_seed": [
+        0.9801500000000002,
+        0.9806
+      ],
+      "delta_vs_1rht": {
+        "delta": -0.0007250000000000006,
+        "ci95": [
+          -0.002201250000000002,
+          0.0009000000000000008
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.001050000000000001,
+        -0.00040000000000000034
+      ],
+      "unbiased_nmse": 0.012816046138801294,
+      "unbiased_vnmse": 0.01279819165192562,
+      "best_scalar_vnmse": 0.01263531545708947
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.9808500000000001,
+      "recall100_by_seed": [
+        0.9804500000000002,
+        0.9812500000000002
+      ],
+      "delta_vs_1rht": {
+        "delta": -0.00024999999999999995,
+        "ci95": [
+          -0.0019000000000000017,
+          0.0016512500000000006
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.0007500000000000001,
+        0.0002500000000000002
+      ],
+      "unbiased_nmse": 0.01301968997876901,
+      "unbiased_vnmse": 0.012813088031275092,
+      "best_scalar_vnmse": 0.012649792999291372
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.9593250000000001,
+      "recall100_by_seed": [
+        0.95905,
+        0.9595999999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.022471554705124228,
+      "unbiased_vnmse": 0.026684658135734694,
+      "best_scalar_vnmse": 0.02569183218762891
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.9764750000000002,
+      "recall100_by_seed": [
+        0.9766500000000002,
+        0.9763000000000003
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.017150000000000006,
+        "ci95": [
+          0.015100000000000004,
+          0.019501250000000005
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.017600000000000008,
+        0.016700000000000003
+      ],
+      "unbiased_nmse": 0.013796867006859016,
+      "unbiased_vnmse": 0.014871765602585255,
+      "best_scalar_vnmse": 0.014625009263274022
+    },
+    {
+      "centers": 128,
+      "quantizer": "historical_fixed_t",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.9797499999999999,
+      "recall100_by_seed": [
+        0.9793999999999999,
+        0.9801000000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.02042500000000001,
+        "ci95": [
+          0.01824937500000001,
+          0.022700625000000012
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.02035000000000001,
+        0.020500000000000008
+      ],
+      "unbiased_nmse": 0.012126621561931093,
+      "unbiased_vnmse": 0.012431462387852473,
+      "best_scalar_vnmse": 0.012274215788000073
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.9353,
+      "recall100_by_seed": [
+        0.93535,
+        0.9352499999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.1254591537186221,
+      "unbiased_vnmse": 0.13474395311334353,
+      "best_scalar_vnmse": 0.11864422251747124
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.9388500000000001,
+      "recall100_by_seed": [
+        0.9396000000000001,
+        0.9381
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.003549999999999994,
+        "ci95": [
+          0.0004500000000000009,
+          0.00639999999999999
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.004249999999999992,
+        0.0028499999999999975
+      ],
+      "unbiased_nmse": 0.13970581641654353,
+      "unbiased_vnmse": 0.13920781646668925,
+      "best_scalar_vnmse": 0.12213200280789023
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 2,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.9394499999999999,
+      "recall100_by_seed": [
+        0.9397999999999999,
+        0.9390999999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.004149999999999992,
+        "ci95": [
+          0.001424374999999994,
+          0.006651249999999995
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.004449999999999991,
+        0.0038499999999999945
+      ],
+      "unbiased_nmse": 0.14053439993449846,
+      "unbiased_vnmse": 0.1395800135138956,
+      "best_scalar_vnmse": 0.12241940618835088
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.8970500000000001,
+      "recall100_by_seed": [
+        0.8961500000000001,
+        0.89795
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.17444877506419212,
+      "unbiased_vnmse": 0.1957639567390923,
+      "best_scalar_vnmse": 0.16219091307683875
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.929025,
+      "recall100_by_seed": [
+        0.92885,
+        0.9292
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.031975,
+        "ci95": [
+          0.0284,
+          0.03585125000000001
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.03270000000000001,
+        0.03125
+      ],
+      "unbiased_nmse": 0.1475141428788487,
+      "unbiased_vnmse": 0.1519946422503583,
+      "best_scalar_vnmse": 0.13170915488639579
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 2,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.9347749999999999,
+      "recall100_by_seed": [
+        0.9345499999999999,
+        0.9349999999999998
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.037725,
+        "ci95": [
+          0.03385,
+          0.04164999999999999
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0384,
+        0.03705
+      ],
+      "unbiased_nmse": 0.14021056858929462,
+      "unbiased_vnmse": 0.1424240197613204,
+      "best_scalar_vnmse": 0.1245805001906345
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.96625,
+      "recall100_by_seed": [
+        0.9662000000000001,
+        0.9662999999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.03166757056009925,
+      "unbiased_vnmse": 0.036037641247830605,
+      "best_scalar_vnmse": 0.03476365203064305
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.96695,
+      "recall100_by_seed": [
+        0.96705,
+        0.96685
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0007000000000000003,
+        "ci95": [
+          -0.0010999999999999994,
+          0.0024999999999999996
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0008500000000000007,
+        0.0005499999999999999
+      ],
+      "unbiased_nmse": 0.0381357121362121,
+      "unbiased_vnmse": 0.03813929854265206,
+      "best_scalar_vnmse": 0.03672259006451771
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 3,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.9673250000000002,
+      "recall100_by_seed": [
+        0.9676000000000002,
+        0.96705
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0010750000000000002,
+        "ci95": [
+          -0.0007999999999999996,
+          0.002850625000000001
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0014000000000000006,
+        0.0007499999999999996
+      ],
+      "unbiased_nmse": 0.0389294737968037,
+      "unbiased_vnmse": 0.03830156415146339,
+      "best_scalar_vnmse": 0.036873112758274776
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.9448499999999999,
+      "recall100_by_seed": [
+        0.9448999999999999,
+        0.9447999999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.05620100208730337,
+      "unbiased_vnmse": 0.06361498608615518,
+      "best_scalar_vnmse": 0.05939663284821427
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.9605750000000001,
+      "recall100_by_seed": [
+        0.9605,
+        0.96065
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.015724999999999986,
+        "ci95": [
+          0.013298749999999984,
+          0.01815124999999998
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.015599999999999989,
+        0.015849999999999982
+      ],
+      "unbiased_nmse": 0.04215633805025258,
+      "unbiased_vnmse": 0.04484402204643831,
+      "best_scalar_vnmse": 0.04283745456089154
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 3,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.965625,
+      "recall100_by_seed": [
+        0.96595,
+        0.9653
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.020774999999999988,
+        "ci95": [
+          0.018399999999999986,
+          0.023149999999999987
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.021049999999999985,
+        0.020499999999999984
+      ],
+      "unbiased_nmse": 0.03869837863089913,
+      "unbiased_vnmse": 0.03964792371054473,
+      "best_scalar_vnmse": 0.038111091850649995
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 1,
+      "recall100": 0.9806750000000001,
+      "recall100_by_seed": [
+        0.9807000000000002,
+        0.98065
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.010474810767498587,
+      "unbiased_vnmse": 0.011495546879947294,
+      "best_scalar_vnmse": 0.011362163242245371
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 2,
+      "recall100": 0.9808500000000001,
+      "recall100_by_seed": [
+        0.9805000000000001,
+        0.9812000000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.00017500000000000016,
+        "ci95": [
+          -0.0014500000000000012,
+          0.0016512500000000004
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        -0.00020000000000000017,
+        0.0005500000000000005
+      ],
+      "unbiased_nmse": 0.012171480485524425,
+      "unbiased_vnmse": 0.012170579527701597,
+      "best_scalar_vnmse": 0.012021693609201776
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 4,
+      "mode": "full512_oracle",
+      "rounds": 3,
+      "recall100": 0.980875,
+      "recall100_by_seed": [
+        0.9812500000000002,
+        0.9805000000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.00020000000000000017,
+        "ci95": [
+          -0.0013000000000000012,
+          0.0016000000000000014
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0005500000000000005,
+        -0.00015000000000000012
+      ],
+      "unbiased_nmse": 0.012501223608386488,
+      "unbiased_vnmse": 0.012214483359360453,
+      "best_scalar_vnmse": 0.012064532529065544
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 1,
+      "recall100": 0.967725,
+      "recall100_by_seed": [
+        0.96815,
+        0.9672999999999999
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0
+      ],
+      "unbiased_nmse": 0.018739189423097227,
+      "unbiased_vnmse": 0.021280486155787558,
+      "best_scalar_vnmse": 0.020775902236355503
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 2,
+      "recall100": 0.976025,
+      "recall100_by_seed": [
+        0.9760000000000001,
+        0.9760500000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.008300000000000004,
+        "ci95": [
+          0.0063000000000000035,
+          0.010050625000000004
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.007850000000000003,
+        0.008750000000000003
+      ],
+      "unbiased_nmse": 0.013765204100152365,
+      "unbiased_vnmse": 0.014761233483103695,
+      "best_scalar_vnmse": 0.01453225424320283
+    },
+    {
+      "centers": 128,
+      "quantizer": "native_per_residual",
+      "bits": 4,
+      "mode": "legacy448_description",
+      "rounds": 3,
+      "recall100": 0.979075,
+      "recall100_by_seed": [
+        0.97905,
+        0.9791000000000001
+      ],
+      "delta_vs_1rht": {
+        "delta": 0.011350000000000006,
+        "ci95": [
+          0.009250000000000005,
+          0.013300000000000008
+        ],
+        "seed_count": 2,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": "few transform seeds give imprecise seed uncertainty"
+      },
+      "delta_by_seed": [
+        0.010900000000000007,
+        0.011800000000000007
+      ],
+      "unbiased_nmse": 0.01237325107491106,
+      "unbiased_vnmse": 0.012812543372706837,
+      "best_scalar_vnmse": 0.012646143634348773
+    }
+  ],
+  "native_query_summaries": [
+    {
+      "bits": 2,
+      "rounds": 1,
+      "qb0_recall100": 0.8665700000000001,
+      "qb4_recall100": 0.8665700000000001,
+      "paired_qb0_minus_qb4": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "identical_stored_codes": true
+    },
+    {
+      "bits": 2,
+      "rounds": 2,
+      "qb0_recall100": 0.88891,
+      "qb4_recall100": 0.88891,
+      "paired_qb0_minus_qb4": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "identical_stored_codes": true
+    },
+    {
+      "bits": 2,
+      "rounds": 3,
+      "qb0_recall100": 0.88919,
+      "qb4_recall100": 0.88919,
+      "paired_qb0_minus_qb4": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "identical_stored_codes": true
+    },
+    {
+      "bits": 3,
+      "rounds": 1,
+      "qb0_recall100": 0.9403799999999999,
+      "qb4_recall100": 0.9403899999999998,
+      "paired_qb0_minus_qb4": {
+        "delta": -1.000000000000012e-05,
+        "ci95": [
+          -9.000000000000007e-05,
+          6.0000000000000056e-05
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        -5.000000000000004e-05,
+        -5.000000000000004e-05,
+        4.999999999999949e-05,
+        0.0
+      ],
+      "identical_stored_codes": true
+    },
+    {
+      "bits": 3,
+      "rounds": 2,
+      "qb0_recall100": 0.93849,
+      "qb4_recall100": 0.93849,
+      "paired_qb0_minus_qb4": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "identical_stored_codes": true
+    },
+    {
+      "bits": 3,
+      "rounds": 3,
+      "qb0_recall100": 0.9379699999999999,
+      "qb4_recall100": 0.9379799999999999,
+      "paired_qb0_minus_qb4": {
+        "delta": -1.000000000000001e-05,
+        "ci95": [
+          -6.0000000000000056e-05,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        -5.000000000000004e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "identical_stored_codes": true
+    },
+    {
+      "bits": 4,
+      "rounds": 1,
+      "qb0_recall100": 0.96477,
+      "qb4_recall100": 0.96478,
+      "paired_qb0_minus_qb4": {
+        "delta": -1.000000000000001e-05,
+        "ci95": [
+          -8.000000000000007e-05,
+          4.000000000000004e-05
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        5.000000000000004e-05,
+        -0.00010000000000000009
+      ],
+      "identical_stored_codes": true
+    },
+    {
+      "bits": 4,
+      "rounds": 2,
+      "qb0_recall100": 0.96512,
+      "qb4_recall100": 0.96512,
+      "paired_qb0_minus_qb4": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "identical_stored_codes": true
+    },
+    {
+      "bits": 4,
+      "rounds": 3,
+      "qb0_recall100": 0.9646200000000001,
+      "qb4_recall100": 0.96464,
+      "paired_qb0_minus_qb4": {
+        "delta": -2.000000000000002e-05,
+        "ci95": [
+          -8.025000000000005e-05,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "delta_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        -0.00010000000000000009,
+        0.0
+      ],
+      "identical_stored_codes": true
+    }
+  ]
+}
