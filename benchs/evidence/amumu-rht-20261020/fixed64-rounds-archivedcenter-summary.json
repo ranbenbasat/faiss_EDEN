@@ -1,0 +1,1448 @@
+{
+  "status": "complete",
+  "purpose": "QUALITY ONLY matched one vs two H64 rounds inside seven fixed groups, no permutation",
+  "raw_sha256": "5107b36f18e50fe8ba804dfc9aa8777f3422ba1c166b4205f6c925e559cdfc06",
+  "centering": "EXACT ARCHIVED PROTOCOL: each round-count transforms same xt; frozen native EDEN448 trains one global centroid from transformed xt; no per-group centers. BF16 and FP32 use identical centroid.",
+  "dimension": 448,
+  "groups": 7,
+  "group_size": 64,
+  "permutation": null,
+  "validation_cases": 10,
+  "speed_results": false,
+  "storage": "BF16 strict strides136/200/264; FP32 strides144/200/264 (2bit diagnostic over136 cap). Padding unused.",
+  "summary": [
+    {
+      "bits": 2,
+      "format": "bf16",
+      "rounds": 1,
+      "stride": 136,
+      "within_cap": true,
+      "recall10": 0.7781,
+      "recall100": 0.8633,
+      "nmse_10k": 0.10987899597457877,
+      "vnmse_10k": 0.10943250948040129,
+      "nmse_full20k": 0.11068507004332458,
+      "vnmse_full20k": 0.10944372546201711
+    },
+    {
+      "bits": 2,
+      "format": "bf16",
+      "rounds": 2,
+      "stride": 136,
+      "within_cap": true,
+      "recall10": 0.7949000000000002,
+      "recall100": 0.87022,
+      "nmse_10k": 0.12368671318190483,
+      "vnmse_10k": 0.12502563894852292,
+      "nmse_full20k": 0.12368455829946881,
+      "vnmse_full20k": 0.12500187776724475
+    },
+    {
+      "bits": 2,
+      "format": "fp32",
+      "rounds": 1,
+      "stride": 144,
+      "within_cap": false,
+      "recall10": 0.7798,
+      "recall100": 0.8641400000000001,
+      "nmse_10k": 0.1098785568167785,
+      "vnmse_10k": 0.109429062670011,
+      "nmse_full20k": 0.11069285736196902,
+      "vnmse_full20k": 0.10944169409295605
+    },
+    {
+      "bits": 2,
+      "format": "fp32",
+      "rounds": 2,
+      "stride": 144,
+      "within_cap": false,
+      "recall10": 0.7956,
+      "recall100": 0.8708899999999999,
+      "nmse_10k": 0.12369976969006471,
+      "vnmse_10k": 0.12502420350918256,
+      "nmse_full20k": 0.12369468921221807,
+      "vnmse_full20k": 0.12500009982542887
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "rounds": 1,
+      "stride": 200,
+      "within_cap": true,
+      "recall10": 0.8777000000000001,
+      "recall100": 0.9280099999999999,
+      "nmse_10k": 0.0297824924456709,
+      "vnmse_10k": 0.03093133405674242,
+      "nmse_full20k": 0.02988728398195791,
+      "vnmse_full20k": 0.030970629302757745
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "rounds": 2,
+      "stride": 200,
+      "within_cap": true,
+      "recall10": 0.8828000000000001,
+      "recall100": 0.92875,
+      "nmse_10k": 0.03202773871650327,
+      "vnmse_10k": 0.032773785870903446,
+      "nmse_full20k": 0.03190222739118525,
+      "vnmse_full20k": 0.03276722597792055
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "rounds": 1,
+      "stride": 200,
+      "within_cap": true,
+      "recall10": 0.8809000000000001,
+      "recall100": 0.9290799999999999,
+      "nmse_10k": 0.029780313177362145,
+      "vnmse_10k": 0.030928854554120276,
+      "nmse_full20k": 0.029884886097271336,
+      "vnmse_full20k": 0.030968123619857357
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "rounds": 2,
+      "stride": 200,
+      "within_cap": true,
+      "recall10": 0.8865999999999999,
+      "recall100": 0.9295,
+      "nmse_10k": 0.03201832588769661,
+      "vnmse_10k": 0.032771776468728364,
+      "nmse_full20k": 0.03189741082798767,
+      "vnmse_full20k": 0.032764774872530995
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "rounds": 1,
+      "stride": 264,
+      "within_cap": true,
+      "recall10": 0.9301,
+      "recall100": 0.96081,
+      "nmse_10k": 0.007758837216116647,
+      "vnmse_10k": 0.008367662263727321,
+      "nmse_full20k": 0.007766029512891634,
+      "vnmse_full20k": 0.008366196774000644
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "rounds": 2,
+      "stride": 264,
+      "within_cap": true,
+      "recall10": 0.9269000000000002,
+      "recall100": 0.95961,
+      "nmse_10k": 0.00868646231583979,
+      "vnmse_10k": 0.008739640206721043,
+      "nmse_full20k": 0.008646294350589948,
+      "vnmse_full20k": 0.008734296412828357
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "rounds": 1,
+      "stride": 264,
+      "within_cap": true,
+      "recall10": 0.9372999999999999,
+      "recall100": 0.96276,
+      "nmse_10k": 0.007755916033012409,
+      "vnmse_10k": 0.008365013715699263,
+      "nmse_full20k": 0.007763165130237419,
+      "vnmse_full20k": 0.008363560784860846
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "rounds": 2,
+      "stride": 264,
+      "within_cap": true,
+      "recall10": 0.9350000000000002,
+      "recall100": 0.96139,
+      "nmse_10k": 0.00868377484143551,
+      "vnmse_10k": 0.008737057080416203,
+      "nmse_full20k": 0.008643951848194172,
+      "vnmse_full20k": 0.008731696952862267
+    }
+  ],
+  "two_minus_one": [
+    {
+      "bits": 2,
+      "format": "bf16",
+      "recall10": {
+        "mean": 0.016800000000000037,
+        "by_seed": [
+          0.015000000000000013,
+          0.02100000000000013,
+          0.00649999999999995,
+          0.017000000000000015,
+          0.024500000000000077
+        ],
+        "seed_bootstrap95_conditional": [
+          0.011099999999999999,
+          0.02170000000000012
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "recall100": {
+        "mean": 0.006920000000000037,
+        "by_seed": [
+          0.0043000000000001926,
+          0.008900000000000019,
+          0.008400000000000074,
+          0.005699999999999927,
+          0.007299999999999973
+        ],
+        "seed_bootstrap95_conditional": [
+          0.005400000000000116,
+          0.008380000000000032
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse_10k": {
+        "mean": 0.013807717207326053,
+        "by_seed": [
+          0.011157200163309289,
+          0.006807691892985024,
+          0.02167481741465198,
+          0.0073336402228033615,
+          0.022065236342880615
+        ],
+        "seed_bootstrap95_conditional": [
+          0.007887972878977212,
+          0.019727461535674895
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "vnmse_10k": {
+        "mean": 0.01559312946812164,
+        "by_seed": [
+          0.010880763885598513,
+          0.013737150671943005,
+          0.024222410998076038,
+          0.010116558080031729,
+          0.01900876370495891
+        ],
+        "seed_bootstrap95_conditional": [
+          0.011146358920640698,
+          0.020511352116957107
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse_full20k": {
+        "mean": 0.012999488256144243,
+        "by_seed": [
+          0.009918575662224427,
+          0.005818063271224638,
+          0.02148058395943847,
+          0.005748049127541122,
+          0.022032169260292556
+        ],
+        "seed_bootstrap95_conditional": [
+          0.006610160091951189,
+          0.019388816420337296
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "vnmse_full20k": {
+        "mean": 0.015558152305227668,
+        "by_seed": [
+          0.010802422503189843,
+          0.013544579168386084,
+          0.024161155958305383,
+          0.01021035943339789,
+          0.019072244462859142
+        ],
+        "seed_bootstrap95_conditional": [
+          0.01111402860831231,
+          0.020471626968193025
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      }
+    },
+    {
+      "bits": 2,
+      "format": "fp32",
+      "recall10": {
+        "mean": 0.01579999999999999,
+        "by_seed": [
+          0.01100000000000001,
+          0.020499999999999963,
+          0.0015000000000000568,
+          0.01849999999999996,
+          0.02749999999999997
+        ],
+        "seed_bootstrap95_conditional": [
+          0.007200000000000028,
+          0.022899999999999966
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "recall100": {
+        "mean": 0.006749999999999967,
+        "by_seed": [
+          0.003649999999999931,
+          0.008849999999999913,
+          0.008850000000000025,
+          0.00474999999999981,
+          0.007650000000000157
+        ],
+        "seed_bootstrap95_conditional": [
+          0.004889999999999927,
+          0.008610000000000007
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse_10k": {
+        "mean": 0.01382121287328622,
+        "by_seed": [
+          0.011192101649916214,
+          0.006803294985946007,
+          0.021678405649409094,
+          0.007345190046156774,
+          0.022087072035003014
+        ],
+        "seed_bootstrap95_conditional": [
+          0.007897814342824355,
+          0.019744611403748086
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "vnmse_10k": {
+        "mean": 0.015595140839171542,
+        "by_seed": [
+          0.010884791891516768,
+          0.013735354124529128,
+          0.024226694339638727,
+          0.010112938792308457,
+          0.019015925047864632
+        ],
+        "seed_bootstrap95_conditional": [
+          0.011146163098435916,
+          0.020516159991659517
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse_full20k": {
+        "mean": 0.013001831850249054,
+        "by_seed": [
+          0.009935120260770341,
+          0.005814507143347344,
+          0.021472584235184652,
+          0.005738180754923092,
+          0.02204876685701984
+        ],
+        "seed_bootstrap95_conditional": [
+          0.006608099211462243,
+          0.019395564489035864
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "vnmse_full20k": {
+        "mean": 0.015558405732472799,
+        "by_seed": [
+          0.01080228383076999,
+          0.013542634654167121,
+          0.024162334550138193,
+          0.010208970954336566,
+          0.019075804672952126
+        ],
+        "seed_bootstrap95_conditional": [
+          0.011113028844876046,
+          0.020473018430827338
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      }
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "recall10": {
+        "mean": 0.005100000000000016,
+        "by_seed": [
+          0.009500000000000064,
+          0.000500000000000167,
+          0.007000000000000006,
+          0.000500000000000056,
+          0.007999999999999785
+        ],
+        "seed_bootstrap95_conditional": [
+          0.0018000000000000904,
+          0.00839999999999994
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "recall100": {
+        "mean": 0.0007400000000000295,
+        "by_seed": [
+          0.00014999999999998348,
+          0.0007499999999999174,
+          0.0017000000000001458,
+          -4.999999999999449e-05,
+          0.0011500000000000954
+        ],
+        "seed_bootstrap95_conditional": [
+          0.00018999999999997909,
+          0.00129000000000008
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse_10k": {
+        "mean": 0.0022452462708323745,
+        "by_seed": [
+          -0.0014739002546451732,
+          -2.1845319230068966e-05,
+          0.002335535642621466,
+          0.002387122581234132,
+          0.007999318704181517
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.00013119110102580365,
+          0.0052726466749097225
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "vnmse_10k": {
+        "mean": 0.0018424518141610196,
+        "by_seed": [
+          -0.0001960861732576702,
+          0.0014625438541838835,
+          0.003230056157869452,
+          0.0014494219665720717,
+          0.003266323265437361
+        ],
+        "seed_bootstrap95_conditional": [
+          0.0007938430881625373,
+          0.0028956895841507216
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse_full20k": {
+        "mean": 0.0020149434092273356,
+        "by_seed": [
+          -0.001453607630772822,
+          -0.0003762932423998118,
+          0.0018901033826045355,
+          0.0024375655158360952,
+          0.007576949020868681
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.0003539396727481464,
+          0.004958423867208466
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "vnmse_full20k": {
+        "mean": 0.0017965966751628004,
+        "by_seed": [
+          -0.00018961338826287144,
+          0.0013592864601811826,
+          0.0031716539624110605,
+          0.0014563271735887721,
+          0.0031853291678958576
+        ],
+        "seed_bootstrap95_conditional": [
+          0.0007591346634850789,
+          0.0028340586868405215
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      }
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "recall10": {
+        "mean": 0.005699999999999905,
+        "by_seed": [
+          0.017000000000000015,
+          0.005999999999999894,
+          0.0029999999999998916,
+          -0.0050000000000001155,
+          0.00749999999999984
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.0006000000000001115,
+          0.012299999999999955
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "recall100": {
+        "mean": 0.00042000000000002035,
+        "by_seed": [
+          -0.0010999999999998789,
+          0.0017499999999999183,
+          0.000300000000000078,
+          -0.000300000000000189,
+          0.0014500000000001734
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.0005000000000000115,
+          0.0013400000000000523
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse_10k": {
+        "mean": 0.0022380127103344633,
+        "by_seed": [
+          -0.001483352991853152,
+          -3.162819575456763e-05,
+          0.0023345024340971077,
+          0.0023783926039624773,
+          0.00799214970122045
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.0001390919882236663,
+          0.005264642702373852
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "vnmse_10k": {
+        "mean": 0.001842921914608084,
+        "by_seed": [
+          -0.00019563592173602734,
+          0.0014614729221735512,
+          0.00323122733932912,
+          0.001449883128031012,
+          0.0032676621052427635
+        ],
+        "seed_bootstrap95_conditional": [
+          0.000793993466952704,
+          0.0028968193566176843
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse_full20k": {
+        "mean": 0.0020125247307163385,
+        "by_seed": [
+          -0.0014608008004024509,
+          -0.0003846050071083379,
+          0.001892875908884182,
+          0.002436723759660968,
+          0.007578429792547331
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.0003595871412274791,
+          0.004957481626038924
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "vnmse_full20k": {
+        "mean": 0.0017966512526736346,
+        "by_seed": [
+          -0.0001891993589974092,
+          0.0013584083112491083,
+          0.0031716241961988953,
+          0.0014564758664773435,
+          0.003185947248440235
+        ],
+        "seed_bootstrap95_conditional": [
+          0.0007589787541961483,
+          0.002834323751151121
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      }
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "recall10": {
+        "mean": -0.0031999999999999806,
+        "by_seed": [
+          -0.0045000000000000595,
+          -0.0004999999999999449,
+          -0.0020000000000000018,
+          -0.00649999999999995,
+          -0.0024999999999999467
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.005199999999999982,
+          -0.001499999999999968
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "recall100": {
+        "mean": -0.0011999999999999789,
+        "by_seed": [
+          -0.0011999999999998678,
+          -0.0025999999999999357,
+          -0.0003500000000000725,
+          -0.0007500000000000284,
+          -0.0010999999999999899
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.0019299999999999652,
+          -0.0006000000000000227
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse_10k": {
+        "mean": 0.0009276250997231434,
+        "by_seed": [
+          0.0009417844272929798,
+          0.0006906109936513048,
+          0.0005685814844392789,
+          0.0011691652616430195,
+          0.001267983331589134
+        ],
+        "seed_bootstrap95_conditional": [
+          0.0006920338766948295,
+          0.0011632163227514574
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "vnmse_10k": {
+        "mean": 0.0003719779429937224,
+        "by_seed": [
+          3.3369918464847687e-06,
+          0.00041384796634620635,
+          0.0005130277207291822,
+          0.00040106533256163007,
+          0.0005286117034851087
+        ],
+        "seed_bootstrap95_conditional": [
+          0.0001848208057660533,
+          0.0004999856327492277
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse_full20k": {
+        "mean": 0.0008802648376983158,
+        "by_seed": [
+          0.0007633969014191715,
+          0.0007916997156930802,
+          0.0006383463346070831,
+          0.0009934036326576818,
+          0.0012144776041145625
+        ],
+        "seed_bootstrap95_conditional": [
+          0.0007190372375491178,
+          0.0010550365559216905
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "vnmse_full20k": {
+        "mean": 0.00036809963882771245,
+        "by_seed": [
+          2.0098345290932643e-05,
+          0.0004104332218283647,
+          0.0005105480801550436,
+          0.0003921512379993584,
+          0.000507267308864863
+        ],
+        "seed_bootstrap95_conditional": [
+          0.00019194271654740386,
+          0.0004892127999736356
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      }
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "recall10": {
+        "mean": -0.0022999999999999466,
+        "by_seed": [
+          -0.006999999999999784,
+          0.0035000000000000586,
+          -0.0024999999999999467,
+          -0.0030000000000000027,
+          -0.0025000000000000577
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.005199999999999894,
+          0.001000000000000023
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "recall100": {
+        "mean": -0.001370000000000049,
+        "by_seed": [
+          -0.0019500000000002293,
+          -0.003050000000000108,
+          -0.0002500000000000835,
+          -0.0004999999999998339,
+          -0.0010999999999999899
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.0022700000000001274,
+          -0.0005199999999999649
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse_10k": {
+        "mean": 0.0009278588084231017,
+        "by_seed": [
+          0.0009430051547597781,
+          0.0006926028265007572,
+          0.0005692650297278931,
+          0.0011655916512525758,
+          0.0012688293798745042
+        ],
+        "seed_bootstrap95_conditional": [
+          0.0006933481734434158,
+          0.0011623694434027877
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "vnmse_10k": {
+        "mean": 0.0003720433647169407,
+        "by_seed": [
+          3.420537066789117e-06,
+          0.0004136264143788423,
+          0.0005132542415126722,
+          0.0004011024289724448,
+          0.0005288132016539552
+        ],
+        "seed_bootstrap95_conditional": [
+          0.00018492365633709685,
+          0.0005001592550893965
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse_full20k": {
+        "mean": 0.0008807867179567528,
+        "by_seed": [
+          0.0007635632294775933,
+          0.0007933527121955792,
+          0.0006391721506930261,
+          0.0009924871187346014,
+          0.001215358378682964
+        ],
+        "seed_bootstrap95_conditional": [
+          0.0007197646945073636,
+          0.001055546881095304
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "vnmse_full20k": {
+        "mean": 0.0003681361680014202,
+        "by_seed": [
+          2.0168427235340083e-05,
+          0.0004103440573246103,
+          0.0005106185131439657,
+          0.0003921242533584113,
+          0.0005074255889447737
+        ],
+        "seed_bootstrap95_conditional": [
+          0.00019201102480184104,
+          0.0004892864523004178
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      }
+    }
+  ],
+  "bf16_minus_fp32": [
+    {
+      "bits": 2,
+      "rounds": 1,
+      "recall100": {
+        "mean": -0.0008400000000000629,
+        "by_seed": [
+          -0.0004500000000001725,
+          -0.0008000000000001339,
+          -0.0005500000000000504,
+          -0.0017000000000000348,
+          -0.0006999999999999229
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.0012900000000000578,
+          -0.0005400000000000737
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse10k": {
+        "mean": 4.3915780028325193e-07,
+        "by_seed": [
+          3.223493681749068e-05,
+          -1.2512801793762574e-05,
+          -3.416906687966903e-06,
+          -6.231386037058861e-06,
+          -7.87805329728608e-06
+        ],
+        "seed_bootstrap95_conditional": [
+          -9.731952695876678e-06,
+          1.6848407675670862e-05
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      }
+    },
+    {
+      "bits": 2,
+      "rounds": 2,
+      "recall100": {
+        "mean": -0.0006699999999999929,
+        "by_seed": [
+          0.000200000000000089,
+          -0.0007500000000000284,
+          -0.0010000000000000009,
+          -0.0007499999999999174,
+          -0.0010500000000001064
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.0009800000000000475,
+          -0.00022999999999993027
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse10k": {
+        "mean": -1.3056508159883796e-05,
+        "by_seed": [
+          -2.6665497894345913e-06,
+          -8.1158947547455e-06,
+          -7.005141445082241e-06,
+          -1.7781209390471675e-05,
+          -2.9713745419684967e-05
+        ],
+        "seed_bootstrap95_conditional": [
+          -2.255422380215699e-05,
+          -5.491855444755833e-06
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      }
+    },
+    {
+      "bits": 3,
+      "rounds": 1,
+      "recall100": {
+        "mean": -0.0010700000000000375,
+        "by_seed": [
+          -0.0012999999999999678,
+          -0.0008000000000000229,
+          -0.0015000000000000568,
+          -0.0005500000000001615,
+          -0.0011999999999999789
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.0013600000000000057,
+          -0.000750000000000095
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse10k": {
+        "mean": 2.1792683087537567e-06,
+        "by_seed": [
+          -2.9442474917783235e-06,
+          4.3868405084010464e-06,
+          7.364845471164588e-06,
+          1.5838283228993e-06,
+          5.050747330821725e-07
+        ],
+        "seed_bootstrap95_conditional": [
+          -7.881654467703503e-07,
+          5.303026878576006e-06
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      }
+    },
+    {
+      "bits": 3,
+      "rounds": 2,
+      "recall100": {
+        "mean": -0.0007500000000000284,
+        "by_seed": [
+          -5.0000000000105516e-05,
+          -0.0018000000000000238,
+          -9.999999999998899e-05,
+          -0.00029999999999996696,
+          -0.0015000000000000568
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.0013900000000000468,
+          -0.00012000000000003119
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse10k": {
+        "mean": 9.412828806665274e-06,
+        "by_seed": [
+          6.5084897162004385e-06,
+          1.4169717032899709e-05,
+          8.39805399552307e-06,
+          1.0313805594554248e-05,
+          7.674077694148906e-06
+        ],
+        "seed_bootstrap95_conditional": [
+          7.352637763244352e-06,
+          1.1866289281890762e-05
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      }
+    },
+    {
+      "bits": 4,
+      "rounds": 1,
+      "recall100": {
+        "mean": -0.0019500000000000294,
+        "by_seed": [
+          -0.002400000000000291,
+          -0.0019999999999998908,
+          -0.0017000000000000348,
+          -0.0013999999999998458,
+          -0.0022500000000000853
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.0022600000000001287,
+          -0.0016299999999999314
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse10k": {
+        "mean": 2.9211831042378483e-06,
+        "by_seed": [
+          1.7421161702876886e-06,
+          5.087305235478359e-06,
+          2.08911015024682e-06,
+          3.2152354788620927e-06,
+          2.472148486314281e-06
+        ],
+        "seed_bootstrap95_conditional": [
+          2.0269202254766598e-06,
+          4.043853471116972e-06
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      }
+    },
+    {
+      "bits": 4,
+      "rounds": 2,
+      "recall100": {
+        "mean": -0.0017799999999999593,
+        "by_seed": [
+          -0.0016499999999999293,
+          -0.0015499999999997183,
+          -0.0018000000000000238,
+          -0.0016500000000000403,
+          -0.0022500000000000853
+        ],
+        "seed_bootstrap95_conditional": [
+          -0.0020199999999999997,
+          -0.0016099999999998672
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      },
+      "nmse10k": {
+        "mean": 2.687474404279577e-06,
+        "by_seed": [
+          5.213887034893894e-07,
+          3.095472386025963e-06,
+          1.4055648616326244e-06,
+          6.788845869305782e-06,
+          1.6261002009441278e-06
+        ],
+        "seed_bootstrap95_conditional": [
+          1.096001466237631e-06,
+          4.79667973948654e-06
+        ],
+        "seed_count": 5,
+        "limitation": "Five paired transform seeds, conditional on fixed MSong prefix20k/200queries; not dataset-general uncertainty"
+      }
+    }
+  ],
+  "archived_two_round_center_policy_effect": [
+    {
+      "bits": 2,
+      "format": "bf16",
+      "recall100_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_nmse10k_delta": 0.0
+    },
+    {
+      "bits": 2,
+      "format": "fp32",
+      "recall100_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_nmse10k_delta": 2.7755575615628914e-17
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "recall100_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_nmse10k_delta": 6.938893903907228e-18
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "recall100_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_nmse10k_delta": 6.938893903907228e-18
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "recall100_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_nmse10k_delta": 1.734723475976807e-18
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "recall100_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_nmse10k_delta": 0.0
+    }
+  ],
+  "detail_file_count": 60,
+  "detail_total_bytes": 272996365,
+  "exact_archived_replay_count": 30,
+  "per_group_two_minus_one": [
+    {
+      "bits": 2,
+      "format": "bf16",
+      "group": 0,
+      "one_pooled_nmse": 0.10865257586224589,
+      "two_pooled_nmse": 0.1229483006149635,
+      "error_sum_delta": 3484788.434723966,
+      "original_energy_fraction": 0.6770407181398652
+    },
+    {
+      "bits": 2,
+      "format": "bf16",
+      "group": 1,
+      "one_pooled_nmse": 0.10587048059379436,
+      "two_pooled_nmse": 0.12470736064881492,
+      "error_sum_delta": 680272.753814118,
+      "original_energy_fraction": 0.10030409128685079
+    },
+    {
+      "bits": 2,
+      "format": "bf16",
+      "group": 2,
+      "one_pooled_nmse": 0.13144782806150895,
+      "two_pooled_nmse": 0.13062772312452348,
+      "error_sum_delta": -1903.074386662047,
+      "original_energy_fraction": 0.006445115740906256
+    },
+    {
+      "bits": 2,
+      "format": "bf16",
+      "group": 3,
+      "one_pooled_nmse": 0.10959805965807026,
+      "two_pooled_nmse": 0.1259291020567926,
+      "error_sum_delta": 230647.84813820967,
+      "original_energy_fraction": 0.03922654352697869
+    },
+    {
+      "bits": 2,
+      "format": "bf16",
+      "group": 4,
+      "one_pooled_nmse": 0.12084773861056104,
+      "two_pooled_nmse": 0.12657134062226413,
+      "error_sum_delta": 105278.86536110286,
+      "original_energy_fraction": 0.051087692454291976
+    },
+    {
+      "bits": 2,
+      "format": "bf16",
+      "group": 5,
+      "one_pooled_nmse": 0.12477087959957962,
+      "two_pooled_nmse": 0.1259149679084984,
+      "error_sum_delta": 37956.218155610375,
+      "original_energy_fraction": 0.09214419883584118
+    },
+    {
+      "bits": 2,
+      "format": "bf16",
+      "group": 6,
+      "one_pooled_nmse": 0.10922477657252327,
+      "two_pooled_nmse": 0.12102073602402587,
+      "error_sum_delta": 143345.3521862456,
+      "original_energy_fraction": 0.03375164001526588
+    },
+    {
+      "bits": 2,
+      "format": "fp32",
+      "group": 0,
+      "one_pooled_nmse": 0.1086639709086031,
+      "two_pooled_nmse": 0.12296202116143054,
+      "error_sum_delta": 3485355.3088093847,
+      "original_energy_fraction": 0.6770407181398652
+    },
+    {
+      "bits": 2,
+      "format": "fp32",
+      "group": 1,
+      "one_pooled_nmse": 0.10588681253456528,
+      "two_pooled_nmse": 0.12471942902116433,
+      "error_sum_delta": 680118.7798347296,
+      "original_energy_fraction": 0.10030409128685079
+    },
+    {
+      "bits": 2,
+      "format": "fp32",
+      "group": 2,
+      "one_pooled_nmse": 0.13147280523446253,
+      "two_pooled_nmse": 0.130660846260613,
+      "error_sum_delta": -1884.1714791864506,
+      "original_energy_fraction": 0.006445115740906256
+    },
+    {
+      "bits": 2,
+      "format": "fp32",
+      "group": 3,
+      "one_pooled_nmse": 0.10960143535299868,
+      "two_pooled_nmse": 0.12592112311523246,
+      "error_sum_delta": 230487.48345557833,
+      "original_energy_fraction": 0.03922654352697869
+    },
+    {
+      "bits": 2,
+      "format": "fp32",
+      "group": 4,
+      "one_pooled_nmse": 0.1208449161789585,
+      "two_pooled_nmse": 0.1265716653370191,
+      "error_sum_delta": 105336.75337890396,
+      "original_energy_fraction": 0.051087692454291976
+    },
+    {
+      "bits": 2,
+      "format": "fp32",
+      "group": 5,
+      "one_pooled_nmse": 0.12476202806680568,
+      "two_pooled_nmse": 0.12591564485578996,
+      "error_sum_delta": 38272.33459361317,
+      "original_energy_fraction": 0.09214419883584118
+    },
+    {
+      "bits": 2,
+      "format": "fp32",
+      "group": 6,
+      "one_pooled_nmse": 0.10919813072965237,
+      "two_pooled_nmse": 0.1210104128263758,
+      "error_sum_delta": 143543.70614490611,
+      "original_energy_fraction": 0.03375164001526588
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "group": 0,
+      "one_pooled_nmse": 0.028990411820285493,
+      "two_pooled_nmse": 0.03138459390478743,
+      "error_sum_delta": 583616.3028588314,
+      "original_energy_fraction": 0.6770407181398652
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "group": 1,
+      "one_pooled_nmse": 0.030693674066616845,
+      "two_pooled_nmse": 0.033099721952125245,
+      "error_sum_delta": 86891.7165337014,
+      "original_energy_fraction": 0.10030409128685079
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "group": 2,
+      "one_pooled_nmse": 0.03650994941905008,
+      "two_pooled_nmse": 0.03328889555903513,
+      "error_sum_delta": -7474.534830339355,
+      "original_energy_fraction": 0.006445115740906256
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "group": 3,
+      "one_pooled_nmse": 0.030392548434199085,
+      "two_pooled_nmse": 0.03309379252772786,
+      "error_sum_delta": 38150.42105718347,
+      "original_energy_fraction": 0.03922654352697869
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "group": 4,
+      "one_pooled_nmse": 0.03244264176021155,
+      "two_pooled_nmse": 0.033543228582483764,
+      "error_sum_delta": 20243.98877384828,
+      "original_energy_fraction": 0.051087692454291976
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "group": 5,
+      "one_pooled_nmse": 0.03417264654843284,
+      "two_pooled_nmse": 0.03282262117896482,
+      "error_sum_delta": -44788.3840780505,
+      "original_energy_fraction": 0.09214419883584118
+    },
+    {
+      "bits": 3,
+      "format": "bf16",
+      "group": 6,
+      "one_pooled_nmse": 0.028062557616751485,
+      "two_pooled_nmse": 0.03208068433792926,
+      "error_sum_delta": 48828.566130516294,
+      "original_energy_fraction": 0.03375164001526588
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "group": 0,
+      "one_pooled_nmse": 0.028986816093879684,
+      "two_pooled_nmse": 0.03137959371965664,
+      "error_sum_delta": 583273.9458525032,
+      "original_energy_fraction": 0.6770407181398652
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "group": 1,
+      "one_pooled_nmse": 0.030694598801559995,
+      "two_pooled_nmse": 0.0330935065056061,
+      "error_sum_delta": 86633.85690720682,
+      "original_energy_fraction": 0.10030409128685079
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "group": 2,
+      "one_pooled_nmse": 0.03651102326205445,
+      "two_pooled_nmse": 0.03328616952735004,
+      "error_sum_delta": -7483.3525329302065,
+      "original_energy_fraction": 0.006445115740906256
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "group": 3,
+      "one_pooled_nmse": 0.0304012882971824,
+      "two_pooled_nmse": 0.03308780005665118,
+      "error_sum_delta": 37942.35221440223,
+      "original_energy_fraction": 0.03922654352697869
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "group": 4,
+      "one_pooled_nmse": 0.03243990882954897,
+      "two_pooled_nmse": 0.03354101482391259,
+      "error_sum_delta": 20253.53832745971,
+      "original_energy_fraction": 0.051087692454291976
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "group": 5,
+      "one_pooled_nmse": 0.03417010363723907,
+      "two_pooled_nmse": 0.03281953619827976,
+      "error_sum_delta": -44806.36775165633,
+      "original_energy_fraction": 0.09214419883584118
+    },
+    {
+      "bits": 3,
+      "format": "fp32",
+      "group": 6,
+      "one_pooled_nmse": 0.028061609271179445,
+      "two_pooled_nmse": 0.032076008798058143,
+      "error_sum_delta": 48783.27299708186,
+      "original_energy_fraction": 0.03375164001526588
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "group": 0,
+      "one_pooled_nmse": 0.0073743799997481145,
+      "two_pooled_nmse": 0.008544694972162738,
+      "error_sum_delta": 285281.0999837895,
+      "original_energy_fraction": 0.6770407181398652
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "group": 1,
+      "one_pooled_nmse": 0.00829123595945003,
+      "two_pooled_nmse": 0.00893542306896114,
+      "error_sum_delta": 23264.09381252789,
+      "original_energy_fraction": 0.10030409128685079
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "group": 2,
+      "one_pooled_nmse": 0.010386812134302394,
+      "two_pooled_nmse": 0.008710158630999963,
+      "error_sum_delta": -3890.715709664233,
+      "original_energy_fraction": 0.006445115740906256
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "group": 3,
+      "one_pooled_nmse": 0.00834971891449498,
+      "two_pooled_nmse": 0.008956000639947496,
+      "error_sum_delta": 8562.685353569963,
+      "original_energy_fraction": 0.03922654352697869
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "group": 4,
+      "one_pooled_nmse": 0.008681067313133744,
+      "two_pooled_nmse": 0.008828659487783991,
+      "error_sum_delta": 2714.783183666528,
+      "original_energy_fraction": 0.051087692454291976
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "group": 5,
+      "one_pooled_nmse": 0.009107658362233479,
+      "two_pooled_nmse": 0.00879891997804386,
+      "error_sum_delta": -10242.691523044545,
+      "original_energy_fraction": 0.09214419883584118
+    },
+    {
+      "bits": 4,
+      "format": "bf16",
+      "group": 6,
+      "one_pooled_nmse": 0.007834899110153866,
+      "two_pooled_nmse": 0.008760233191399383,
+      "error_sum_delta": 11244.726637508706,
+      "original_energy_fraction": 0.03375164001526588
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "group": 0,
+      "one_pooled_nmse": 0.007371482828416994,
+      "two_pooled_nmse": 0.008542553760384016,
+      "error_sum_delta": 285465.3759936001,
+      "original_energy_fraction": 0.6770407181398652
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "group": 1,
+      "one_pooled_nmse": 0.008288373051017062,
+      "two_pooled_nmse": 0.008932247557894037,
+      "error_sum_delta": 23252.80451963446,
+      "original_energy_fraction": 0.10030409128685079
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "group": 2,
+      "one_pooled_nmse": 0.010383543565862937,
+      "two_pooled_nmse": 0.008707939841882463,
+      "error_sum_delta": -3888.2796709350114,
+      "original_energy_fraction": 0.006445115740906256
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "group": 3,
+      "one_pooled_nmse": 0.008347297624312505,
+      "two_pooled_nmse": 0.008953894371961209,
+      "error_sum_delta": 8567.134499408043,
+      "original_energy_fraction": 0.03922654352697869
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "group": 4,
+      "one_pooled_nmse": 0.008678593035535734,
+      "two_pooled_nmse": 0.008825897982877053,
+      "error_sum_delta": 2709.4999784477986,
+      "original_energy_fraction": 0.051087692454291976
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "group": 5,
+      "one_pooled_nmse": 0.009104840218337401,
+      "two_pooled_nmse": 0.008796276742993377,
+      "error_sum_delta": -10236.888754714106,
+      "original_energy_fraction": 0.09214419883584118
+    },
+    {
+      "bits": 4,
+      "format": "fp32",
+      "group": 6,
+      "one_pooled_nmse": 0.007831533573683639,
+      "two_pooled_nmse": 0.008757485519656171,
+      "error_sum_delta": 11252.234974025108,
+      "original_energy_fraction": 0.03375164001526588
+    }
+  ]
+}
