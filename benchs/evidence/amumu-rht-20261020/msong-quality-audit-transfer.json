@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "raw_sha256": "9cd57245e2ed2d6838617ae642ed4967e5f2912dfbcbadc56e60daf6469e6f48",
+  "compressed_sha256": "74b5b8378e3af9dbbe8d4eb29fdbd66e3db708849f8b32bd9f3f4984c965e27c",
+  "compressed_bytes": 73528,
+  "factor_rows": 216,
+  "native_query_rows": 90,
+  "factor_summaries": 108,
+  "no_speed_claims": true,
+  "historical_replication": false
+}
