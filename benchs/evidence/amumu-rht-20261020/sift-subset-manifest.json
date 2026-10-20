@@ -1,0 +1,62 @@
+{
+  "dataset": "SIFT1M",
+  "primary_download_url": "ftp://ftp.irisa.fr/local/texmex/corpus/sift.tar.gz",
+  "archive_bytes": 168280445,
+  "archive_sha256": "92f1270c5e3a0cb46b89983e72b0511e4df065c31a9fa0276d8c9b1fca5bc81a",
+  "sources": {
+    "xt": {
+      "path": "C:\\Users\\Ran\\faiss-rht-20261020\\amumu-evidence\\source-data\\sift\\sift_learn.fvecs",
+      "sha256": "331bc82b6a0e89465776a3ba0c2113e0bd0cceaa014ec3ed639bc8b981af72ea",
+      "bytes": 51600000,
+      "rows": [
+        0,
+        4096
+      ],
+      "total_rows": 100000,
+      "dimension": 128
+    },
+    "xb": {
+      "path": "C:\\Users\\Ran\\faiss-rht-20261020\\amumu-evidence\\source-data\\sift\\sift_base.fvecs",
+      "sha256": "21f66e2975057b5728ba56de1c825bac4f4d89d596609ae985741c6242631816",
+      "bytes": 516000000,
+      "rows": [
+        0,
+        20000
+      ],
+      "total_rows": 1000000,
+      "dimension": 128
+    },
+    "xq": {
+      "path": "C:\\Users\\Ran\\faiss-rht-20261020\\amumu-evidence\\source-data\\sift\\sift_query.fvecs",
+      "sha256": "f7fc9be140accdfd64116c2fa2365ecdb69b8f084970c6b0532db5ff79ac8fdc",
+      "bytes": 5160000,
+      "rows": [
+        0,
+        200
+      ],
+      "total_rows": 10000,
+      "dimension": 128
+    }
+  },
+  "shape": {
+    "xt": [
+      4096,
+      128
+    ],
+    "xb": [
+      20000,
+      128
+    ],
+    "xq": [
+      200,
+      128
+    ]
+  },
+  "selected_vectors_sha256": {
+    "xt": "66af85c032488b6d8eec42ae8f6de73e0c80726e5eee10e67f6e9cde7267895e",
+    "xb": "13d61b175d4f64349564cc263fb56397c346f485bb8e8fb460a31fde565bcd4c",
+    "xq": "9fa182372cf6a32c6020005b23b50f7e94272d929af1dafd9a96b68828558098"
+  },
+  "control_note": "Native dimension128 is already a power of two; padded baseline dimension is identical.",
+  "training_base_note": "Separate public learning and base source files; exact value overlap remains checked by runner."
+}
