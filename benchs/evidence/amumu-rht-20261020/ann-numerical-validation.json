@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "focused_native_tests": 29,
+  "focused_skipped": 4,
+  "expanded_index_cases": 120,
+  "expanded_nprobe_k_conditions": 720,
+  "independent_eden_or_flat_query_references": 1080,
+  "bits": [
+    2,
+    3,
+    4
+  ],
+  "k": [
+    10,
+    100
+  ],
+  "nprobe": [
+    1,
+    2,
+    4
+  ],
+  "nlist": 4,
+  "modes": [
+    "none",
+    "urr",
+    "rht1",
+    "rht2",
+    "rht3"
+  ],
+  "controls": [
+    "native",
+    "padded"
+  ],
+  "none_simd_reference_available": false,
+  "skips": [
+    {
+      "test": "test_search_matches_none_simd_level (test_eden.TestEDENScalarQuantizer.test_search_matches_none_simd_level)",
+      "reason": "SIMDLevel.NONE not available"
+    },
+    {
+      "test": "test_comparison_vs_ref_L2 (test_rabitq.TestIVFRaBitQ_AVX2.test_comparison_vs_ref_L2)",
+      "reason": "SIMDLevel.NONE not available"
+    },
+    {
+      "test": "test_comparison_vs_ref_L2_rrot (test_rabitq.TestIVFRaBitQ_AVX2.test_comparison_vs_ref_L2_rrot)",
+      "reason": "SIMDLevel.NONE not available"
+    },
+    {
+      "test": "test_ivf_vs_ivfrabitq_equivalence (test_rabitq_fastscan.TestMultiBitRaBitQFastScan_AVX2.test_ivf_vs_ivfrabitq_equivalence)",
+      "reason": "SIMDLevel.NONE not available"
+    }
+  ],
+  "reference_details": "EDEN NumPy scalar assignment/scale/L2 formula using each actual coarse centroid; Flat exact candidate L2. Existing independent RaBitQ reference and encoding/serialization tests passed. Four optimized-vs-NONE checks were skipped: static AVX2 build has no NONE backend. Expanded NONE comparisons run only when available.",
+  "v1_driver_sha256": "a48b283d9b6fc07b13e4f0bb96190730fdfb3ecf051a8d48324b7ac28cf2aba1",
+  "v2_driver_sha256": "2cf8ce45f8b2065fed708cbb439754032bc1df87d1716bdaf0a34769a8eb3ab8"
+}
+
