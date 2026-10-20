@@ -1,0 +1,890 @@
+{
+  "status": "bounded_primary_complete",
+  "corrected_no_permutation": true,
+  "scope": "420pad448; seven FIXED64 groups; two independent-sign normalizedH64 rounds WITHIN groups; NO cross-group mixing/permutation",
+  "primary_baseline": "ACTUAL frozen FAISS EDEN Index::search plus independently optimized full512 ONE-RHT preprocessing, bitwise frozen-HR equivalent",
+  "separate_control": "custom global512_uniform scorer is NOT substituted for the actual-FAISS primary comparator",
+  "k": 100,
+  "batch": 256,
+  "shapes": {
+    "xt": [
+      4096,
+      420
+    ],
+    "xb": [
+      20000,
+      420
+    ],
+    "xq": [
+      200,
+      420
+    ]
+  },
+  "seed_count": 5,
+  "passes": 2,
+  "native_repeats_per_setting_pass": 5,
+  "paired_settings": 15,
+  "raw_primary_sha256": "9171cf1667af692511d63cfed93eec5a2b38daa59a49f7efca0a745844618d2d",
+  "dll_sha256": "875e2e701f56b049b828017e1d2092e77fb15b5b093694b17d504bb5b7209ab0",
+  "native_timing_measured": true,
+  "timing_diagnostic_nonquiet": true,
+  "validated_uncontended_speedup_claims_allowed": false,
+  "workload": {
+    "samples_at_export": 474,
+    "busy_samples": 307,
+    "all_primary_gates_passed": false,
+    "threshold_cpu_cores": 0.35
+  },
+  "primary_six_rows": [
+    {
+      "mode": "frozen_full512",
+      "bits": 2,
+      "actual_code_bytes_per_vector": 136,
+      "hard_cap_bytes": 136,
+      "within_cap": true,
+      "recall100": 0.8868199999999999,
+      "recall_delta_vs_actual_FAISS": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "pooled_nmse_10k": 0.11028421715088067,
+      "mean_vector_vnmse_10k": 0.11916429289282729,
+      "qps_median": 1034.9224360575022,
+      "paired_measured_speedup_vs_actual_FAISS": 1.0,
+      "paired_speedup_seed_pass_ci95": [
+        1.0,
+        1.0
+      ],
+      "paired_speedup_by_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "frozen_full512",
+      "bits": 3,
+      "actual_code_bytes_per_vector": 200,
+      "hard_cap_bytes": 200,
+      "within_cap": true,
+      "recall100": 0.94062,
+      "recall_delta_vs_actual_FAISS": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "pooled_nmse_10k": 0.031162488153209895,
+      "mean_vector_vnmse_10k": 0.03279470492021616,
+      "qps_median": 167.88251620432362,
+      "paired_measured_speedup_vs_actual_FAISS": 1.0,
+      "paired_speedup_seed_pass_ci95": [
+        1.0,
+        1.0
+      ],
+      "paired_speedup_by_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "frozen_full512",
+      "bits": 4,
+      "actual_code_bytes_per_vector": 264,
+      "hard_cap_bytes": 264,
+      "within_cap": true,
+      "recall100": 0.9685700000000002,
+      "recall_delta_vs_actual_FAISS": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "pooled_nmse_10k": 0.008374453895746755,
+      "mean_vector_vnmse_10k": 0.008850824059776512,
+      "qps_median": 530.5833409765082,
+      "paired_measured_speedup_vs_actual_FAISS": 1.0,
+      "paired_speedup_seed_pass_ci95": [
+        1.0,
+        1.0
+      ],
+      "paired_speedup_by_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "group_bf16_samestride",
+      "bits": 2,
+      "actual_code_bytes_per_vector": 136,
+      "hard_cap_bytes": 136,
+      "within_cap": true,
+      "recall100": 0.87022,
+      "recall_delta_vs_actual_FAISS": {
+        "delta": -0.0166,
+        "ci95": [
+          -0.02077025,
+          -0.011699500000000007
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "pooled_nmse_10k": 0.12368671318887056,
+      "mean_vector_vnmse_10k": 0.12502563894852292,
+      "qps_median": 1066.2703009641048,
+      "paired_measured_speedup_vs_actual_FAISS": 1.0295835346280509,
+      "paired_speedup_seed_pass_ci95": [
+        1.0246147017018872,
+        1.0348917717604111
+      ],
+      "paired_speedup_by_seed": [
+        1.0230415384583829,
+        1.028437102248186,
+        1.0315511659246919,
+        1.0314124354482443,
+        1.0335079026216314
+      ],
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "group_bf16_samestride",
+      "bits": 3,
+      "actual_code_bytes_per_vector": 200,
+      "hard_cap_bytes": 200,
+      "within_cap": true,
+      "recall100": 0.92875,
+      "recall_delta_vs_actual_FAISS": {
+        "delta": -0.011869999999999993,
+        "ci95": [
+          -0.014981249999999995,
+          -0.008819499999999994
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "pooled_nmse_10k": 0.032027738719717695,
+      "mean_vector_vnmse_10k": 0.032773785870903446,
+      "qps_median": 333.4195739339814,
+      "paired_measured_speedup_vs_actual_FAISS": 1.9839131196150932,
+      "paired_speedup_seed_pass_ci95": [
+        1.9770341310322388,
+        1.9898137323144358
+      ],
+      "paired_speedup_by_seed": [
+        1.987789093532144,
+        1.9875997558052254,
+        1.9829388264028525,
+        1.9752000016382196,
+        1.9860657191533526
+      ],
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "group_bf16_samestride",
+      "bits": 4,
+      "actual_code_bytes_per_vector": 264,
+      "hard_cap_bytes": 264,
+      "within_cap": true,
+      "recall100": 0.95961,
+      "recall_delta_vs_actual_FAISS": {
+        "delta": -0.00896,
+        "ci95": [
+          -0.010840999999999995,
+          -0.007109500000000001
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "pooled_nmse_10k": 0.008686462316221135,
+      "mean_vector_vnmse_10k": 0.008739640206721043,
+      "qps_median": 564.9542041304733,
+      "paired_measured_speedup_vs_actual_FAISS": 1.0656902434615152,
+      "paired_speedup_seed_pass_ci95": [
+        1.0610773249673366,
+        1.0707468138135428
+      ],
+      "paired_speedup_by_seed": [
+        1.0639670583918002,
+        1.0686574539369322,
+        1.0611182163270074,
+        1.0678285768232025,
+        1.0668980916755242
+      ],
+      "diagnostic_nonquiet": true
+    }
+  ],
+  "compact_secondary": [
+    {
+      "mode": "group_bf16_compact",
+      "bits": 2,
+      "actual_code_bytes_per_vector": 130,
+      "hard_cap_bytes": 136,
+      "within_cap": true,
+      "recall100": 0.87022,
+      "recall_delta_vs_actual_FAISS": {
+        "delta": -0.0166,
+        "ci95": [
+          -0.02077025,
+          -0.011699500000000007
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "pooled_nmse_10k": 0.12368671318887056,
+      "mean_vector_vnmse_10k": 0.12502563894852292,
+      "qps_median": 1067.489386082243,
+      "paired_measured_speedup_vs_actual_FAISS": 1.0322830096959381,
+      "paired_speedup_seed_pass_ci95": [
+        1.0268429212371624,
+        1.0372858518567296
+      ],
+      "paired_speedup_by_seed": [
+        1.023740121610312,
+        1.033118809895758,
+        1.0333815043317187,
+        1.0321733499075727,
+        1.0390598843321943
+      ],
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "group_bf16_compact",
+      "bits": 3,
+      "actual_code_bytes_per_vector": 186,
+      "hard_cap_bytes": 200,
+      "within_cap": true,
+      "recall100": 0.92875,
+      "recall_delta_vs_actual_FAISS": {
+        "delta": -0.011869999999999993,
+        "ci95": [
+          -0.014981249999999995,
+          -0.008819499999999994
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "pooled_nmse_10k": 0.032027738719717695,
+      "mean_vector_vnmse_10k": 0.032773785870903446,
+      "qps_median": 334.40067977429317,
+      "paired_measured_speedup_vs_actual_FAISS": 1.992336934742715,
+      "paired_speedup_seed_pass_ci95": [
+        1.988409162121842,
+        1.9977720093547504
+      ],
+      "paired_speedup_by_seed": [
+        1.9869449564603021,
+        1.9949150308100945,
+        1.9896477505439432,
+        1.990414345438365,
+        1.999788210440207
+      ],
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "group_bf16_compact",
+      "bits": 4,
+      "actual_code_bytes_per_vector": 242,
+      "hard_cap_bytes": 264,
+      "within_cap": true,
+      "recall100": 0.95961,
+      "recall_delta_vs_actual_FAISS": {
+        "delta": -0.00896,
+        "ci95": [
+          -0.010840999999999995,
+          -0.007109500000000001
+        ],
+        "seed_count": 5,
+        "query_count": 200,
+        "bootstrap_samples": 1000,
+        "method": "paired two-way seed/query percentile bootstrap",
+        "conditional_on": "fixed training/base dataset and supplied query population",
+        "limitation": null
+      },
+      "pooled_nmse_10k": 0.008686462316221135,
+      "mean_vector_vnmse_10k": 0.008739640206721043,
+      "qps_median": 568.9076909946014,
+      "paired_measured_speedup_vs_actual_FAISS": 1.0717595408679124,
+      "paired_speedup_seed_pass_ci95": [
+        1.066957652241456,
+        1.0771268111927663
+      ],
+      "paired_speedup_by_seed": [
+        1.0724555682893175,
+        1.0739722900675648,
+        1.0733836645498638,
+        1.0721829024652125,
+        1.0668185235371173
+      ],
+      "diagnostic_nonquiet": true
+    }
+  ],
+  "limits": [
+    "prefix20k and200 queries on one dataset",
+    "recall intervals paired seed/query, conditional on fixed dataset",
+    "timing intervals paired seed/pass; do NOT remove load-related bias",
+    "all noise flags retained; no uncontended speed claim on gate failure",
+    "NMSE uses original whole residual norms; not a mean of equally weighted group relative errors",
+    "first10k reconstruction population paired with prior runner"
+  ],
+  "routing_validation": {
+    "status": "complete",
+    "corrected_no_permutation": true,
+    "routing": "codekind2=>modefull512,rounds1; kinds0/1/3=>modefixed64,rounds2; permutation pointer null",
+    "cases": [
+      {
+        "bits": 2,
+        "kind": 2,
+        "dimension": 512,
+        "expected_rounds": 1,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 136,
+        "strict_same_stride": false,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 2,
+        "kind": 3,
+        "dimension": 448,
+        "expected_rounds": 2,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 120,
+        "strict_same_stride": false,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 2,
+        "kind": 0,
+        "dimension": 448,
+        "expected_rounds": 2,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 130,
+        "strict_same_stride": false,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 2,
+        "kind": 0,
+        "dimension": 448,
+        "expected_rounds": 2,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 136,
+        "strict_same_stride": true,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 2,
+        "kind": 1,
+        "dimension": 448,
+        "expected_rounds": 2,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 144,
+        "strict_same_stride": false,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 2,
+        "actual_frozen_FAISS_Index_search_primary_comparator": true,
+        "full512_ONE_round": true
+      },
+      {
+        "bits": 3,
+        "kind": 2,
+        "dimension": 512,
+        "expected_rounds": 1,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 200,
+        "strict_same_stride": false,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 3,
+        "kind": 3,
+        "dimension": 448,
+        "expected_rounds": 2,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 176,
+        "strict_same_stride": false,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 3,
+        "kind": 0,
+        "dimension": 448,
+        "expected_rounds": 2,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 186,
+        "strict_same_stride": false,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 3,
+        "kind": 0,
+        "dimension": 448,
+        "expected_rounds": 2,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 200,
+        "strict_same_stride": true,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 3,
+        "kind": 1,
+        "dimension": 448,
+        "expected_rounds": 2,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 200,
+        "strict_same_stride": false,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 3,
+        "actual_frozen_FAISS_Index_search_primary_comparator": true,
+        "full512_ONE_round": true
+      },
+      {
+        "bits": 4,
+        "kind": 2,
+        "dimension": 512,
+        "expected_rounds": 1,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 264,
+        "strict_same_stride": false,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 4,
+        "kind": 3,
+        "dimension": 448,
+        "expected_rounds": 2,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 232,
+        "strict_same_stride": false,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 4,
+        "kind": 0,
+        "dimension": 448,
+        "expected_rounds": 2,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 242,
+        "strict_same_stride": false,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 4,
+        "kind": 0,
+        "dimension": 448,
+        "expected_rounds": 2,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 264,
+        "strict_same_stride": true,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 4,
+        "kind": 1,
+        "dimension": 448,
+        "expected_rounds": 2,
+        "permutation_pointer_null": true,
+        "actual_code_stride": 256,
+        "strict_same_stride": false,
+        "native_timed_pipeline_matches_explicit_projected_search": true,
+        "tested_batches": [
+          1,
+          3,
+          32,
+          256
+        ]
+      },
+      {
+        "bits": 4,
+        "actual_frozen_FAISS_Index_search_primary_comparator": true,
+        "full512_ONE_round": true
+      }
+    ],
+    "case_count": 18,
+    "near_clamp_differential": [
+      {
+        "bits": 2,
+        "native_scores": [
+          0.00390625,
+          0.003173828125,
+          0.0030517578125
+        ],
+        "oracle_scores": [
+          0.0034357183903921396,
+          0.0034357173208263703,
+          0.0034357182375970297
+        ],
+        "max_abs_difference": 0.00047053160960786045,
+        "conservative_fp32_absolute_error_bound": 0.031190544366836548,
+        "exact_unbiasedness_or_zero_self_distance_claimed": false
+      },
+      {
+        "bits": 3,
+        "native_scores": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "oracle_scores": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_abs_difference": 0.0,
+        "conservative_fp32_absolute_error_bound": 0.031190544366836548,
+        "exact_unbiasedness_or_zero_self_distance_claimed": false
+      },
+      {
+        "bits": 4,
+        "native_scores": [
+          1.629150390625,
+          1.629638671875,
+          1.626708984375
+        ],
+        "oracle_scores": [
+          1.628027179831406,
+          1.6280288456164271,
+          1.6280303851799545
+        ],
+        "max_abs_difference": 0.0016098262585728662,
+        "conservative_fp32_absolute_error_bound": 0.031190544366836548,
+        "exact_unbiasedness_or_zero_self_distance_claimed": false
+      }
+    ],
+    "not_performance_evidence": true,
+    "dll_sha256": "875e2e701f56b049b828017e1d2092e77fb15b5b093694b17d504bb5b7209ab0"
+  },
+  "frozen_FAISS_binary_checks": [
+    {
+      "file": "C:\\Users\\Ran\\faiss-rht-20261020\\amumu-evidence\\runtime\\faiss\\_swigfaiss_avx2.pyd",
+      "sha256": "10ed67de00233a013af049273950f2eccfdc9dd41dadd41b3947bcec1439d9f6",
+      "unchanged_from_frozen_build": true
+    },
+    {
+      "file": "C:\\Users\\Ran\\faiss-rht-20261020\\build-amumu\\faiss\\libfaiss_avx2.dll",
+      "sha256": "8ce27795db58f84d7d25685263b5010c1c35d3466028411886162259a860aace",
+      "unchanged_from_frozen_build": true
+    }
+  ],
+  "build_provenance": {
+    "flags": [
+      "-O3",
+      "-DNDEBUG",
+      "-march=native",
+      "-ffp-contract=off",
+      "-std=c++17",
+      "-shared",
+      "-I workspace-root"
+    ],
+    "linked_import_library": "build-amumu/faiss/libfaiss_avx2.dll.a",
+    "source_hashes": {
+      "experimental-kernel/block_transform_fixed64.cpp": "250bfa37cebc110834979c599183085f8de8d2cab272831fcc8c1a30d537c0fe",
+      "experimental-kernel/eden_group.cpp": "7b241cc606e3721f3b977e09ee5226511a40f90645fe2e81a8f37ef9540ae732",
+      "experimental-kernel/eden_group_search.cpp": "ba433b5d10a5bf53d63624a6f1a1023fe249630b3c6039dba48a7655758ca47f"
+    }
+  },
+  "all_native_flat_rows_at_export": 170,
+  "overall_native_flat_run_complete": true,
+  "attribution_controls": [
+    {
+      "mode": "global512_uniform",
+      "bits": 2,
+      "code_bytes": 136,
+      "within_cap": true,
+      "recall100": 0.8868199999999999,
+      "qps_median": 1041.5664318717136,
+      "paired_measured_ratio_vs_actual_FAISS": 1.0044813381524946,
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "global512_uniform",
+      "bits": 3,
+      "code_bytes": 200,
+      "within_cap": true,
+      "recall100": 0.94062,
+      "qps_median": 302.21342332059,
+      "paired_measured_ratio_vs_actual_FAISS": 1.787884831618443,
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "global512_uniform",
+      "bits": 4,
+      "code_bytes": 264,
+      "within_cap": true,
+      "recall100": 0.9685699999999999,
+      "qps_median": 541.3883481600624,
+      "paired_measured_ratio_vs_actual_FAISS": 1.021593109658381,
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "global448",
+      "bits": 2,
+      "code_bytes": 120,
+      "within_cap": true,
+      "recall100": 0.79533,
+      "qps_median": 1170.8224035329354,
+      "paired_measured_ratio_vs_actual_FAISS": 1.133584752074557,
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "global448",
+      "bits": 3,
+      "code_bytes": 176,
+      "within_cap": true,
+      "recall100": 0.87858,
+      "qps_median": 192.51891723836928,
+      "paired_measured_ratio_vs_actual_FAISS": 1.142281354680198,
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "global448",
+      "bits": 4,
+      "code_bytes": 232,
+      "within_cap": true,
+      "recall100": 0.9237499999999998,
+      "qps_median": 608.2156285087103,
+      "paired_measured_ratio_vs_actual_FAISS": 1.147458550988742,
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "group_fp32_reference",
+      "bits": 3,
+      "code_bytes": 200,
+      "within_cap": true,
+      "recall100": 0.9295,
+      "qps_median": 335.3529626834988,
+      "paired_measured_ratio_vs_actual_FAISS": 1.989901683005192,
+      "diagnostic_nonquiet": true
+    },
+    {
+      "mode": "group_fp32_reference",
+      "bits": 4,
+      "code_bytes": 256,
+      "within_cap": true,
+      "recall100": 0.96139,
+      "qps_median": 560.3845855826039,
+      "paired_measured_ratio_vs_actual_FAISS": 1.057975224688436,
+      "diagnostic_nonquiet": true
+    }
+  ],
+  "group_vs_uniform_global_control": [
+    {
+      "bits": 2,
+      "paired_measured_ratio": 1.024990206907901,
+      "scope": "same optimized scan kernel; still different geometry and group scales, diagnostic nonquiet",
+      "not_the_primary_actual_FAISS_comparator": true
+    },
+    {
+      "bits": 3,
+      "paired_measured_ratio": 1.1096425701085009,
+      "scope": "same optimized scan kernel; still different geometry and group scales, diagnostic nonquiet",
+      "not_the_primary_actual_FAISS_comparator": true
+    },
+    {
+      "bits": 4,
+      "paired_measured_ratio": 1.0431650658038212,
+      "scope": "same optimized scan kernel; still different geometry and group scales, diagnostic nonquiet",
+      "not_the_primary_actual_FAISS_comparator": true
+    }
+  ],
+  "attribution_warning": "Do not attribute the entire3-bit ratio to BF16/group scales: frozen FAISS3-bit scalar decoding differs from the separately measured common optimized SIMD scanner.",
+  "transform_only": [
+    {
+      "n": 1,
+      "full512_ns_per_vector_median": 163.3415,
+      "fixed64_two_ns_per_vector_median": 108.16300000000001,
+      "paired_ratio_full_over_fixed": 1.5039565726140673,
+      "allocation_free_native_kernel": true,
+      "all_gates_passed": false,
+      "diagnostic_nonquiet": true
+    },
+    {
+      "n": 32,
+      "full512_ns_per_vector_median": 153.528,
+      "fixed64_two_ns_per_vector_median": 114.2305,
+      "paired_ratio_full_over_fixed": 1.3476589161793802,
+      "allocation_free_native_kernel": true,
+      "all_gates_passed": false,
+      "diagnostic_nonquiet": true
+    },
+    {
+      "n": 256,
+      "full512_ns_per_vector_median": 155.20883413461536,
+      "fixed64_two_ns_per_vector_median": 118.35336538461539,
+      "paired_ratio_full_over_fixed": 1.312054571592876,
+      "allocation_free_native_kernel": true,
+      "all_gates_passed": false,
+      "diagnostic_nonquiet": true
+    },
+    {
+      "n": 20000,
+      "full512_ns_per_vector_median": 253.81575000000004,
+      "fixed64_two_ns_per_vector_median": 248.401,
+      "paired_ratio_full_over_fixed": 1.0108820883561187,
+      "allocation_free_native_kernel": true,
+      "all_gates_passed": false,
+      "diagnostic_nonquiet": true
+    }
+  ],
+  "storage_scope": {
+    "flat_ID_bytes": 0,
+    "flat_ID_rule": "implicit row IDs",
+    "actual_grouped_code_buffer_bytes_by_bits": {
+      "2": 2720000,
+      "3": 4000000,
+      "4": 5280000
+    },
+    "reserved_grouped_padding_bytes_by_bits": {
+      "2": 6,
+      "3": 14,
+      "4": 22
+    },
+    "transform_sign_buffer_bytes": {
+      "fixed448": 5376,
+      "full512": 6144
+    },
+    "permutation_buffer_bytes": 0,
+    "serialization": "Prototype NPZ code+centroid caches plus manifest, not a production integrated FAISS serialization; frozen baseline .index files retained locally. No IVF IDs/list padding in this flat experiment."
+  }
+}
