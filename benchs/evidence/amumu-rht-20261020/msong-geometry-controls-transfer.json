@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "rows": 225,
+  "no_speed_claims": true,
+  "compressed_sha256": "e7d0bb7d741b4b7e6c4addd1323cb2e2cb29d19272433dcd8b115f295954ed0f",
+  "compressed_bytes": 69036,
+  "raw_files": [
+    {
+      "file": "msong-equal512-geometry-audit.json",
+      "sha256": "0c6dea6181387ad5836eb6802070bfd3b8489c34cf910ad76c3ea4e24e437f16",
+      "rows": 108,
+      "limitations": [
+        "prefix20k base/200 queries; two NumPy sign seeds",
+        "512 partial256 construction is mechanism control, NOT historical448 replay",
+        "Native RNG full512 controls are separately reported in msong-pairwise-layer-audit.json"
+      ]
+    },
+    {
+      "file": "msong-pairwise-layer-audit.json",
+      "sha256": "ce34897d3d8781637e01ed270f9c9e871936d2739cd4186136334801591ef791",
+      "rows": 117,
+      "limitations": [
+        "prefix20k base and200 queries, not full dataset",
+        "two NumPy sign seeds for isolated448 comparison",
+        "missing frozen historical sign/FWHT helper remains unauthenticated",
+        "native full512 uses its own actual RNG and separate five-seed control; not same signs as NumPy448"
+      ]
+    }
+  ]
+}
