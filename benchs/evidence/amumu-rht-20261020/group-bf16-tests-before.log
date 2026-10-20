@@ -1,0 +1,95 @@
+test_bf16_known_round_nearest_even (__main__.TestGroupedEDEN.test_bf16_known_round_nearest_even) ... ERROR
+test_decode_uses_rounded_scales (__main__.TestGroupedEDEN.test_decode_uses_rounded_scales) ... ERROR
+test_exact_sizes_and_18_metadata_bytes (__main__.TestGroupedEDEN.test_exact_sizes_and_18_metadata_bytes) ... ERROR
+test_frozen_native_group_codes_and_unbiased_scale (__main__.TestGroupedEDEN.test_frozen_native_group_codes_and_unbiased_scale) ... ERROR
+test_independent_scalar_decoding_and_scores_centering (__main__.TestGroupedEDEN.test_independent_scalar_decoding_and_scores_centering) ... ERROR
+test_original_whole_norm_term_not_reconstructed_norm (__main__.TestGroupedEDEN.test_original_whole_norm_term_not_reconstructed_norm) ... ERROR
+test_translation_consistency (__main__.TestGroupedEDEN.test_translation_consistency) ... ERROR
+test_zero_groups_zero_vector (__main__.TestGroupedEDEN.test_zero_groups_zero_vector) ... ERROR
+
+======================================================================
+ERROR: test_bf16_known_round_nearest_even (__main__.TestGroupedEDEN.test_bf16_known_round_nearest_even)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\test_eden_group_bf16.py", line 10, in test_bf16_known_round_nearest_even
+    np.testing.assert_array_equal(codec.to_bf16(words.view('float32')),expected)
+                                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\eden_group_bf16.py", line 3, in to_bf16
+    raise NotImplementedError('BF16 RNE conversion not implemented')
+NotImplementedError: BF16 RNE conversion not implemented
+
+======================================================================
+ERROR: test_decode_uses_rounded_scales (__main__.TestGroupedEDEN.test_decode_uses_rounded_scales)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\test_eden_group_bf16.py", line 38, in test_decode_uses_rounded_scales
+    codes=codec.encode(x,2);p=112
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\eden_group_bf16.py", line 7, in encode
+    raise NotImplementedError('Seven-group unbiased codec not implemented')
+NotImplementedError: Seven-group unbiased codec not implemented
+
+======================================================================
+ERROR: test_exact_sizes_and_18_metadata_bytes (__main__.TestGroupedEDEN.test_exact_sizes_and_18_metadata_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\test_eden_group_bf16.py", line 15, in test_exact_sizes_and_18_metadata_bytes
+    a=codec.encode(x,bits);b=codec.encode(x,bits,stride=cap)
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\eden_group_bf16.py", line 7, in encode
+    raise NotImplementedError('Seven-group unbiased codec not implemented')
+NotImplementedError: Seven-group unbiased codec not implemented
+
+======================================================================
+ERROR: test_frozen_native_group_codes_and_unbiased_scale (__main__.TestGroupedEDEN.test_frozen_native_group_codes_and_unbiased_scale)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\test_eden_group_bf16.py", line 32, in test_frozen_native_group_codes_and_unbiased_scale
+    codes=codec.encode(x,bits)
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\eden_group_bf16.py", line 7, in encode
+    raise NotImplementedError('Seven-group unbiased codec not implemented')
+NotImplementedError: Seven-group unbiased codec not implemented
+
+======================================================================
+ERROR: test_independent_scalar_decoding_and_scores_centering (__main__.TestGroupedEDEN.test_independent_scalar_decoding_and_scores_centering)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\test_eden_group_bf16.py", line 53, in test_independent_scalar_decoding_and_scores_centering
+    codes=codec.encode(x+center,bits,center=center)
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\eden_group_bf16.py", line 7, in encode
+    raise NotImplementedError('Seven-group unbiased codec not implemented')
+NotImplementedError: Seven-group unbiased codec not implemented
+
+======================================================================
+ERROR: test_original_whole_norm_term_not_reconstructed_norm (__main__.TestGroupedEDEN.test_original_whole_norm_term_not_reconstructed_norm)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\test_eden_group_bf16.py", line 44, in test_original_whole_norm_term_not_reconstructed_norm
+    original=np.array([1234.5],dtype='float32');codes=codec.encode(x,2,original_norm2=original)
+                                                      ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\eden_group_bf16.py", line 7, in encode
+    raise NotImplementedError('Seven-group unbiased codec not implemented')
+NotImplementedError: Seven-group unbiased codec not implemented
+
+======================================================================
+ERROR: test_translation_consistency (__main__.TestGroupedEDEN.test_translation_consistency)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\test_eden_group_bf16.py", line 70, in test_translation_consistency
+    a=codec.encode(x,4);b=codec.encode(x+c,4,center=c)
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\eden_group_bf16.py", line 7, in encode
+    raise NotImplementedError('Seven-group unbiased codec not implemented')
+NotImplementedError: Seven-group unbiased codec not implemented
+
+======================================================================
+ERROR: test_zero_groups_zero_vector (__main__.TestGroupedEDEN.test_zero_groups_zero_vector)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\test_eden_group_bf16.py", line 21, in test_zero_groups_zero_vector
+    codes=codec.encode(x,3);decoded=codec.decode(codes,3)
+  File "C:\Users\Ran\faiss-rht-20261020\amumu-evidence\eden_group_bf16.py", line 7, in encode
+    raise NotImplementedError('Seven-group unbiased codec not implemented')
+NotImplementedError: Seven-group unbiased codec not implemented
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.035s
+
+FAILED (errors=8)
