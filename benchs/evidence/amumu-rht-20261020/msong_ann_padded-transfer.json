@@ -1,0 +1,10 @@
+{
+  "label": "msong_ann_padded",
+  "summary": "C:\\Users\\Ran\\faiss-rht-20261020\\amumu-evidence\\msong_ann_padded-summary.json",
+  "bundle": "C:\\Users\\Ran\\faiss-rht-20261020\\amumu-evidence\\msong_ann_padded-evidence.tar.xz",
+  "raw_sha256": "113f416913e87cad3a331d2453ce526318df6a57aeee3975a596f9fa2d3af059",
+  "compressed_sha256": "ad4ae032052e56d61b7dd0726fc389cdce6dea43b1bcfdc42e352d382e256673",
+  "compressed_bytes": 475884,
+  "rows": 3150,
+  "summaries": 630
+}
