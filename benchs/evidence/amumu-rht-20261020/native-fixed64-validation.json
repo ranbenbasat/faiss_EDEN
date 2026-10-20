@@ -1,0 +1,544 @@
+{
+  "status": "complete",
+  "corrected_no_permutation": true,
+  "case_count": 75,
+  "rows": [
+    {
+      "seed": 12345,
+      "mode": "fixed64",
+      "strategy": 0,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12345,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12345,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12345,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12345,
+      "mode": "fixed64",
+      "strategy": 1,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12345,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12345,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12345,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12345,
+      "mode": "fixed64",
+      "strategy": 2,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12345,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12345,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12345,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12346,
+      "mode": "fixed64",
+      "strategy": 0,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12346,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12346,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12346,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12346,
+      "mode": "fixed64",
+      "strategy": 1,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12346,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12346,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12346,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12346,
+      "mode": "fixed64",
+      "strategy": 2,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12346,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12346,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12346,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12347,
+      "mode": "fixed64",
+      "strategy": 0,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12347,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12347,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12347,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12347,
+      "mode": "fixed64",
+      "strategy": 1,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12347,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12347,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12347,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12347,
+      "mode": "fixed64",
+      "strategy": 2,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12347,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12347,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12347,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12348,
+      "mode": "fixed64",
+      "strategy": 0,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12348,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12348,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12348,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12348,
+      "mode": "fixed64",
+      "strategy": 1,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12348,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12348,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12348,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12348,
+      "mode": "fixed64",
+      "strategy": 2,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12348,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12348,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12348,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12349,
+      "mode": "fixed64",
+      "strategy": 0,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12349,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12349,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12349,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 0,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12349,
+      "mode": "fixed64",
+      "strategy": 1,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12349,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12349,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12349,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 1,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12349,
+      "mode": "fixed64",
+      "strategy": 2,
+      "no_cross_group_support": true,
+      "two_independent_sign_rounds_exact_basis_oracle": true,
+      "bitwise_previous_noperm_equal": true
+    },
+    {
+      "seed": 12349,
+      "mode": "full512",
+      "rounds": 1,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12349,
+      "mode": "full512",
+      "rounds": 2,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12349,
+      "mode": "full512",
+      "rounds": 3,
+      "strategy": 2,
+      "bitwise_frozen_equal": true
+    },
+    {
+      "seed": 12345,
+      "array": "xt",
+      "vectors": 4096,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12345,
+      "array": "xb",
+      "vectors": 20000,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12345,
+      "array": "xq",
+      "vectors": 200,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12346,
+      "array": "xt",
+      "vectors": 4096,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12346,
+      "array": "xb",
+      "vectors": 20000,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12346,
+      "array": "xq",
+      "vectors": 200,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12347,
+      "array": "xt",
+      "vectors": 4096,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12347,
+      "array": "xb",
+      "vectors": 20000,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12347,
+      "array": "xq",
+      "vectors": 200,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12348,
+      "array": "xt",
+      "vectors": 4096,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12348,
+      "array": "xb",
+      "vectors": 20000,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12348,
+      "array": "xq",
+      "vectors": 200,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12349,
+      "array": "xt",
+      "vectors": 4096,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12349,
+      "array": "xb",
+      "vectors": 20000,
+      "all_pilot_rows_bitwise_validated": true
+    },
+    {
+      "seed": 12349,
+      "array": "xq",
+      "vectors": 200,
+      "all_pilot_rows_bitwise_validated": true
+    }
+  ],
+  "dll_sha256": "875e2e701f56b049b828017e1d2092e77fb15b5b093694b17d504bb5b7209ab0",
+  "transform_source_sha256": "250bfa37cebc110834979c599183085f8de8d2cab272831fcc8c1a30d537c0fe",
+  "compiler_flags": [
+    "-O3",
+    "-DNDEBUG",
+    "-march=native",
+    "-ffp-contract=off",
+    "-std=c++17",
+    "-shared"
+  ],
+  "fused_fixed_two_rounds": true,
+  "fused_full512_sign_and_H64_passes": true
+}
