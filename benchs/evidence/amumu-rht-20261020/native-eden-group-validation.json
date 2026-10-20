@@ -1,0 +1,131 @@
+{
+  "status": "complete",
+  "scope": "native codec and scalar-reference score validation ONLY; not optimized speed evidence",
+  "dll_sha256": "0782028a32242990321a0015deb3183139e50def3d9aafd06991f371fb0596ad",
+  "cpp_sha256": "7b241cc606e3721f3b977e09ee5226511a40f90645fe2e81a8f37ef9540ae732",
+  "oracle_sha256": "20bc9bf4cdb33c9005b0ae2749506e4c2073717f8638a82d6ddf631b3232c1f9",
+  "bf16_special_and_ties_case_count": 12,
+  "test_case_count": 12,
+  "rows": [
+    {
+      "bits": 2,
+      "shifted_center": false,
+      "stride": 130,
+      "bytes_exactly_equal_oracle": true,
+      "decode_exactly_equal_oracle": true,
+      "score_max_abs_error": 0.0002187116663208144,
+      "unaligned_decode_valid": true,
+      "nonfinite_inputs_rejected": true
+    },
+    {
+      "bits": 2,
+      "shifted_center": false,
+      "stride": 136,
+      "bytes_exactly_equal_oracle": true,
+      "decode_exactly_equal_oracle": true,
+      "score_max_abs_error": 0.00030292721874047857,
+      "unaligned_decode_valid": true,
+      "nonfinite_inputs_rejected": true
+    },
+    {
+      "bits": 2,
+      "shifted_center": true,
+      "stride": 130,
+      "bytes_exactly_equal_oracle": true,
+      "decode_exactly_equal_oracle": true,
+      "score_max_abs_error": 0.0002735184943958302,
+      "unaligned_decode_valid": true,
+      "nonfinite_inputs_rejected": true
+    },
+    {
+      "bits": 2,
+      "shifted_center": true,
+      "stride": 136,
+      "bytes_exactly_equal_oracle": true,
+      "decode_exactly_equal_oracle": true,
+      "score_max_abs_error": 0.00015298598771096295,
+      "unaligned_decode_valid": true,
+      "nonfinite_inputs_rejected": true
+    },
+    {
+      "bits": 3,
+      "shifted_center": false,
+      "stride": 186,
+      "bytes_exactly_equal_oracle": true,
+      "decode_exactly_equal_oracle": true,
+      "score_max_abs_error": 0.0003145928449157509,
+      "unaligned_decode_valid": true,
+      "nonfinite_inputs_rejected": true
+    },
+    {
+      "bits": 3,
+      "shifted_center": false,
+      "stride": 200,
+      "bytes_exactly_equal_oracle": true,
+      "decode_exactly_equal_oracle": true,
+      "score_max_abs_error": 0.00021699803733099543,
+      "unaligned_decode_valid": true,
+      "nonfinite_inputs_rejected": true
+    },
+    {
+      "bits": 3,
+      "shifted_center": true,
+      "stride": 186,
+      "bytes_exactly_equal_oracle": true,
+      "decode_exactly_equal_oracle": true,
+      "score_max_abs_error": 0.00019974894837559987,
+      "unaligned_decode_valid": true,
+      "nonfinite_inputs_rejected": true
+    },
+    {
+      "bits": 3,
+      "shifted_center": true,
+      "stride": 200,
+      "bytes_exactly_equal_oracle": true,
+      "decode_exactly_equal_oracle": true,
+      "score_max_abs_error": 0.00010392305466666585,
+      "unaligned_decode_valid": true,
+      "nonfinite_inputs_rejected": true
+    },
+    {
+      "bits": 4,
+      "shifted_center": false,
+      "stride": 242,
+      "bytes_exactly_equal_oracle": true,
+      "decode_exactly_equal_oracle": true,
+      "score_max_abs_error": 0.00023294459185763117,
+      "unaligned_decode_valid": true,
+      "nonfinite_inputs_rejected": true
+    },
+    {
+      "bits": 4,
+      "shifted_center": false,
+      "stride": 264,
+      "bytes_exactly_equal_oracle": true,
+      "decode_exactly_equal_oracle": true,
+      "score_max_abs_error": 0.0003559035945954747,
+      "unaligned_decode_valid": true,
+      "nonfinite_inputs_rejected": true
+    },
+    {
+      "bits": 4,
+      "shifted_center": true,
+      "stride": 242,
+      "bytes_exactly_equal_oracle": true,
+      "decode_exactly_equal_oracle": true,
+      "score_max_abs_error": 0.00026080806549089175,
+      "unaligned_decode_valid": true,
+      "nonfinite_inputs_rejected": true
+    },
+    {
+      "bits": 4,
+      "shifted_center": true,
+      "stride": 264,
+      "bytes_exactly_equal_oracle": true,
+      "decode_exactly_equal_oracle": true,
+      "score_max_abs_error": 0.00022997303165084304,
+      "unaligned_decode_valid": true,
+      "nonfinite_inputs_rejected": true
+    }
+  ]
+}
