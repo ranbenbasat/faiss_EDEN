@@ -1,0 +1,9 @@
+{
+  "status": "bounded_primary_complete",
+  "raw_primary_sha256": "9171cf1667af692511d63cfed93eec5a2b38daa59a49f7efca0a745844618d2d",
+  "compressed_sha256": "e6250b824b09ba0f70386961fd0c24ca68390699e4c06ab655e6287140e504af",
+  "compressed_bytes": 94800,
+  "primary_timing_rows": 90,
+  "corrected_no_permutation": true,
+  "diagnostic_nonquiet": true
+}
