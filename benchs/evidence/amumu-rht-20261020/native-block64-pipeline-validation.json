@@ -1,0 +1,368 @@
+{
+  "status": "complete",
+  "test_cases": 30,
+  "rows": [
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "RaBitQ2",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "RaBitQ3",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "RaBitQ4",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "EDEN2",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "EDEN3",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "EDEN4",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "IVF4,RaBitQ2",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "IVF4,RaBitQ3",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "IVF4,RaBitQ4",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "IVF4,EDEN2",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "IVF4,EDEN3",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "IVF4,EDEN4",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "IVF4,RaBitQfs2",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "IVF4,RaBitQfs3",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "full512",
+      "rounds": 1,
+      "factory": "IVF4,RaBitQfs4",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "RaBitQ2",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "RaBitQ3",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "RaBitQ4",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "EDEN2",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "EDEN3",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "EDEN4",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "IVF4,RaBitQ2",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "IVF4,RaBitQ3",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "IVF4,RaBitQ4",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "IVF4,EDEN2",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "IVF4,EDEN3",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "IVF4,EDEN4",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "IVF4,RaBitQfs2",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "IVF4,RaBitQfs3",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    },
+    {
+      "mode": "block64",
+      "rounds": 2,
+      "factory": "IVF4,RaBitQfs4",
+      "indices_equal": true,
+      "distances_close": true,
+      "tested_batches": [
+        3,
+        256
+      ],
+      "native_clock_samples_valid": true
+    }
+  ],
+  "clock": "C++ steady_clock inside native pipeline; NOT Python/dense proxy timing",
+  "scope": "output/ABI validation only; timings intentionally not retained as performance evidence"
+}
