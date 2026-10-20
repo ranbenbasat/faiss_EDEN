@@ -1,0 +1,5 @@
+MethodInvocationException: 
+Line |
+   2 |  [Console]::Write([IO.File]::ReadAllText('C:\Users\Ran\faiss-rht-20261 …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Exception calling "ReadAllText" with "1" argument(s): "The process cannot access the file 'C:\Users\Ran\faiss-rht-20261020\amumu-evidence\audit_block64_primary.log' because it is being used by another process."
