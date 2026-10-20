@@ -1,0 +1,10 @@
+{
+  "label": "msong_ann_native",
+  "summary": "C:\\Users\\Ran\\faiss-rht-20261020\\amumu-evidence\\msong_ann_native-summary.json",
+  "bundle": "C:\\Users\\Ran\\faiss-rht-20261020\\amumu-evidence\\msong_ann_native-evidence.tar.xz",
+  "raw_sha256": "15638639d3bf3290784caa1f1efdf207d3d578d13893289f4f416f0a094cc6e5",
+  "compressed_sha256": "70f8b05a781e143c3e085523ebb4c11090653df666fb122711bfa278fc3dfa44",
+  "compressed_bytes": 470492,
+  "rows": 3150,
+  "summaries": 630
+}
