@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-20",
+  "current_primary": "CORRECTED:420 padded448, seven FIXED64 groups, TWO independent-sign normalized H64 rounds WITHIN each group, NO permutation/cross-group mixing, seven rounded BF16 EDEN scales plus original whole-residual FP32 norm2",
+  "corrected_quality_prefix": "msong-eden-fixed64-bf16",
+  "corrected_native_quality": "native-eden-fixed64-flat-quality.json",
+  "corrected_primary_native_timing": "native-eden-fixed64-primary-benchmark.json",
+  "earlier_permuted_grouped_results": {
+    "prefixes": ["msong-eden-group-bf16", "native-eden-group-flat", "native-eden-group-primary-v2"],
+    "scope": "WRONG-SCOPE for the corrected current question; valid historical diagnostics of the distinct permuted construction, NOT current primary evidence",
+    "retained_runtime": "native-eden-group-flat-v1-pass0-retained.json",
+    "retained_complete_pass0_rows": 510,
+    "retained_transform_rows": 80,
+    "retained_sha256": "0081ba1f177cc7743dd90725378a048b681b8bc473a038b8c2e7ee6d5af1458b",
+    "stopped_at": "closed next-pass quiet gate; no completed checkpoint discarded"
+  },
+  "budget": {"bits2": {"compact":130,"strict_stride_cap":136,"unused_reserved":6},"bits3":{"compact":186,"strict_stride_cap":200,"unused_reserved":14},"bits4":{"compact":242,"strict_stride_cap":264,"unused_reserved":22}},
+  "budget_note": "Padding earns NO accuracy credit. FP32 group reference144/200/256B is over budget only at2bit, eligible at3/4bit; BF16 remains primary.",
+  "frozen_faiss_feature": "Unmodified; original native RHT/ANN quality evidence remains valid for its declared configurations",
+  "other_jobs": "Four native dense cases and trained-index caches preserved at case5/pass0 quiet gate; resume broader validation after current corrected priority"
+}
