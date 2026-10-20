@@ -1,0 +1,13 @@
+{
+  "encoding": "base64 of tar.xz",
+  "compressed_bytes": 77440,
+  "base64_bytes": 103256,
+  "sha256": "f4fabcc3380726803d5cba06539de412010e954d6f4f46ad47614db51f787cfe",
+  "raw_result_sha256": "31fe5946c3c4f650542d3c8c9e27a243b63dd3bfe14d5231cfaccd62e54e8132",
+  "frozen_local_source_commit": "159b1c54a36aca8dad7c369661b15d86b27e516f",
+  "source_base": "50ae699ad899ed6f2eb38794a8f34ff6dd2d22b1",
+  "source_diff": "mingw-portability.patch",
+  "first_pilot_cases": 150,
+  "timing_qualification": "provisional: 14/95 background workload samples above threshold",
+  "contents": "completed raw MSong JSON, subset/build/dependency/core manifests, correctness logs, tuning evidence and ANN source; no embeddings or native binaries"
+}
