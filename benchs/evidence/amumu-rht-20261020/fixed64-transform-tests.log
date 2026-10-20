@@ -1,0 +1,8 @@
+test_exact_independent_rounds_vs_explicit_oracle (__main__.TestFixed64.test_exact_independent_rounds_vs_explicit_oracle) ... ok
+test_no_support_crosses_group_boundary (__main__.TestFixed64.test_no_support_crosses_group_boundary) ... ok
+test_wrong_scope_permutation_is_detectable (__main__.TestFixed64.test_wrong_scope_permutation_is_detectable) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.541s
+
+OK
