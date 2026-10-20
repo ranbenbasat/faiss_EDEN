@@ -1,0 +1,12 @@
+{
+  "predeclared_sampling_seed": 20261021,
+  "dataset": "MSong",
+  "nt": 4096,
+  "nb": 20000,
+  "nq": 200,
+  "random_source_rows": "NumPy default_rng(seed).permutation(base_row_count); first4096 for training, next20000 for searched base. Independent subsequent permutation(query_row_count), first200 for queries.",
+  "value_disjoint_control": "Same seeded source permutation and training rows; scan later base rows excluding training values until20000 accepted. Scan query permutation excluding all selected training/base values until200 accepted.",
+  "exact_value_comparison": "Finite float32 row bytes with signed zero normalized; report train/base, train/query and base/query match counts.",
+  "interpretation": "Exploratory validation against source-order artifacts; retain prefix runs, all outcomes, and source-index/hash provenance. No pooling across different splits."
+}
+
