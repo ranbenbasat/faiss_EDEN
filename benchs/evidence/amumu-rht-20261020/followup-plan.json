@@ -1,0 +1,33 @@
+{
+  "prefix_qualification": {
+    "source_rows": "disjoint training/base source-row intervals",
+    "exact_searched_base_rows_matching_training": 21,
+    "value_disjoint": false
+  },
+  "ann_completion_requirements": {
+    "unsupported": 0,
+    "successful_index_cases": 225,
+    "unique_case_nprobe_k_rows": 3150
+  },
+  "ann_validation": "Focused existing numerical tests plus expanded bits2/3/4, k10/100, nprobe1/2/4 integration and independent EDEN/Flat candidate-score references at clean serial boundary; current ANN data remains provisional until checks pass",
+  "next_jobs": [
+    "MSong ANN padded (v2)",
+    "Word2Vec native k100",
+    "GIST native k100",
+    "SIFT native k100",
+    "randomized MSong native/padded k100",
+    "value-disjoint randomized MSong native/padded k100",
+    "remaining prefix padded/Recall@10 controls",
+    "batch1/32 coverage",
+    "stricter quiet-window repeat",
+    "secondary onebit",
+    "runtime-gated larger MSong sweep"
+  ],
+  "sift": {
+    "url": "ftp://ftp.irisa.fr/local/texmex/corpus/sift.tar.gz",
+    "reported_archive_bytes": 168280445,
+    "download": "deferred to clean boundary; SHA256 and public split/source file hashes retained"
+  },
+  "timing": "Single P-core mask1; one BLAS/OpenMP thread. Background activity flagged; no speed gains claimed from contaminated runs.",
+  "measurement_source": "Frozen native revision159b1c54; follow-up v2 only changes error handling and driver-version label, not numeric kernels"
+}
