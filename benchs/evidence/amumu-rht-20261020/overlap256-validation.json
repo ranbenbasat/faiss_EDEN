@@ -1,0 +1,170 @@
+{
+  "status": "complete",
+  "definition": "MSong420: normalize signedH256[0:256] THEN signedH256[164:420], overlap92; no padding, no H2, no permutation",
+  "source_sha256": "bd9850d0c46825185ee1eb1fe057bb166794b6809d4694c401f41ceb3dbc0ced",
+  "dll_sha256": "fc3e29640ced358cfb2d4146c424749d564a659ff9fc28cc55b56f93157d429a",
+  "no_speed_samples": true,
+  "cases": [
+    {
+      "seed": 12345,
+      "strategy": 0,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12345,
+      "strategy": 1,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12345,
+      "strategy": 2,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12346,
+      "strategy": 0,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12346,
+      "strategy": 1,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12346,
+      "strategy": 2,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12347,
+      "strategy": 0,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12347,
+      "strategy": 1,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12347,
+      "strategy": 2,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12348,
+      "strategy": 0,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12348,
+      "strategy": 1,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12348,
+      "strategy": 2,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12349,
+      "strategy": 0,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12349,
+      "strategy": 1,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    },
+    {
+      "seed": 12349,
+      "strategy": 2,
+      "full_basis_matches_independent_dense_oracle": true,
+      "gram_exact_identity": true,
+      "first164_outputs_do_not_see_last164_inputs": true
+    }
+  ],
+  "storage": [
+    {
+      "family": "RaBitQ",
+      "bits": 2,
+      "padded512_bytes": 148,
+      "overlap420_bytes": 126,
+      "same_native_quantizer_scale_contract": true,
+      "actual_FAISS_frozen_HR_pipeline_and_optimized_full_control_match": true,
+      "overlap_native_pipeline_matches_explicit_transform_then_actual_search": true
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 3,
+      "padded512_bytes": 212,
+      "overlap420_bytes": 178,
+      "same_native_quantizer_scale_contract": true,
+      "actual_FAISS_frozen_HR_pipeline_and_optimized_full_control_match": true,
+      "overlap_native_pipeline_matches_explicit_transform_then_actual_search": true
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 4,
+      "padded512_bytes": 276,
+      "overlap420_bytes": 231,
+      "same_native_quantizer_scale_contract": true,
+      "actual_FAISS_frozen_HR_pipeline_and_optimized_full_control_match": true,
+      "overlap_native_pipeline_matches_explicit_transform_then_actual_search": true
+    },
+    {
+      "family": "EDEN",
+      "bits": 2,
+      "padded512_bytes": 136,
+      "overlap420_bytes": 113,
+      "same_native_quantizer_scale_contract": true,
+      "actual_FAISS_frozen_HR_pipeline_and_optimized_full_control_match": true,
+      "overlap_native_pipeline_matches_explicit_transform_then_actual_search": true
+    },
+    {
+      "family": "EDEN",
+      "bits": 3,
+      "padded512_bytes": 200,
+      "overlap420_bytes": 166,
+      "same_native_quantizer_scale_contract": true,
+      "actual_FAISS_frozen_HR_pipeline_and_optimized_full_control_match": true,
+      "overlap_native_pipeline_matches_explicit_transform_then_actual_search": true
+    },
+    {
+      "family": "EDEN",
+      "bits": 4,
+      "padded512_bytes": 264,
+      "overlap420_bytes": 218,
+      "same_native_quantizer_scale_contract": true,
+      "actual_FAISS_frozen_HR_pipeline_and_optimized_full_control_match": true,
+      "overlap_native_pipeline_matches_explicit_transform_then_actual_search": true
+    }
+  ]
+}
