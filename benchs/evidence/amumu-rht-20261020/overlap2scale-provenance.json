@@ -1,0 +1,16 @@
+{
+  "quality_sha256": "3f0f6d6f04008b6114eec617462a0c31352206908694cd1f85d52addb13f54f4",
+  "speed_sha256": "f1b4d9e35bf893c6af88f1b09114b3925c3ac97aa316cce66863a11f6cf273c3",
+  "dataset_npz_sha256": "d50a94e65f01b4ebbb10d7c38fb247a94e0cf337ba17508d4220baaedaf83a90",
+  "repository_helper_bench_rht_sha256": "d4371b41950564f858fa43af79e0b5db9542ade3c76dd76d1b87b2b2d7d97908",
+  "native_dll_sha256": "4ea3811272f52c136f555e1ee3c03f79005362f238f8676f3fb1c5159efe0897",
+  "compiler_flags": "GCC16.2UCRT -O3 -DNDEBUG -march=native -ffp-contract=off -std=c++17 -shared; nofastmath; includes unchanged experimental full512 and overlap256 controls; links frozen libfaiss_avx2.dll",
+  "frozen_binaries": {
+    "runtime/faiss/_swigfaiss_avx2.pyd": "10ed67de00233a013af049273950f2eccfdc9dd41dadd41b3947bcec1439d9f6",
+    "../build-amumu/faiss/libfaiss_avx2.dll": "8ce27795db58f84d7d25685263b5010c1c35d3466028411886162259a860aace"
+  },
+  "large_caches": "Prototype code arrays and native indexes retained locally, perfilehashes/paths in qualityraw; not embedded. Compact format not integrated production FAISS serialization.",
+  "storage": "Two-scale candidate117/170/222B (scalar420bits*b +2FP32scales+1originalFP32norm). EDENactualnativebaseline136/200/264B. RaBitQactualnativebaseline148/212/276B, qb0. Compactfull512 control136/200/264B.",
+  "attribution": "compact_full512 isolates custom format/SIMD scanner changes from transform/group scales; overlap_one_scale versus overlap_two_scale isolates group normalization at fixed420 geometry. DO NOT attribute full native baseline ratio wholly to overlap.",
+  "RaBitQ_caveat": "Native pergroup164/256 RaBitQ encoder; compacted full multibit codes/twoFP32scales/globalnorm used by custom FP32-query scorer. This is NOT nativeqb4 production layout; speed uses qb0 on actual FAISS baseline."
+}
