@@ -1,0 +1,1488 @@
+{
+  "status": "recall_complete_speed_provisional",
+  "scope": "MSong20k base/200queries/fivepairedseeds, signednormalizedH256[0:256] THEN H256[164:420]; final164+256 quantization groups, twoFP32scales/globalFP32 original norm",
+  "quality_sha256": "3f0f6d6f04008b6114eec617462a0c31352206908694cd1f85d52addb13f54f4",
+  "estimators": "FP32 unquantized queries throughout; native full512 FAISS HR+leaf primary comparator (RaBitQqb0/EDENoriginal), compact common SIMD scorer uses stored original norm and one final clamp",
+  "attribution": "compact_full512 isolates custom format/SIMD scanner changes from transform/group scales; overlap_one_scale versus overlap_two_scale isolates group normalization at fixed420 geometry. DO NOT attribute full native baseline ratio wholly to overlap.",
+  "RaBitQ_caveat": "Native pergroup164/256 RaBitQ encoder; compacted full multibit codes/twoFP32scales/globalnorm used by custom FP32-query scorer. This is NOT nativeqb4 production layout; speed uses qb0 on actual FAISS baseline.",
+  "speed_status": "complete_some_samples_unqualified",
+  "recall_groups": [
+    {
+      "family": "EDEN",
+      "bits": 2,
+      "modes": {
+        "native_full512": {
+          "code_bytes": 136,
+          "recall10": 0.8225000000000001,
+          "recall100": 0.88681
+        },
+        "compact_full512": {
+          "code_bytes": 136,
+          "recall10": 0.8225000000000001,
+          "recall100": 0.88681,
+          "nmse20k": 0.11103817560339073,
+          "vnmse20k": 0.11909188627761849
+        },
+        "overlap_one_scale": {
+          "code_bytes": 113,
+          "recall10": 0.8079000000000001,
+          "recall100": 0.8771100000000001,
+          "nmse20k": 0.10483193456596082,
+          "vnmse20k": 0.12144675729545393
+        },
+        "overlap_two_scale": {
+          "code_bytes": 117,
+          "recall10": 0.8048,
+          "recall100": 0.87859,
+          "nmse20k": 0.12180811810882042,
+          "vnmse20k": 0.12187760959652176
+        }
+      },
+      "two_scale_minus": {
+        "native_full512": {
+          "10": {
+            "delta": -0.017700000000000004,
+            "ci95": [
+              -0.029300000000000003,
+              -0.006400000000000001
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.008220000000000002,
+            "ci95": [
+              -0.011800500000000005,
+              -0.004669750000000005
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "compact_full512": {
+          "10": {
+            "delta": -0.017700000000000004,
+            "ci95": [
+              -0.029300000000000003,
+              -0.006400000000000001
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.008220000000000002,
+            "ci95": [
+              -0.011800500000000005,
+              -0.004669750000000005
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "overlap_one_scale": {
+          "10": {
+            "delta": -0.0031000000000000003,
+            "ci95": [
+              -0.0134,
+              0.005900000000000001
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": 0.0014799999999999987,
+            "ci95": [
+              -0.0006007500000000002,
+              0.003410249999999999
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      }
+    },
+    {
+      "family": "EDEN",
+      "bits": 3,
+      "modes": {
+        "native_full512": {
+          "code_bytes": 200,
+          "recall10": 0.8972000000000001,
+          "recall100": 0.9406100000000001
+        },
+        "compact_full512": {
+          "code_bytes": 200,
+          "recall10": 0.8972000000000001,
+          "recall100": 0.9406100000000001,
+          "nmse20k": 0.03132639267662797,
+          "vnmse20k": 0.032772365829315406
+        },
+        "overlap_one_scale": {
+          "code_bytes": 166,
+          "recall10": 0.8951,
+          "recall100": 0.9336599999999999,
+          "nmse20k": 0.03127357364779373,
+          "vnmse20k": 0.03326638128197576
+        },
+        "overlap_two_scale": {
+          "code_bytes": 170,
+          "recall10": 0.8881000000000002,
+          "recall100": 0.93395,
+          "nmse20k": 0.03294132677874167,
+          "vnmse20k": 0.033316514364055055
+        }
+      },
+      "two_scale_minus": {
+        "native_full512": {
+          "10": {
+            "delta": -0.0091,
+            "ci95": [
+              -0.0181,
+              -0.00039750000000000863
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.006659999999999996,
+            "ci95": [
+              -0.008690249999999995,
+              -0.004579749999999999
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "compact_full512": {
+          "10": {
+            "delta": -0.0091,
+            "ci95": [
+              -0.0181,
+              -0.00039750000000000863
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.006659999999999996,
+            "ci95": [
+              -0.008690249999999995,
+              -0.004579749999999999
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "overlap_one_scale": {
+          "10": {
+            "delta": -0.007,
+            "ci95": [
+              -0.015199999999999997,
+              0.001500000000000001
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": 0.00028999999999999957,
+            "ci95": [
+              -0.0014607499999999998,
+              0.0022002499999999956
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      }
+    },
+    {
+      "family": "EDEN",
+      "bits": 4,
+      "modes": {
+        "native_full512": {
+          "code_bytes": 264,
+          "recall10": 0.9455000000000002,
+          "recall100": 0.9685499999999999
+        },
+        "compact_full512": {
+          "code_bytes": 264,
+          "recall10": 0.9455000000000002,
+          "recall100": 0.9685499999999999,
+          "nmse20k": 0.008386324904692702,
+          "vnmse20k": 0.008845734952455026
+        },
+        "overlap_one_scale": {
+          "code_bytes": 218,
+          "recall10": 0.9364000000000001,
+          "recall100": 0.96513,
+          "nmse20k": 0.00862370857209304,
+          "vnmse20k": 0.008977642166174823
+        },
+        "overlap_two_scale": {
+          "code_bytes": 222,
+          "recall10": 0.9407,
+          "recall100": 0.96498,
+          "nmse20k": 0.00872783589827364,
+          "vnmse20k": 0.008955228744777546
+        }
+      },
+      "two_scale_minus": {
+        "native_full512": {
+          "10": {
+            "delta": -0.004799999999999999,
+            "ci95": [
+              -0.012399999999999998,
+              0.002999999999999999
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.003570000000000001,
+            "ci95": [
+              -0.0049900000000000005,
+              -0.0022800000000000016
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "compact_full512": {
+          "10": {
+            "delta": -0.004799999999999999,
+            "ci95": [
+              -0.012399999999999998,
+              0.002999999999999999
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.003570000000000001,
+            "ci95": [
+              -0.0049900000000000005,
+              -0.0022800000000000016
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "overlap_one_scale": {
+          "10": {
+            "delta": 0.004299999999999999,
+            "ci95": [
+              -0.003499999999999999,
+              0.012199999999999997
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.00015000000000000023,
+            "ci95": [
+              -0.00168025,
+              0.001369999999999998
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      }
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 2,
+      "modes": {
+        "native_full512": {
+          "code_bytes": 148,
+          "recall10": 0.7857000000000001,
+          "recall100": 0.8665800000000001
+        },
+        "compact_full512": {
+          "code_bytes": 136,
+          "recall10": 0.7857000000000001,
+          "recall100": 0.8665800000000001,
+          "nmse20k": 0.09416056576784447,
+          "vnmse20k": 0.12443389797518001
+        },
+        "overlap_one_scale": {
+          "code_bytes": 113,
+          "recall10": 0.7868999999999999,
+          "recall100": 0.86757,
+          "nmse20k": 0.11232853252136735,
+          "vnmse20k": 0.12953274832884684
+        },
+        "overlap_two_scale": {
+          "code_bytes": 117,
+          "recall10": 0.7784000000000001,
+          "recall100": 0.8656499999999999,
+          "nmse20k": 0.11088824054475313,
+          "vnmse20k": 0.13044227066267677
+        }
+      },
+      "two_scale_minus": {
+        "native_full512": {
+          "10": {
+            "delta": -0.007300000000000001,
+            "ci95": [
+              -0.018402500000000006,
+              0.0038
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.0009300000000000029,
+            "ci95": [
+              -0.0058002500000000025,
+              0.003501249999999987
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "compact_full512": {
+          "10": {
+            "delta": -0.007300000000000001,
+            "ci95": [
+              -0.018402500000000006,
+              0.0038
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.0009300000000000029,
+            "ci95": [
+              -0.0058002500000000025,
+              0.003501249999999987
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "overlap_one_scale": {
+          "10": {
+            "delta": -0.008500000000000004,
+            "ci95": [
+              -0.017200000000000003,
+              -0.0008000000000000035
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.0019200000000000011,
+            "ci95": [
+              -0.0042099999999999985,
+              0.00016000000000000028
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      }
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 3,
+      "modes": {
+        "native_full512": {
+          "code_bytes": 212,
+          "recall10": 0.8997000000000002,
+          "recall100": 0.9404200000000001
+        },
+        "compact_full512": {
+          "code_bytes": 200,
+          "recall10": 0.8997000000000002,
+          "recall100": 0.9405199999999999,
+          "nmse20k": 0.02324546962833355,
+          "vnmse20k": 0.03237771089545238
+        },
+        "overlap_one_scale": {
+          "code_bytes": 166,
+          "recall10": 0.8888000000000001,
+          "recall100": 0.9350099999999999,
+          "nmse20k": 0.028719192511429088,
+          "vnmse20k": 0.03399782738160872
+        },
+        "overlap_two_scale": {
+          "code_bytes": 170,
+          "recall10": 0.8911000000000001,
+          "recall100": 0.93521,
+          "nmse20k": 0.027577629087460576,
+          "vnmse20k": 0.032884756178458166
+        }
+      },
+      "two_scale_minus": {
+        "native_full512": {
+          "10": {
+            "delta": -0.008600000000000002,
+            "ci95": [
+              -0.019002500000000002,
+              0.0023999999999999976
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.005209999999999998,
+            "ci95": [
+              -0.0075107499999999975,
+              -0.0028599999999999975
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "compact_full512": {
+          "10": {
+            "delta": -0.008600000000000002,
+            "ci95": [
+              -0.019002500000000002,
+              0.0023999999999999976
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.005309999999999997,
+            "ci95": [
+              -0.007640499999999992,
+              -0.002959250000000002
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "overlap_one_scale": {
+          "10": {
+            "delta": 0.0022999999999999982,
+            "ci95": [
+              -0.004900000000000001,
+              0.008899999999999998
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": 0.00019999999999999917,
+            "ci95": [
+              -0.0012299999999999948,
+              0.0015399999999999908
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      }
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 4,
+      "modes": {
+        "native_full512": {
+          "code_bytes": 276,
+          "recall10": 0.9369,
+          "recall100": 0.9648
+        },
+        "compact_full512": {
+          "code_bytes": 264,
+          "recall10": 0.9369,
+          "recall100": 0.9649400000000001,
+          "nmse20k": 0.008518083291742029,
+          "vnmse20k": 0.010440674067065605
+        },
+        "overlap_one_scale": {
+          "code_bytes": 218,
+          "recall10": 0.9338000000000001,
+          "recall100": 0.9626699999999999,
+          "nmse20k": 0.009527903538136583,
+          "vnmse20k": 0.011020079337484372
+        },
+        "overlap_two_scale": {
+          "code_bytes": 222,
+          "recall10": 0.9307000000000002,
+          "recall100": 0.9612399999999999,
+          "nmse20k": 0.010413290586060081,
+          "vnmse20k": 0.011397517431365302
+        }
+      },
+      "two_scale_minus": {
+        "native_full512": {
+          "10": {
+            "delta": -0.006199999999999998,
+            "ci95": [
+              -0.012899999999999998,
+              0.000602499999999988
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.00356,
+            "ci95": [
+              -0.005199999999999998,
+              -0.0017292500000000025
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "compact_full512": {
+          "10": {
+            "delta": -0.006199999999999998,
+            "ci95": [
+              -0.012899999999999998,
+              0.000602499999999988
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.003699999999999999,
+            "ci95": [
+              -0.005339999999999998,
+              -0.0018997500000000013
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        },
+        "overlap_one_scale": {
+          "10": {
+            "delta": -0.003099999999999999,
+            "ci95": [
+              -0.009499999999999996,
+              0.002602499999999986
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          },
+          "100": {
+            "delta": -0.0014299999999999992,
+            "ci95": [
+              -0.0028202499999999985,
+              -1.9500000000000437e-05
+            ],
+            "seed_count": 5,
+            "query_count": 200,
+            "bootstrap_samples": 2000,
+            "method": "paired two-way seed/query percentile bootstrap",
+            "conditional_on": "fixed training/base dataset and supplied query population",
+            "limitation": null
+          }
+        }
+      }
+    }
+  ],
+  "speed_groups": [
+    {
+      "family": "EDEN",
+      "bits": 2,
+      "two_scale_versus": "native_full512",
+      "qualified_pairs": 3,
+      "qualified_seeds": [
+        12345,
+        12348
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12345,
+          "pass_id": 0,
+          "ratio": 1.1870603729901015,
+          "new_qps": 1226.2957040408896,
+          "baseline_qps": 1033.0525152246114
+        },
+        {
+          "seed": 12345,
+          "pass_id": 1,
+          "ratio": 1.1913275246851236,
+          "new_qps": 1223.4743122392088,
+          "baseline_qps": 1026.9840047241264
+        },
+        {
+          "seed": 12348,
+          "pass_id": 1,
+          "ratio": 1.1803321357870813,
+          "new_qps": 1221.985971601046,
+          "baseline_qps": 1035.2899277678216
+        }
+      ],
+      "geomean_paired_ratio": 1.1847538032785487,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 1.1858309128438238,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      },
+      "conditional_seed_bootstrap95_ratio": [
+        1.1803321357870813,
+        1.1891920348732987
+      ]
+    },
+    {
+      "family": "EDEN",
+      "bits": 2,
+      "two_scale_versus": "compact_full512",
+      "qualified_pairs": 3,
+      "qualified_seeds": [
+        12345,
+        12348
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12345,
+          "pass_id": 0,
+          "ratio": 1.1936885012704421,
+          "new_qps": 1226.2957040408896,
+          "baseline_qps": 1027.3163415210447
+        },
+        {
+          "seed": 12345,
+          "pass_id": 1,
+          "ratio": 1.1888983164381726,
+          "new_qps": 1223.4743122392088,
+          "baseline_qps": 1029.0823826756039
+        },
+        {
+          "seed": 12348,
+          "pass_id": 1,
+          "ratio": 1.1846060317227558,
+          "new_qps": 1221.985971601046,
+          "baseline_qps": 1031.5547438365893
+        }
+      ],
+      "geomean_paired_ratio": 1.187943814136261,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 1.1913624976001367,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      },
+      "conditional_seed_bootstrap95_ratio": [
+        1.1846060317227558,
+        1.191291001188221
+      ]
+    },
+    {
+      "family": "EDEN",
+      "bits": 2,
+      "two_scale_versus": "overlap_one_scale",
+      "qualified_pairs": 3,
+      "qualified_seeds": [
+        12345,
+        12348
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12345,
+          "pass_id": 0,
+          "ratio": 1.005000220733227,
+          "new_qps": 1226.2957040408896,
+          "baseline_qps": 1220.1944623914712
+        },
+        {
+          "seed": 12345,
+          "pass_id": 1,
+          "ratio": 0.9955991628988755,
+          "new_qps": 1223.4743122392088,
+          "baseline_qps": 1228.882423601916
+        },
+        {
+          "seed": 12348,
+          "pass_id": 1,
+          "ratio": 1.0007649632182223,
+          "new_qps": 1221.985971601046,
+          "baseline_qps": 1221.0519118009784
+        }
+      ],
+      "geomean_paired_ratio": 1.0005267770539095,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 0.9972273908734757,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      },
+      "conditional_seed_bootstrap95_ratio": [
+        1.0002886475788806,
+        1.0007649632182223
+      ]
+    },
+    {
+      "family": "EDEN",
+      "bits": 3,
+      "two_scale_versus": "native_full512",
+      "qualified_pairs": 2,
+      "qualified_seeds": [
+        12346,
+        12347
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12346,
+          "pass_id": 1,
+          "ratio": 2.0360958342097217,
+          "new_qps": 340.8965784551317,
+          "baseline_qps": 167.42658804537328
+        },
+        {
+          "seed": 12347,
+          "pass_id": 0,
+          "ratio": 2.045809128772975,
+          "new_qps": 342.87115159276505,
+          "baseline_qps": 167.59684311234378
+        }
+      ],
+      "geomean_paired_ratio": 2.0409467030480917,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 2.0421971139547814,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      },
+      "conditional_seed_bootstrap95_ratio": [
+        2.0360958342097217,
+        2.045809128772975
+      ]
+    },
+    {
+      "family": "EDEN",
+      "bits": 3,
+      "two_scale_versus": "compact_full512",
+      "qualified_pairs": 2,
+      "qualified_seeds": [
+        12346,
+        12347
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12346,
+          "pass_id": 1,
+          "ratio": 1.1568964570959497,
+          "new_qps": 340.8965784551317,
+          "baseline_qps": 294.6647267905486
+        },
+        {
+          "seed": 12347,
+          "pass_id": 0,
+          "ratio": 1.1677298243899679,
+          "new_qps": 342.87115159276505,
+          "baseline_qps": 293.6219872365458
+        }
+      ],
+      "geomean_paired_ratio": 1.1623005190922135,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 1.1605399802408989,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      },
+      "conditional_seed_bootstrap95_ratio": [
+        1.1568964570959497,
+        1.1677298243899679
+      ]
+    },
+    {
+      "family": "EDEN",
+      "bits": 3,
+      "two_scale_versus": "overlap_one_scale",
+      "qualified_pairs": 2,
+      "qualified_seeds": [
+        12346,
+        12347
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12346,
+          "pass_id": 1,
+          "ratio": 0.9573240095846481,
+          "new_qps": 340.8965784551317,
+          "baseline_qps": 356.09320882178196
+        },
+        {
+          "seed": 12347,
+          "pass_id": 0,
+          "ratio": 0.9624096641662788,
+          "new_qps": 342.87115159276505,
+          "baseline_qps": 356.2632051183622
+        }
+      ],
+      "geomean_paired_ratio": 0.9598634687093143,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 0.9575420673947118,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      },
+      "conditional_seed_bootstrap95_ratio": [
+        0.9573240095846481,
+        0.9624096641662788
+      ]
+    },
+    {
+      "family": "EDEN",
+      "bits": 4,
+      "two_scale_versus": "native_full512",
+      "qualified_pairs": 1,
+      "qualified_seeds": [
+        12347
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12347,
+          "pass_id": 1,
+          "ratio": 1.160852114092054,
+          "new_qps": 613.959285289996,
+          "baseline_qps": 528.8867357322225
+        }
+      ],
+      "geomean_paired_ratio": 1.160852114092054,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 1.2026639324212391,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      }
+    },
+    {
+      "family": "EDEN",
+      "bits": 4,
+      "two_scale_versus": "compact_full512",
+      "qualified_pairs": 1,
+      "qualified_seeds": [
+        12347
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12347,
+          "pass_id": 1,
+          "ratio": 1.1496943250208365,
+          "new_qps": 613.959285289996,
+          "baseline_qps": 534.0195841002077
+        }
+      ],
+      "geomean_paired_ratio": 1.1496943250208365,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 1.186760797216335,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      }
+    },
+    {
+      "family": "EDEN",
+      "bits": 4,
+      "two_scale_versus": "overlap_one_scale",
+      "qualified_pairs": 1,
+      "qualified_seeds": [
+        12347
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12347,
+          "pass_id": 1,
+          "ratio": 0.9565289197846846,
+          "new_qps": 613.959285289996,
+          "baseline_qps": 641.8617070440471
+        }
+      ],
+      "geomean_paired_ratio": 0.9565289197846846,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 0.9825853072457928,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      }
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 2,
+      "two_scale_versus": "native_full512",
+      "qualified_pairs": 2,
+      "qualified_seeds": [
+        12349
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12349,
+          "pass_id": 0,
+          "ratio": 38.714638182528425,
+          "new_qps": 1222.6351332763993,
+          "baseline_qps": 31.58069378078713
+        },
+        {
+          "seed": 12349,
+          "pass_id": 1,
+          "ratio": 38.93358271759688,
+          "new_qps": 1227.6875461533787,
+          "baseline_qps": 31.532868553566193
+        }
+      ],
+      "geomean_paired_ratio": 38.82395611038763,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 38.749691296810994,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      }
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 2,
+      "two_scale_versus": "compact_full512",
+      "qualified_pairs": 6,
+      "qualified_seeds": [
+        12345,
+        12346,
+        12347,
+        12349
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12345,
+          "pass_id": 1,
+          "ratio": 1.1917232360678893,
+          "new_qps": 1233.680717261969,
+          "baseline_qps": 1035.207403803352
+        },
+        {
+          "seed": 12346,
+          "pass_id": 0,
+          "ratio": 1.1761493063688337,
+          "new_qps": 1213.5966514441193,
+          "baseline_qps": 1031.8389381964591
+        },
+        {
+          "seed": 12346,
+          "pass_id": 1,
+          "ratio": 1.1827503340068477,
+          "new_qps": 1222.3489390622383,
+          "baseline_qps": 1033.4801047328738
+        },
+        {
+          "seed": 12347,
+          "pass_id": 0,
+          "ratio": 1.1989999816285664,
+          "new_qps": 1224.762243029572,
+          "baseline_qps": 1021.4864568771832
+        },
+        {
+          "seed": 12349,
+          "pass_id": 0,
+          "ratio": 1.2119266834615978,
+          "new_qps": 1222.6351332763993,
+          "baseline_qps": 1008.8358891349889
+        },
+        {
+          "seed": 12349,
+          "pass_id": 1,
+          "ratio": 1.1861837271243445,
+          "new_qps": 1227.6875461533787,
+          "baseline_qps": 1034.9893680717164
+        }
+      ],
+      "geomean_paired_ratio": 1.1922617923399448,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 1.188124552928821,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      },
+      "conditional_seed_bootstrap95_ratio": [
+        1.1843003693724068,
+        1.1989930496343624
+      ]
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 2,
+      "two_scale_versus": "overlap_one_scale",
+      "qualified_pairs": 5,
+      "qualified_seeds": [
+        12346,
+        12347,
+        12349
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12346,
+          "pass_id": 0,
+          "ratio": 0.9880011699071719,
+          "new_qps": 1213.5966514441193,
+          "baseline_qps": 1228.3352372529512
+        },
+        {
+          "seed": 12346,
+          "pass_id": 1,
+          "ratio": 0.9895733635497992,
+          "new_qps": 1222.3489390622383,
+          "baseline_qps": 1235.2282145887862
+        },
+        {
+          "seed": 12347,
+          "pass_id": 0,
+          "ratio": 1.0049602870842698,
+          "new_qps": 1224.762243029572,
+          "baseline_qps": 1218.717056554565
+        },
+        {
+          "seed": 12349,
+          "pass_id": 0,
+          "ratio": 0.9966811569307211,
+          "new_qps": 1222.6351332763993,
+          "baseline_qps": 1226.706379241184
+        },
+        {
+          "seed": 12349,
+          "pass_id": 1,
+          "ratio": 1.0015118972130879,
+          "new_qps": 1227.6875461533787,
+          "baseline_qps": 1225.8342108263225
+        }
+      ],
+      "geomean_paired_ratio": 0.9975911845001009,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 0.9965592755673714,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      },
+      "conditional_seed_bootstrap95_ratio": [
+        0.9887869542505993,
+        1.0049602870842698
+      ]
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 3,
+      "two_scale_versus": "native_full512",
+      "qualified_pairs": 2,
+      "qualified_seeds": [
+        12347,
+        12349
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12347,
+          "pass_id": 1,
+          "ratio": 10.93136346879482,
+          "new_qps": 343.7309068222851,
+          "baseline_qps": 31.444467819912436
+        },
+        {
+          "seed": 12349,
+          "pass_id": 0,
+          "ratio": 10.8128551923074,
+          "new_qps": 339.5212783926791,
+          "baseline_qps": 31.399780386795996
+        }
+      ],
+      "geomean_paired_ratio": 10.871947858712229,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 10.876640368605573,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      },
+      "conditional_seed_bootstrap95_ratio": [
+        10.812855192307397,
+        10.931363468794821
+      ]
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 3,
+      "two_scale_versus": "compact_full512",
+      "qualified_pairs": 2,
+      "qualified_seeds": [
+        12346,
+        12347
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12346,
+          "pass_id": 0,
+          "ratio": 1.1562866684487287,
+          "new_qps": 342.0464536709195,
+          "baseline_qps": 295.8145786890444
+        },
+        {
+          "seed": 12347,
+          "pass_id": 1,
+          "ratio": 1.1742310095118933,
+          "new_qps": 343.7309068222851,
+          "baseline_qps": 292.72852108135675
+        }
+      ],
+      "geomean_paired_ratio": 1.1652242968534834,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 1.1607235900489505,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      },
+      "conditional_seed_bootstrap95_ratio": [
+        1.1562866684487287,
+        1.1742310095118933
+      ]
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 3,
+      "two_scale_versus": "overlap_one_scale",
+      "qualified_pairs": 4,
+      "qualified_seeds": [
+        12346,
+        12347,
+        12348,
+        12349
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12346,
+          "pass_id": 0,
+          "ratio": 0.9531618688665726,
+          "new_qps": 342.0464536709195,
+          "baseline_qps": 358.85452916581215
+        },
+        {
+          "seed": 12347,
+          "pass_id": 1,
+          "ratio": 0.9698627052825424,
+          "new_qps": 343.7309068222851,
+          "baseline_qps": 354.4119234094569
+        },
+        {
+          "seed": 12348,
+          "pass_id": 0,
+          "ratio": 0.9509389901659023,
+          "new_qps": 339.46970080158985,
+          "baseline_qps": 356.98368066953003
+        },
+        {
+          "seed": 12349,
+          "pass_id": 0,
+          "ratio": 0.9414084734664968,
+          "new_qps": 339.5212783926791,
+          "baseline_qps": 360.65245635879876
+        }
+      ],
+      "geomean_paired_ratio": 0.9537881431953006,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 0.9558376978241749,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      },
+      "conditional_seed_bootstrap95_ratio": [
+        0.9443331647765625,
+        0.9650967613923774
+      ]
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 4,
+      "two_scale_versus": "native_full512",
+      "qualified_pairs": 1,
+      "qualified_seeds": [
+        12346
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12346,
+          "pass_id": 0,
+          "ratio": 20.394754430088856,
+          "new_qps": 638.3413338780513,
+          "baseline_qps": 31.299290024119703
+        }
+      ],
+      "geomean_paired_ratio": 20.39475443008886,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 20.360921433765736,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      }
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 4,
+      "two_scale_versus": "compact_full512",
+      "qualified_pairs": 6,
+      "qualified_seeds": [
+        12345,
+        12346,
+        12348,
+        12349
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12345,
+          "pass_id": 1,
+          "ratio": 1.2107514097414198,
+          "new_qps": 641.6300483051182,
+          "baseline_qps": 529.9436722870727
+        },
+        {
+          "seed": 12346,
+          "pass_id": 0,
+          "ratio": 1.21891788377081,
+          "new_qps": 638.3413338780513,
+          "baseline_qps": 523.6951088971609
+        },
+        {
+          "seed": 12348,
+          "pass_id": 0,
+          "ratio": 1.1755334171876992,
+          "new_qps": 632.5448766869577,
+          "baseline_qps": 538.0917866207782
+        },
+        {
+          "seed": 12348,
+          "pass_id": 1,
+          "ratio": 1.188647594377551,
+          "new_qps": 636.1387902166944,
+          "baseline_qps": 535.1786292469769
+        },
+        {
+          "seed": 12349,
+          "pass_id": 0,
+          "ratio": 1.19995889234129,
+          "new_qps": 642.3071673451037,
+          "baseline_qps": 535.2743093489405
+        },
+        {
+          "seed": 12349,
+          "pass_id": 1,
+          "ratio": 1.190700823892401,
+          "new_qps": 638.2062829493938,
+          "baseline_qps": 535.9921402112559
+        }
+      ],
+      "geomean_paired_ratio": 1.2016818392229496,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 1.1978523942448562,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      },
+      "conditional_seed_bootstrap95_ratio": [
+        1.1886781493423224,
+        1.21482778455818
+      ]
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 4,
+      "two_scale_versus": "overlap_one_scale",
+      "qualified_pairs": 6,
+      "qualified_seeds": [
+        12345,
+        12346,
+        12348,
+        12349
+      ],
+      "all5seeds_bothpasses_qualified": false,
+      "pairs": [
+        {
+          "seed": 12345,
+          "pass_id": 1,
+          "ratio": 0.9914294266297644,
+          "new_qps": 641.6300483051182,
+          "baseline_qps": 647.1767239008188
+        },
+        {
+          "seed": 12346,
+          "pass_id": 0,
+          "ratio": 0.9989397150444285,
+          "new_qps": 638.3413338780513,
+          "baseline_qps": 639.0188759785776
+        },
+        {
+          "seed": 12348,
+          "pass_id": 0,
+          "ratio": 0.9788903961027646,
+          "new_qps": 632.5448766869577,
+          "baseline_qps": 646.1855987200355
+        },
+        {
+          "seed": 12348,
+          "pass_id": 1,
+          "ratio": 0.9794962925831308,
+          "new_qps": 636.1387902166944,
+          "baseline_qps": 649.4550260512647
+        },
+        {
+          "seed": 12349,
+          "pass_id": 0,
+          "ratio": 0.9934873264767045,
+          "new_qps": 642.3071673451037,
+          "baseline_qps": 646.5177262230176
+        },
+        {
+          "seed": 12349,
+          "pass_id": 1,
+          "ratio": 0.9785693521217008,
+          "new_qps": 638.2062829493938,
+          "baseline_qps": 652.1829868937307
+        }
+      ],
+      "geomean_paired_ratio": 0.9888641261221285,
+      "diagnostic_all_recorded_samples": {
+        "geomean_paired_ratio": 0.9891602797114639,
+        "seed_count": 5,
+        "qualification": "PROVISIONAL ONLY: includes workload-rejected rows, not verified uncontended five-seed speed. All samples retained, no fastest selection."
+      },
+      "conditional_seed_bootstrap95_ratio": [
+        0.9822380985921824,
+        0.9956889846017494
+      ]
+    }
+  ],
+  "speed_qualification": "Lowtargetcoreinterference, notwholemachineidle. Only paired rows satisfying entire overlapping telemetry windows are used; no fastest-sample selection. Fixedbits notmatchedrecall.",
+  "speed_notes": "NativeFAISSbaseline includes original frozenHR512+nativeleaf; compactfull512 attribution includes commonoptimized full512/customSIMDscanner/compactmetadata. Do not attribute all nativebaseline speed ratio to transform/groupnormalization.",
+  "speed_sha256": "f1b4d9e35bf893c6af88f1b09114b3925c3ac97aa316cce66863a11f6cf273c3",
+  "speed_rows": 240,
+  "speed_qualified_rows": 88
+}
