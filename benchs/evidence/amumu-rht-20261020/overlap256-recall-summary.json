@@ -1,0 +1,279 @@
+{
+  "status": "recall_complete_speed_pending",
+  "raw_sha256": "686dac0e2524ae39708d37e8be40a8a19b2a4b629b32af518472921f79fd7d2b",
+  "scope": "MSong prefix20k/200queries, five paired seeds12345..49; overlapH256[0:256] then[164:420] versus actual frozen FAISS fullH512 ONE round",
+  "estimators": "Actual native Index.search; RaBitQqb4 default production query quantization, EDENoriginal-unbiased/defaultclamp. Same within each comparison. RaBitQqb0 recall recorded separately, not used to label qb4 speed.",
+  "dll_sha256": "fc3e29640ced358cfb2d4146c424749d564a659ff9fc28cc55b56f93157d429a",
+  "operation_count": {
+    "fullH512": 4608,
+    "twoH256": 4096,
+    "reduction_fraction": 0.11111111111111116,
+    "limitation": "Arithmetic count is NOT measured speed; excludes copy, signs, normalization, allocation and quantized search."
+  },
+  "groups": [
+    {
+      "family": "RaBitQ",
+      "bits": 2,
+      "full512": {
+        "code_bytes": 148,
+        "recall10": 0.7857000000000001,
+        "recall100": 0.8665800000000001,
+        "reconstruction_pooled_nmse20k": 0.09416056576784447
+      },
+      "overlap420": {
+        "code_bytes": 126,
+        "recall10": 0.7868999999999999,
+        "recall100": 0.86757,
+        "reconstruction_pooled_nmse20k": 0.11232853252136735
+      },
+      "overlap_minus_full": {
+        "10": {
+          "delta": 0.0012000000000000031,
+          "ci95": [
+            -0.012299999999999998,
+            0.01550249999999999
+          ],
+          "seed_count": 5,
+          "query_count": 200,
+          "bootstrap_samples": 2000,
+          "method": "paired two-way seed/query percentile bootstrap",
+          "conditional_on": "fixed training/base dataset and supplied query population",
+          "limitation": null
+        },
+        "100": {
+          "delta": 0.0009899999999999983,
+          "ci95": [
+            -0.005001750000000001,
+            0.0065502500000000005
+          ],
+          "seed_count": 5,
+          "query_count": 200,
+          "bootstrap_samples": 2000,
+          "method": "paired two-way seed/query percentile bootstrap",
+          "conditional_on": "fixed training/base dataset and supplied query population",
+          "limitation": null
+        }
+      }
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 3,
+      "full512": {
+        "code_bytes": 212,
+        "recall10": 0.8997000000000002,
+        "recall100": 0.9404399999999999,
+        "reconstruction_pooled_nmse20k": 0.02324546962833355
+      },
+      "overlap420": {
+        "code_bytes": 178,
+        "recall10": 0.8888000000000001,
+        "recall100": 0.9349899999999998,
+        "reconstruction_pooled_nmse20k": 0.028719192511429088
+      },
+      "overlap_minus_full": {
+        "10": {
+          "delta": -0.010899999999999998,
+          "ci95": [
+            -0.0192,
+            -0.0014975000000000138
+          ],
+          "seed_count": 5,
+          "query_count": 200,
+          "bootstrap_samples": 2000,
+          "method": "paired two-way seed/query percentile bootstrap",
+          "conditional_on": "fixed training/base dataset and supplied query population",
+          "limitation": null
+        },
+        "100": {
+          "delta": -0.005449999999999996,
+          "ci95": [
+            -0.007989999999999995,
+            -0.0028297499999999968
+          ],
+          "seed_count": 5,
+          "query_count": 200,
+          "bootstrap_samples": 2000,
+          "method": "paired two-way seed/query percentile bootstrap",
+          "conditional_on": "fixed training/base dataset and supplied query population",
+          "limitation": null
+        }
+      }
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 4,
+      "full512": {
+        "code_bytes": 276,
+        "recall10": 0.9369,
+        "recall100": 0.9648100000000002,
+        "reconstruction_pooled_nmse20k": 0.008518083291742029
+      },
+      "overlap420": {
+        "code_bytes": 231,
+        "recall10": 0.9338000000000001,
+        "recall100": 0.96265,
+        "reconstruction_pooled_nmse20k": 0.009527903538136583
+      },
+      "overlap_minus_full": {
+        "10": {
+          "delta": -0.0030999999999999995,
+          "ci95": [
+            -0.0098,
+            0.003799999999999999
+          ],
+          "seed_count": 5,
+          "query_count": 200,
+          "bootstrap_samples": 2000,
+          "method": "paired two-way seed/query percentile bootstrap",
+          "conditional_on": "fixed training/base dataset and supplied query population",
+          "limitation": null
+        },
+        "100": {
+          "delta": -0.00216,
+          "ci95": [
+            -0.0036207500000000007,
+            -0.0006200000000000014
+          ],
+          "seed_count": 5,
+          "query_count": 200,
+          "bootstrap_samples": 2000,
+          "method": "paired two-way seed/query percentile bootstrap",
+          "conditional_on": "fixed training/base dataset and supplied query population",
+          "limitation": null
+        }
+      }
+    },
+    {
+      "family": "EDEN",
+      "bits": 2,
+      "full512": {
+        "code_bytes": 136,
+        "recall10": 0.8225000000000001,
+        "recall100": 0.88681,
+        "reconstruction_pooled_nmse20k": 0.11103817560339073
+      },
+      "overlap420": {
+        "code_bytes": 113,
+        "recall10": 0.8079000000000001,
+        "recall100": 0.8771100000000001,
+        "reconstruction_pooled_nmse20k": 0.10483193456596082
+      },
+      "overlap_minus_full": {
+        "10": {
+          "delta": -0.014600000000000004,
+          "ci95": [
+            -0.025500000000000002,
+            -0.0032000000000000028
+          ],
+          "seed_count": 5,
+          "query_count": 200,
+          "bootstrap_samples": 2000,
+          "method": "paired two-way seed/query percentile bootstrap",
+          "conditional_on": "fixed training/base dataset and supplied query population",
+          "limitation": null
+        },
+        "100": {
+          "delta": -0.009699999999999999,
+          "ci95": [
+            -0.013871,
+            -0.00553900000000001
+          ],
+          "seed_count": 5,
+          "query_count": 200,
+          "bootstrap_samples": 2000,
+          "method": "paired two-way seed/query percentile bootstrap",
+          "conditional_on": "fixed training/base dataset and supplied query population",
+          "limitation": null
+        }
+      }
+    },
+    {
+      "family": "EDEN",
+      "bits": 3,
+      "full512": {
+        "code_bytes": 200,
+        "recall10": 0.8972000000000001,
+        "recall100": 0.9406100000000001,
+        "reconstruction_pooled_nmse20k": 0.03132639267662797
+      },
+      "overlap420": {
+        "code_bytes": 166,
+        "recall10": 0.8951,
+        "recall100": 0.9336599999999999,
+        "reconstruction_pooled_nmse20k": 0.03127357364779373
+      },
+      "overlap_minus_full": {
+        "10": {
+          "delta": -0.002099999999999999,
+          "ci95": [
+            -0.010699999999999996,
+            0.007002499999999988
+          ],
+          "seed_count": 5,
+          "query_count": 200,
+          "bootstrap_samples": 2000,
+          "method": "paired two-way seed/query percentile bootstrap",
+          "conditional_on": "fixed training/base dataset and supplied query population",
+          "limitation": null
+        },
+        "100": {
+          "delta": -0.006949999999999996,
+          "ci95": [
+            -0.008849999999999992,
+            -0.004939749999999997
+          ],
+          "seed_count": 5,
+          "query_count": 200,
+          "bootstrap_samples": 2000,
+          "method": "paired two-way seed/query percentile bootstrap",
+          "conditional_on": "fixed training/base dataset and supplied query population",
+          "limitation": null
+        }
+      }
+    },
+    {
+      "family": "EDEN",
+      "bits": 4,
+      "full512": {
+        "code_bytes": 264,
+        "recall10": 0.9455000000000002,
+        "recall100": 0.9685499999999999,
+        "reconstruction_pooled_nmse20k": 0.008386324904692702
+      },
+      "overlap420": {
+        "code_bytes": 218,
+        "recall10": 0.9364000000000001,
+        "recall100": 0.96513,
+        "reconstruction_pooled_nmse20k": 0.00862370857209304
+      },
+      "overlap_minus_full": {
+        "10": {
+          "delta": -0.009099999999999999,
+          "ci95": [
+            -0.015302499999999997,
+            -0.002997500000000012
+          ],
+          "seed_count": 5,
+          "query_count": 200,
+          "bootstrap_samples": 2000,
+          "method": "paired two-way seed/query percentile bootstrap",
+          "conditional_on": "fixed training/base dataset and supplied query population",
+          "limitation": null
+        },
+        "100": {
+          "delta": -0.0034200000000000007,
+          "ci95": [
+            -0.00492025,
+            -0.0019497500000000012
+          ],
+          "seed_count": 5,
+          "query_count": 200,
+          "bootstrap_samples": 2000,
+          "method": "paired two-way seed/query percentile bootstrap",
+          "conditional_on": "fixed training/base dataset and supplied query population",
+          "limitation": null
+        }
+      }
+    }
+  ]
+}
