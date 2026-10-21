@@ -1,0 +1,188 @@
+{
+  "status": "complete",
+  "rows": [
+    {
+      "family": "EDEN",
+      "bits": 2,
+      "dimension": 420,
+      "groups": 2,
+      "bytes": 117,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.00010410261893412098,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "EDEN",
+      "bits": 2,
+      "dimension": 420,
+      "groups": 1,
+      "bytes": 113,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.00012371552691092802,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "EDEN",
+      "bits": 2,
+      "dimension": 512,
+      "groups": 1,
+      "bytes": 136,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.0001873717974376632,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "EDEN",
+      "bits": 3,
+      "dimension": 420,
+      "groups": 2,
+      "bytes": 170,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.00011948805490646919,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "EDEN",
+      "bits": 3,
+      "dimension": 420,
+      "groups": 1,
+      "bytes": 166,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.00012392247526804567,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "EDEN",
+      "bits": 3,
+      "dimension": 512,
+      "groups": 1,
+      "bytes": 200,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.00016447245229755936,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "EDEN",
+      "bits": 4,
+      "dimension": 420,
+      "groups": 2,
+      "bytes": 222,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 9.09706034235569e-05,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "EDEN",
+      "bits": 4,
+      "dimension": 420,
+      "groups": 1,
+      "bytes": 218,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 8.62039007643034e-05,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "EDEN",
+      "bits": 4,
+      "dimension": 512,
+      "groups": 1,
+      "bytes": 264,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.000249241660867483,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 2,
+      "dimension": 420,
+      "groups": 2,
+      "bytes": 117,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 9.718993601381953e-05,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 2,
+      "dimension": 420,
+      "groups": 1,
+      "bytes": 113,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.00012196275633868936,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 2,
+      "dimension": 512,
+      "groups": 1,
+      "bytes": 136,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.0001620077052848501,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 3,
+      "dimension": 420,
+      "groups": 2,
+      "bytes": 170,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 8.81831306287495e-05,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 3,
+      "dimension": 420,
+      "groups": 1,
+      "bytes": 166,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.0001602417222557051,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 3,
+      "dimension": 512,
+      "groups": 1,
+      "bytes": 200,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.00015764141699037282,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 4,
+      "dimension": 420,
+      "groups": 2,
+      "bytes": 222,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.00011707890735124238,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 4,
+      "dimension": 420,
+      "groups": 1,
+      "bytes": 218,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.00011821886710094986,
+      "independent_rankings_exact": true
+    },
+    {
+      "family": "RaBitQ",
+      "bits": 4,
+      "dimension": 512,
+      "groups": 1,
+      "bytes": 264,
+      "native_group_reconstruction_exact": true,
+      "independent_FP64_score_max_abs_error": 0.00017946216598829778,
+      "independent_rankings_exact": true
+    }
+  ],
+  "whole_original_norm_preserved_when_both_EDEN_groups_tiny": true,
+  "codebook_policy": "Native EDEN164 and256 each normalize with their OWN dimension/norm and original unbiased scales; RaBitQ native164/256 per-residual optimization. FP32 query score, one final clamp.",
+  "dll_sha256": "4ea3811272f52c136f555e1ee3c03f79005362f238f8676f3fb1c5159efe0897"
+}
