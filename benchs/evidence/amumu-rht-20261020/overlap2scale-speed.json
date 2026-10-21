@@ -1,0 +1,4513 @@
+{
+  "status": "complete_some_samples_unqualified",
+  "pid": 11088,
+  "affinity": [
+    0
+  ],
+  "protocol": "Low target-core interference under persistent maintenance background, NOT fully idle whole machine",
+  "gate": "3consecutive5sec windows rawCPU0<=5%, globalexternal excluding worker+monitor<=0.6core; max3x12windows",
+  "native_pipeline": "C++ centering+transform+alloc+actualsearch or native SIMD compactsearch; k100,batch256,3native samples,2pairedpasses; noPython/dense proxy timings",
+  "attribution": "compact_full512 isolates custom format/SIMD scanner changes from transform/group scales; overlap_one_scale versus overlap_two_scale isolates group normalization at fixed420 geometry. DO NOT attribute full native baseline ratio wholly to overlap.",
+  "recall_source_sha256": "3f0f6d6f04008b6114eec617462a0c31352206908694cd1f85d52addb13f54f4",
+  "gates": [
+    {
+      "attempt": 0,
+      "window": 0,
+      "external_cpu_cores": 0.6186550241009988,
+      "cpu0_fraction": 0.0687394471197466,
+      "passed": false
+    },
+    {
+      "attempt": 0,
+      "window": 1,
+      "external_cpu_cores": 0.4749594859569923,
+      "cpu0_fraction": 0.059369935744624035,
+      "passed": false
+    },
+    {
+      "attempt": 0,
+      "window": 2,
+      "external_cpu_cores": 0.42496475342211737,
+      "cpu0_fraction": 0.04999585334377851,
+      "passed": true
+    },
+    {
+      "attempt": 0,
+      "window": 3,
+      "external_cpu_cores": 0.4437215751964076,
+      "cpu0_fraction": 0.03437279807859495,
+      "passed": true
+    },
+    {
+      "attempt": 0,
+      "window": 4,
+      "external_cpu_cores": 0.46228436284094115,
+      "cpu0_fraction": 0.02186480094517965,
+      "passed": true
+    }
+  ],
+  "tuning": [
+    {
+      "strategy": 1,
+      "n": 32,
+      "trial": 0,
+      "seconds_per_vector": 1.67975e-07
+    },
+    {
+      "strategy": 0,
+      "n": 256,
+      "trial": 0,
+      "seconds_per_vector": 5.342798477564102e-07
+    },
+    {
+      "strategy": 1,
+      "n": 256,
+      "trial": 0,
+      "seconds_per_vector": 1.9136618589743588e-07
+    },
+    {
+      "strategy": 2,
+      "n": 32,
+      "trial": 0,
+      "seconds_per_vector": 1.21015e-07
+    },
+    {
+      "strategy": 0,
+      "n": 32,
+      "trial": 0,
+      "seconds_per_vector": 5.33035e-07
+    },
+    {
+      "strategy": 2,
+      "n": 20000,
+      "trial": 0,
+      "seconds_per_vector": 4.42385e-07
+    },
+    {
+      "strategy": 1,
+      "n": 20000,
+      "trial": 0,
+      "seconds_per_vector": 5.826350000000001e-07
+    },
+    {
+      "strategy": 2,
+      "n": 256,
+      "trial": 0,
+      "seconds_per_vector": 1.2745893429487179e-07
+    },
+    {
+      "strategy": 0,
+      "n": 20000,
+      "trial": 0,
+      "seconds_per_vector": 9.2557e-07
+    },
+    {
+      "strategy": 2,
+      "n": 256,
+      "trial": 1,
+      "seconds_per_vector": 1.3194110576923076e-07
+    },
+    {
+      "strategy": 1,
+      "n": 256,
+      "trial": 1,
+      "seconds_per_vector": 1.8337840544871796e-07
+    },
+    {
+      "strategy": 1,
+      "n": 20000,
+      "trial": 1,
+      "seconds_per_vector": 5.856799999999999e-07
+    },
+    {
+      "strategy": 2,
+      "n": 32,
+      "trial": 1,
+      "seconds_per_vector": 1.27195e-07
+    },
+    {
+      "strategy": 1,
+      "n": 32,
+      "trial": 1,
+      "seconds_per_vector": 1.6749499999999998e-07
+    },
+    {
+      "strategy": 2,
+      "n": 20000,
+      "trial": 1,
+      "seconds_per_vector": 4.4111999999999997e-07
+    },
+    {
+      "strategy": 0,
+      "n": 32,
+      "trial": 1,
+      "seconds_per_vector": 5.35215e-07
+    },
+    {
+      "strategy": 0,
+      "n": 256,
+      "trial": 1,
+      "seconds_per_vector": 5.205428685897435e-07
+    },
+    {
+      "strategy": 0,
+      "n": 20000,
+      "trial": 1,
+      "seconds_per_vector": 8.94555e-07
+    },
+    {
+      "strategy": 0,
+      "n": 256,
+      "trial": 2,
+      "seconds_per_vector": 5.684845753205128e-07
+    },
+    {
+      "strategy": 0,
+      "n": 32,
+      "trial": 2,
+      "seconds_per_vector": 5.291350000000001e-07
+    },
+    {
+      "strategy": 0,
+      "n": 20000,
+      "trial": 2,
+      "seconds_per_vector": 9.01495e-07
+    },
+    {
+      "strategy": 1,
+      "n": 20000,
+      "trial": 2,
+      "seconds_per_vector": 5.445e-07
+    },
+    {
+      "strategy": 2,
+      "n": 256,
+      "trial": 2,
+      "seconds_per_vector": 1.2494991987179486e-07
+    },
+    {
+      "strategy": 1,
+      "n": 32,
+      "trial": 2,
+      "seconds_per_vector": 1.65455e-07
+    },
+    {
+      "strategy": 1,
+      "n": 256,
+      "trial": 2,
+      "seconds_per_vector": 1.732071314102564e-07
+    },
+    {
+      "strategy": 2,
+      "n": 32,
+      "trial": 2,
+      "seconds_per_vector": 1.1915999999999999e-07
+    },
+    {
+      "strategy": 2,
+      "n": 20000,
+      "trial": 2,
+      "seconds_per_vector": 4.6904499999999995e-07
+    },
+    {
+      "strategy": 2,
+      "n": 20000,
+      "trial": 3,
+      "seconds_per_vector": 4.2443999999999995e-07
+    },
+    {
+      "strategy": 0,
+      "n": 32,
+      "trial": 3,
+      "seconds_per_vector": 5.4323e-07
+    },
+    {
+      "strategy": 1,
+      "n": 256,
+      "trial": 3,
+      "seconds_per_vector": 1.8397435897435897e-07
+    },
+    {
+      "strategy": 2,
+      "n": 32,
+      "trial": 3,
+      "seconds_per_vector": 1.1861e-07
+    },
+    {
+      "strategy": 0,
+      "n": 20000,
+      "trial": 3,
+      "seconds_per_vector": 8.7601e-07
+    },
+    {
+      "strategy": 0,
+      "n": 256,
+      "trial": 3,
+      "seconds_per_vector": 5.589443108974359e-07
+    },
+    {
+      "strategy": 1,
+      "n": 32,
+      "trial": 3,
+      "seconds_per_vector": 1.6836e-07
+    },
+    {
+      "strategy": 1,
+      "n": 20000,
+      "trial": 3,
+      "seconds_per_vector": 5.75535e-07
+    },
+    {
+      "strategy": 2,
+      "n": 256,
+      "trial": 3,
+      "seconds_per_vector": 1.4852764423076925e-07
+    },
+    {
+      "strategy": 1,
+      "n": 32,
+      "trial": 4,
+      "seconds_per_vector": 1.6997e-07
+    },
+    {
+      "strategy": 1,
+      "n": 256,
+      "trial": 4,
+      "seconds_per_vector": 1.7546073717948717e-07
+    },
+    {
+      "strategy": 0,
+      "n": 32,
+      "trial": 4,
+      "seconds_per_vector": 5.47275e-07
+    },
+    {
+      "strategy": 2,
+      "n": 20000,
+      "trial": 4,
+      "seconds_per_vector": 5.563249999999999e-07
+    },
+    {
+      "strategy": 0,
+      "n": 20000,
+      "trial": 4,
+      "seconds_per_vector": 9.40685e-07
+    },
+    {
+      "strategy": 2,
+      "n": 256,
+      "trial": 4,
+      "seconds_per_vector": 1.290314503205128e-07
+    },
+    {
+      "strategy": 1,
+      "n": 20000,
+      "trial": 4,
+      "seconds_per_vector": 5.525600000000001e-07
+    },
+    {
+      "strategy": 2,
+      "n": 32,
+      "trial": 4,
+      "seconds_per_vector": 1.21285e-07
+    },
+    {
+      "strategy": 0,
+      "n": 256,
+      "trial": 4,
+      "seconds_per_vector": 5.395983573717949e-07
+    },
+    {
+      "strategy": 0,
+      "n": 32,
+      "trial": 5,
+      "seconds_per_vector": 5.185450000000001e-07
+    },
+    {
+      "strategy": 1,
+      "n": 256,
+      "trial": 5,
+      "seconds_per_vector": 1.7661258012820511e-07
+    },
+    {
+      "strategy": 0,
+      "n": 20000,
+      "trial": 5,
+      "seconds_per_vector": 1.03578e-06
+    },
+    {
+      "strategy": 1,
+      "n": 20000,
+      "trial": 5,
+      "seconds_per_vector": 5.67765e-07
+    },
+    {
+      "strategy": 2,
+      "n": 32,
+      "trial": 5,
+      "seconds_per_vector": 1.22155e-07
+    },
+    {
+      "strategy": 0,
+      "n": 256,
+      "trial": 5,
+      "seconds_per_vector": 5.577974759615385e-07
+    },
+    {
+      "strategy": 2,
+      "n": 256,
+      "trial": 5,
+      "seconds_per_vector": 1.2529547275641027e-07
+    },
+    {
+      "strategy": 1,
+      "n": 32,
+      "trial": 5,
+      "seconds_per_vector": 1.7168e-07
+    },
+    {
+      "strategy": 2,
+      "n": 20000,
+      "trial": 5,
+      "seconds_per_vector": 5.00095e-07
+    },
+    {
+      "strategy": 1,
+      "n": 256,
+      "trial": 6,
+      "seconds_per_vector": 1.778896233974359e-07
+    },
+    {
+      "strategy": 1,
+      "n": 32,
+      "trial": 6,
+      "seconds_per_vector": 1.67865e-07
+    },
+    {
+      "strategy": 2,
+      "n": 256,
+      "trial": 6,
+      "seconds_per_vector": 1.2763421474358974e-07
+    },
+    {
+      "strategy": 2,
+      "n": 32,
+      "trial": 6,
+      "seconds_per_vector": 1.26315e-07
+    },
+    {
+      "strategy": 0,
+      "n": 32,
+      "trial": 6,
+      "seconds_per_vector": 5.4311e-07
+    },
+    {
+      "strategy": 0,
+      "n": 20000,
+      "trial": 6,
+      "seconds_per_vector": 8.9444e-07
+    },
+    {
+      "strategy": 2,
+      "n": 20000,
+      "trial": 6,
+      "seconds_per_vector": 4.36945e-07
+    },
+    {
+      "strategy": 1,
+      "n": 20000,
+      "trial": 6,
+      "seconds_per_vector": 5.6647e-07
+    },
+    {
+      "strategy": 0,
+      "n": 256,
+      "trial": 6,
+      "seconds_per_vector": 5.403345352564103e-07
+    }
+  ],
+  "rows": [
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652501.4408245,
+      "end": 652503.1978568,
+      "samples_seconds": [
+        0.5876336,
+        0.5842054,
+        0.5851429
+      ],
+      "qps": 341.796849966051,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652503.2258983,
+      "end": 652506.8393014,
+      "samples_seconds": [
+        1.2112908,
+        1.2056658,
+        1.1963582
+      ],
+      "qps": 165.88344796709006,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652506.856956,
+      "end": 652508.8975708,
+      "samples_seconds": [
+        0.67878,
+        0.6802136,
+        0.6814966
+      ],
+      "qps": 294.0252885270156,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652508.9131666,
+      "end": 652510.6001327,
+      "samples_seconds": [
+        0.5587801,
+        0.5619761,
+        0.566151
+      ],
+      "qps": 355.8870208181451,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652510.6074458,
+      "end": 652511.0996953,
+      "samples_seconds": [
+        0.1636178,
+        0.1641792,
+        0.1644003
+      ],
+      "qps": 1218.1811094219,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652511.1076973,
+      "end": 652511.6975653,
+      "samples_seconds": [
+        0.1951073,
+        0.1945571,
+        0.2001562
+      ],
+      "qps": 1025.07697046702,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652511.7050397,
+      "end": 652512.198135,
+      "samples_seconds": [
+        0.1633742,
+        0.1662295,
+        0.163441
+      ],
+      "qps": 1223.6831639551888,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652512.2061052,
+      "end": 652512.7933656,
+      "samples_seconds": [
+        0.1934153,
+        0.1996075,
+        0.1941897
+      ],
+      "qps": 1029.920742449265,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652512.8111187,
+      "end": 652514.8709202,
+      "samples_seconds": [
+        0.6758881,
+        0.6951947,
+        0.6886652
+      ],
+      "qps": 290.4168818171733,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652514.8866685,
+      "end": 652516.6434647,
+      "samples_seconds": [
+        0.5802956,
+        0.5906437,
+        0.5857954
+      ],
+      "qps": 341.41613266338385,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652516.6714469,
+      "end": 652520.2646764,
+      "samples_seconds": [
+        1.1981896,
+        1.1916789,
+        1.203304
+      ],
+      "qps": 166.9184910301341,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652520.2799958,
+      "end": 652521.9608419,
+      "samples_seconds": [
+        0.5621802,
+        0.5571488,
+        0.561465
+      ],
+      "qps": 356.21098376568443,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652521.9770187,
+      "end": 652523.7365898,
+      "samples_seconds": [
+        0.5795105,
+        0.5889621,
+        0.5910465
+      ],
+      "qps": 339.5804246147587,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652523.7518144,
+      "end": 652525.4311163,
+      "samples_seconds": [
+        0.5623688,
+        0.5601774,
+        0.5566998
+      ],
+      "qps": 357.02975521682947,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652525.4585567,
+      "end": 652529.0495643,
+      "samples_seconds": [
+        1.1951015,
+        1.1992273,
+        1.1966095
+      ],
+      "qps": 167.13890371085972,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652529.0670394,
+      "end": 652531.1016972,
+      "samples_seconds": [
+        0.6762999,
+        0.6789841,
+        0.6793246
+      ],
+      "qps": 294.5577076105317,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652531.1133311,
+      "end": 652532.2439362,
+      "samples_seconds": [
+        0.3723797,
+        0.379582,
+        0.3784992
+      ],
+      "qps": 528.4027020400572,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652532.2560888,
+      "end": 652533.3897685,
+      "samples_seconds": [
+        0.3755556,
+        0.3804959,
+        0.3775646
+      ],
+      "qps": 529.7106773251518,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652533.4000433,
+      "end": 652534.3333126,
+      "samples_seconds": [
+        0.3097522,
+        0.3147481,
+        0.3087195
+      ],
+      "qps": 645.6774156890573,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652534.3435651,
+      "end": 652535.2885552,
+      "samples_seconds": [
+        0.3132236,
+        0.3122469,
+        0.3194693
+      ],
+      "qps": 638.5214907178131,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652535.298639,
+      "end": 652536.2418814,
+      "samples_seconds": [
+        0.3106649,
+        0.3121054,
+        0.320412
+      ],
+      "qps": 640.8091625457298,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652536.2536864,
+      "end": 652537.3787304,
+      "samples_seconds": [
+        0.3736267,
+        0.3716866,
+        0.3796684
+      ],
+      "qps": 535.2936500523116,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652537.3893686,
+      "end": 652538.3181813,
+      "samples_seconds": [
+        0.3070234,
+        0.3086759,
+        0.3130562
+      ],
+      "qps": 647.9287822599691,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652538.3300279,
+      "end": 652539.4624061,
+      "samples_seconds": [
+        0.3763278,
+        0.3825953,
+        0.3734011
+      ],
+      "qps": 531.4515696156383,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652539.4706423,
+      "end": 652540.0620456,
+      "samples_seconds": [
+        0.1936172,
+        0.1949983,
+        0.2027387
+      ],
+      "qps": 1025.6499672048421,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652540.0692965,
+      "end": 652540.5589867,
+      "samples_seconds": [
+        0.1640612,
+        0.1625733,
+        0.1630011
+      ],
+      "qps": 1226.9855847598574,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652540.5666399,
+      "end": 652541.1464876,
+      "samples_seconds": [
+        0.1925111,
+        0.1933127,
+        0.1939743
+      ],
+      "qps": 1034.5931746853673,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652541.1539657,
+      "end": 652541.6442207,
+      "samples_seconds": [
+        0.1646384,
+        0.1624398,
+        0.1631255
+      ],
+      "qps": 1226.0498818394426,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652541.659947,
+      "end": 652543.4295671,
+      "samples_seconds": [
+        0.5949385,
+        0.5830675,
+        0.5915569
+      ],
+      "qps": 338.090892017319,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652543.4470184,
+      "end": 652545.4860024,
+      "samples_seconds": [
+        0.6783693,
+        0.6831043,
+        0.6774464
+      ],
+      "qps": 294.82466261371206,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652545.5136757,
+      "end": 652549.1046176,
+      "samples_seconds": [
+        1.1951835,
+        1.1970867,
+        1.198609
+      ],
+      "qps": 167.07227638566195,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652549.1197856,
+      "end": 652550.8025499,
+      "samples_seconds": [
+        0.562716,
+        0.5580711,
+        0.5619213
+      ],
+      "qps": 355.9217278291462,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652550.8134247,
+      "end": 652551.7862335,
+      "samples_seconds": [
+        0.3222703,
+        0.3273102,
+        0.3231792
+      ],
+      "qps": 618.8517082782555,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652551.796566,
+      "end": 652552.7282907,
+      "samples_seconds": [
+        0.3106197,
+        0.3130847,
+        0.3079562
+      ],
+      "qps": 643.8741650964186,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652552.7402103,
+      "end": 652553.8653118,
+      "samples_seconds": [
+        0.3732157,
+        0.378766,
+        0.3730517
+      ],
+      "qps": 535.8831367490703,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652553.8773044,
+      "end": 652555.0205723,
+      "samples_seconds": [
+        0.3764882,
+        0.383432,
+        0.3832929
+      ],
+      "qps": 521.7941683761949,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652555.0290737,
+      "end": 652555.6169711,
+      "samples_seconds": [
+        0.1941863,
+        0.1996846,
+        0.1939673
+      ],
+      "qps": 1029.938775289503,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652555.6242694,
+      "end": 652556.1151322,
+      "samples_seconds": [
+        0.1622624,
+        0.1622195,
+        0.1663327
+      ],
+      "qps": 1232.571439840653,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652556.1230586,
+      "end": 652556.709177,
+      "samples_seconds": [
+        0.1939944,
+        0.1993396,
+        0.1927364
+      ],
+      "qps": 1030.9575946522168,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652556.7161771,
+      "end": 652557.2053512,
+      "samples_seconds": [
+        0.1625005,
+        0.1637141,
+        0.1629128
+      ],
+      "qps": 1227.6506204546235,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652557.2131357,
+      "end": 652557.799672,
+      "samples_seconds": [
+        0.1951,
+        0.1979989,
+        0.1933894
+      ],
+      "qps": 1025.115325474116,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652557.8069647,
+      "end": 652558.3017492,
+      "samples_seconds": [
+        0.1654096,
+        0.165532,
+        0.1637945
+      ],
+      "qps": 1209.1196641549222,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652558.3094598,
+      "end": 652558.8963544,
+      "samples_seconds": [
+        0.1994041,
+        0.1938245,
+        0.193616
+      ],
+      "qps": 1031.8612972044298,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652558.9040255,
+      "end": 652559.3917181,
+      "samples_seconds": [
+        0.1605982,
+        0.1636504,
+        0.16339
+      ],
+      "qps": 1224.065120264398,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652559.401938,
+      "end": 652560.3367749,
+      "samples_seconds": [
+        0.3145367,
+        0.3117593,
+        0.3084873
+      ],
+      "qps": 641.5205576866512,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652560.3471657,
+      "end": 652561.2897216,
+      "samples_seconds": [
+        0.3174456,
+        0.3121263,
+        0.3129286
+      ],
+      "qps": 639.1234294340626,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652561.3017916,
+      "end": 652562.4252517,
+      "samples_seconds": [
+        0.3770472,
+        0.3731265,
+        0.3732339
+      ],
+      "qps": 535.8570054863719,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652562.4372376,
+      "end": 652563.5758266,
+      "samples_seconds": [
+        0.3810765,
+        0.3765696,
+        0.3808891
+      ],
+      "qps": 525.0872235514222,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652563.5877886,
+      "end": 652564.7295513,
+      "samples_seconds": [
+        0.3793688,
+        0.3805331,
+        0.3818051
+      ],
+      "qps": 525.5784582208486,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652564.7399705,
+      "end": 652565.6859414,
+      "samples_seconds": [
+        0.3121185,
+        0.3148797,
+        0.3189126
+      ],
+      "qps": 635.1632067738886,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652565.6959176,
+      "end": 652566.6232794,
+      "samples_seconds": [
+        0.308014,
+        0.3059632,
+        0.3133297
+      ],
+      "qps": 649.3211347536151,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652566.6353015,
+      "end": 652567.7594101,
+      "samples_seconds": [
+        0.3733745,
+        0.3721765,
+        0.3785048
+      ],
+      "qps": 535.6552201609912,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652567.7753703,
+      "end": 652569.526378,
+      "samples_seconds": [
+        0.5867427,
+        0.5833095,
+        0.5809002
+      ],
+      "qps": 342.87115159276505,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652569.5543964,
+      "end": 652573.1450213,
+      "samples_seconds": [
+        1.2047774,
+        1.1933399,
+        1.1924498
+      ],
+      "qps": 167.59684311234378,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652573.1629258,
+      "end": 652575.2016442,
+      "samples_seconds": [
+        0.6832563,
+        0.6742497,
+        0.6811479
+      ],
+      "qps": 293.6219872365458,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652575.2166586,
+      "end": 652576.8993528,
+      "samples_seconds": [
+        0.558533,
+        0.562729,
+        0.5613827
+      ],
+      "qps": 356.2632051183622,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652576.9066894,
+      "end": 652577.3963699,
+      "samples_seconds": [
+        0.1636884,
+        0.1630928,
+        0.1628518
+      ],
+      "qps": 1226.2957040408896,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652577.4048112,
+      "end": 652577.9939728,
+      "samples_seconds": [
+        0.194682,
+        0.1942147,
+        0.2002151
+      ],
+      "qps": 1027.3163415210447,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652578.0021174,
+      "end": 652578.5819518,
+      "samples_seconds": [
+        0.1924166,
+        0.193601,
+        0.1937654
+      ],
+      "qps": 1033.0525152246114,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652578.5894992,
+      "end": 652579.0853818,
+      "samples_seconds": [
+        0.1632246,
+        0.1686985,
+        0.1639083
+      ],
+      "qps": 1220.1944623914712,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652579.0925083,
+      "end": 652579.5822326,
+      "samples_seconds": [
+        0.1630382,
+        0.1624196,
+        0.1642185
+      ],
+      "qps": 1226.706379241184,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652579.5906844,
+      "end": 652580.1827822,
+      "samples_seconds": [
+        0.1938985,
+        0.1998983,
+        0.1982483
+      ],
+      "qps": 1008.8358891349889,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652580.3133366,
+      "end": 652599.3191496,
+      "samples_seconds": [
+        6.3174836,
+        6.3329831,
+        6.355264
+      ],
+      "qps": 31.58069378078713,
+      "code_bytes": 148,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652599.3262759,
+      "end": 652599.816146,
+      "samples_seconds": [
+        0.1635811,
+        0.1637326,
+        0.1625099
+      ],
+      "qps": 1222.6351332763993,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652599.9463499,
+      "end": 652619.1082891,
+      "samples_seconds": [
+        6.3899213,
+        6.347876,
+        6.4239541
+      ],
+      "qps": 31.299290024119703,
+      "code_bytes": 276,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652619.1191557,
+      "end": 652620.0649941,
+      "samples_seconds": [
+        0.3117718,
+        0.3206907,
+        0.313312
+      ],
+      "qps": 638.3413338780513,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652620.0760605,
+      "end": 652621.0135454,
+      "samples_seconds": [
+        0.3129798,
+        0.3080722,
+        0.3162745
+      ],
+      "qps": 639.0188759785776,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652621.0259564,
+      "end": 652622.1763881,
+      "samples_seconds": [
+        0.3819016,
+        0.3902399,
+        0.3782159
+      ],
+      "qps": 523.6951088971609,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652622.1836937,
+      "end": 652622.6743366,
+      "samples_seconds": [
+        0.1640874,
+        0.163297,
+        0.1631946
+      ],
+      "qps": 1224.762243029572,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652622.682638,
+      "end": 652623.2738226,
+      "samples_seconds": [
+        0.2002673,
+        0.1957931,
+        0.1950757
+      ],
+      "qps": 1021.4864568771832,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652623.4030361,
+      "end": 652642.5066176,
+      "samples_seconds": [
+        6.409021,
+        6.3480919,
+        6.3463877
+      ],
+      "qps": 31.505530031787977,
+      "code_bytes": 148,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652642.5135223,
+      "end": 652643.0092349,
+      "samples_seconds": [
+        0.1632288,
+        0.164107,
+        0.1683276
+      ],
+      "qps": 1218.717056554565,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652643.0272075,
+      "end": 652645.0640091,
+      "samples_seconds": [
+        0.6761803,
+        0.6861405,
+        0.6744238
+      ],
+      "qps": 295.7790991544711,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652645.0794927,
+      "end": 652646.7509964,
+      "samples_seconds": [
+        0.5569534,
+        0.5609125,
+        0.5535836
+      ],
+      "qps": 359.09647018942695,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652646.8798834,
+      "end": 652665.8476755,
+      "samples_seconds": [
+        6.2954282,
+        6.3238589,
+        6.3484234
+      ],
+      "qps": 31.626259086836992,
+      "code_bytes": 212,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652665.8632599,
+      "end": 652667.6242613,
+      "samples_seconds": [
+        0.5806538,
+        0.592044,
+        0.5882504
+      ],
+      "qps": 339.9912690242115,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652667.7543105,
+      "end": 652686.8498204,
+      "samples_seconds": [
+        6.3345732,
+        6.3648543,
+        6.3959932
+      ],
+      "qps": 31.422557465298144,
+      "code_bytes": 276,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652686.8601596,
+      "end": 652687.7908116,
+      "samples_seconds": [
+        0.3130267,
+        0.307881,
+        0.3095086
+      ],
+      "qps": 646.1855987200355,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652687.8014622,
+      "end": 652688.7471551,
+      "samples_seconds": [
+        0.3183682,
+        0.3161831,
+        0.3110876
+      ],
+      "qps": 632.5448766869577,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652688.7592166,
+      "end": 652689.8824094,
+      "samples_seconds": [
+        0.3804391,
+        0.3710178,
+        0.3716838
+      ],
+      "qps": 538.0917866207782,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652689.8981985,
+      "end": 652691.5738466,
+      "samples_seconds": [
+        0.5602497,
+        0.553713,
+        0.5616317
+      ],
+      "qps": 356.98368066953003,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652691.7030492,
+      "end": 652710.8296311,
+      "samples_seconds": [
+        6.3502924,
+        6.379029,
+        6.3971814
+      ],
+      "qps": 31.35273409166191,
+      "code_bytes": 212,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652710.8469841,
+      "end": 652712.88206,
+      "samples_seconds": [
+        0.6783422,
+        0.6726889,
+        0.6839915
+      ],
+      "qps": 294.83644095856044,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652712.898077,
+      "end": 652714.6626385,
+      "samples_seconds": [
+        0.5910015,
+        0.584355,
+        0.5891542
+      ],
+      "qps": 339.46970080158985,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652714.6783013,
+      "end": 652716.4332852,
+      "samples_seconds": [
+        0.5818083,
+        0.5847159,
+        0.5884042
+      ],
+      "qps": 342.0464536709195,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652716.4486928,
+      "end": 652718.1201135,
+      "samples_seconds": [
+        0.5582647,
+        0.5573289,
+        0.5557778
+      ],
+      "qps": 358.85452916581215,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652718.1377149,
+      "end": 652720.167208,
+      "samples_seconds": [
+        0.6809771,
+        0.6723626,
+        0.6760992
+      ],
+      "qps": 295.8145786890444,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652720.2974837,
+      "end": 652739.4995682,
+      "samples_seconds": [
+        6.3977922,
+        6.3989042,
+        6.4053057
+      ],
+      "qps": 31.25535150221502,
+      "code_bytes": 212,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652739.5147717,
+      "end": 652741.1942067,
+      "samples_seconds": [
+        0.5618161,
+        0.559187,
+        0.5583821
+      ],
+      "qps": 357.6621058787132,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652741.3227744,
+      "end": 652760.395938,
+      "samples_seconds": [
+        6.3448531,
+        6.3612893,
+        6.3669408
+      ],
+      "qps": 31.440167325828114,
+      "code_bytes": 212,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652760.4173588,
+      "end": 652762.4410174,
+      "samples_seconds": [
+        0.6708783,
+        0.6763876,
+        0.6762831
+      ],
+      "qps": 295.7341385582458,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652762.4567293,
+      "end": 652764.2109995,
+      "samples_seconds": [
+        0.5812591,
+        0.5929731,
+        0.5799817
+      ],
+      "qps": 344.08063460855925,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652764.2187158,
+      "end": 652764.7184015,
+      "samples_seconds": [
+        0.16416,
+        0.1717807,
+        0.1636911
+      ],
+      "qps": 1218.3235867446394,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652764.7265644,
+      "end": 652765.3099416,
+      "samples_seconds": [
+        0.1936174,
+        0.1942605,
+        0.1954491
+      ],
+      "qps": 1029.545378499489,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652765.4443882,
+      "end": 652784.4825018,
+      "samples_seconds": [
+        6.3137025,
+        6.353226,
+        6.3711077
+      ],
+      "qps": 31.480070125004207,
+      "code_bytes": 148,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652784.4898909,
+      "end": 652784.9828465,
+      "samples_seconds": [
+        0.1619577,
+        0.161906,
+        0.1690397
+      ],
+      "qps": 1234.8903448246053,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652784.9915556,
+      "end": 652785.573664,
+      "samples_seconds": [
+        0.1944899,
+        0.1937341,
+        0.1938287
+      ],
+      "qps": 1031.8389381964591,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652785.7040768,
+      "end": 652804.7287666,
+      "samples_seconds": [
+        6.3765409,
+        6.339656,
+        6.3084145
+      ],
+      "qps": 31.54745304792563,
+      "code_bytes": 148,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652804.7361617,
+      "end": 652805.2336856,
+      "samples_seconds": [
+        0.1647994,
+        0.1635704,
+        0.1691072
+      ],
+      "qps": 1213.5966514441193,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652805.2406977,
+      "end": 652805.7284037,
+      "samples_seconds": [
+        0.162822,
+        0.1619107,
+        0.1629253
+      ],
+      "qps": 1228.3352372529512,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652805.7388565,
+      "end": 652806.6704824,
+      "samples_seconds": [
+        0.3089505,
+        0.3132741,
+        0.3093496
+      ],
+      "qps": 646.5177262230176,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652806.6812023,
+      "end": 652807.6206201,
+      "samples_seconds": [
+        0.3106794,
+        0.317309,
+        0.3113775
+      ],
+      "qps": 642.3071673451037,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652807.7499675,
+      "end": 652826.8716815,
+      "samples_seconds": [
+        6.3845351,
+        6.3796061,
+        6.3574879
+      ],
+      "qps": 31.349897919246143,
+      "code_bytes": 276,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652826.8834034,
+      "end": 652828.0109833,
+      "samples_seconds": [
+        0.3736402,
+        0.3718577,
+        0.3820266
+      ],
+      "qps": 535.2743093489405,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652828.0272663,
+      "end": 652829.7871171,
+      "samples_seconds": [
+        0.5814039,
+        0.5893309,
+        0.5890647
+      ],
+      "qps": 339.5212783926791,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652829.8027776,
+      "end": 652831.4774275,
+      "samples_seconds": [
+        0.553357,
+        0.5666827,
+        0.5545505
+      ],
+      "qps": 360.65245635879876,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652831.6063451,
+      "end": 652850.714802,
+      "samples_seconds": [
+        6.3773278,
+        6.3694713,
+        6.3615734
+      ],
+      "qps": 31.399780386795996,
+      "code_bytes": 212,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652850.7327245,
+      "end": 652852.7831522,
+      "samples_seconds": [
+        0.6773871,
+        0.6796623,
+        0.6930208
+      ],
+      "qps": 294.2637836466727,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652852.7907036,
+      "end": 652853.2819652,
+      "samples_seconds": [
+        0.1651156,
+        0.1635129,
+        0.1625822
+      ],
+      "qps": 1223.1450851889974,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652853.2907755,
+      "end": 652853.874325,
+      "samples_seconds": [
+        0.1947031,
+        0.1943366,
+        0.194457
+      ],
+      "qps": 1028.5050165332182,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652854.0031048,
+      "end": 652873.0069499,
+      "samples_seconds": [
+        6.3438321,
+        6.3168599,
+        6.343077
+      ],
+      "qps": 31.5304386183551,
+      "code_bytes": 148,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652873.014201,
+      "end": 652873.5056954,
+      "samples_seconds": [
+        0.1635572,
+        0.1641305,
+        0.1637585
+      ],
+      "qps": 1221.310649523536,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652873.5168284,
+      "end": 652874.4615629,
+      "samples_seconds": [
+        0.3192537,
+        0.3123158,
+        0.3130041
+      ],
+      "qps": 638.9692658977949,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652874.5970397,
+      "end": 652893.5811723,
+      "samples_seconds": [
+        6.2923707,
+        6.3287926,
+        6.3628681
+      ],
+      "qps": 31.601604388173506,
+      "code_bytes": 276,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652893.5931204,
+      "end": 652894.7207017,
+      "samples_seconds": [
+        0.3747586,
+        0.3780665,
+        0.3747004
+      ],
+      "qps": 533.6768789295296,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652894.7310558,
+      "end": 652895.6608983,
+      "samples_seconds": [
+        0.3059512,
+        0.3165684,
+        0.3072702
+      ],
+      "qps": 650.8929274625395,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652895.6716319,
+      "end": 652896.6112194,
+      "samples_seconds": [
+        0.3106832,
+        0.3188656,
+        0.3099868
+      ],
+      "qps": 643.7425647733769,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652896.6218343,
+      "end": 652897.5539226,
+      "samples_seconds": [
+        0.3112422,
+        0.3128676,
+        0.3079255
+      ],
+      "qps": 642.5863844941334,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652897.5655674,
+      "end": 652898.6905554,
+      "samples_seconds": [
+        0.3712651,
+        0.3793354,
+        0.3743364
+      ],
+      "qps": 534.2787930855776,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 0,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652898.8207327,
+      "end": 652917.9266338,
+      "samples_seconds": [
+        6.3745353,
+        6.366294,
+        6.3649899
+      ],
+      "qps": 31.4154514384664,
+      "code_bytes": 276,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652917.9346374,
+      "end": 652918.5217642,
+      "samples_seconds": [
+        0.1938834,
+        0.1943479,
+        0.1988461
+      ],
+      "qps": 1029.0823826756039,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652918.5290435,
+      "end": 652919.0171522,
+      "samples_seconds": [
+        0.1621038,
+        0.1632068,
+        0.1627495
+      ],
+      "qps": 1228.882423601916,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652919.0250718,
+      "end": 652919.6100847,
+      "samples_seconds": [
+        0.194745,
+        0.1919455,
+        0.1982748
+      ],
+      "qps": 1026.9840047241264,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652919.6177324,
+      "end": 652920.1078776,
+      "samples_seconds": [
+        0.1634689,
+        0.162907,
+        0.163718
+      ],
+      "qps": 1223.4743122392088,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652920.1362201,
+      "end": 652923.7275066,
+      "samples_seconds": [
+        1.1973944,
+        1.1930888,
+        1.2007413
+      ],
+      "qps": 167.0293430468691,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652923.7453359,
+      "end": 652925.7786974,
+      "samples_seconds": [
+        0.6730279,
+        0.6817039,
+        0.6785756
+      ],
+      "qps": 294.73503026044557,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652925.7951654,
+      "end": 652927.5392849,
+      "samples_seconds": [
+        0.5784259,
+        0.5846221,
+        0.5810216
+      ],
+      "qps": 344.22128196266715,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652927.5547769,
+      "end": 652929.23172,
+      "samples_seconds": [
+        0.5591627,
+        0.553852,
+        0.5638735
+      ],
+      "qps": 357.67764909926933,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652929.2427529,
+      "end": 652930.2212156,
+      "samples_seconds": [
+        0.3236698,
+        0.3289892,
+        0.3257545
+      ],
+      "qps": 613.959285289996,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652930.2335777,
+      "end": 652931.3708991,
+      "samples_seconds": [
+        0.3781528,
+        0.3825982,
+        0.3765159
+      ],
+      "qps": 528.8867357322225,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652931.382698,
+      "end": 652932.5062067,
+      "samples_seconds": [
+        0.3726637,
+        0.3762737,
+        0.3745181
+      ],
+      "qps": 534.0195841002077,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652932.5168012,
+      "end": 652933.452217,
+      "samples_seconds": [
+        0.3115936,
+        0.3146978,
+        0.3090207
+      ],
+      "qps": 641.8617070440471,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652933.4594543,
+      "end": 652933.9536947,
+      "samples_seconds": [
+        0.1624306,
+        0.1637932,
+        0.1679675
+      ],
+      "qps": 1221.0519118009784,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652933.961585,
+      "end": 652934.5434982,
+      "samples_seconds": [
+        0.1928499,
+        0.1951301,
+        0.1938821
+      ],
+      "qps": 1031.5547438365893,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652934.551171,
+      "end": 652935.0458031,
+      "samples_seconds": [
+        0.1623063,
+        0.163668,
+        0.1685989
+      ],
+      "qps": 1221.985971601046,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652935.0546015,
+      "end": 652935.6334677,
+      "samples_seconds": [
+        0.1914161,
+        0.1942135,
+        0.1931826
+      ],
+      "qps": 1035.2899277678216,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652935.6512523,
+      "end": 652937.6853733,
+      "samples_seconds": [
+        0.6787375,
+        0.6806254,
+        0.6747024
+      ],
+      "qps": 294.6647267905486,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652937.7130509,
+      "end": 652941.3015358,
+      "samples_seconds": [
+        1.1927192,
+        1.2011614,
+        1.1945534
+      ],
+      "qps": 167.42658804537328,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652941.3167623,
+      "end": 652942.9969495,
+      "samples_seconds": [
+        0.5538723,
+        0.5616507,
+        0.5646103
+      ],
+      "qps": 356.09320882178196,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652943.0131775,
+      "end": 652944.774792,
+      "samples_seconds": [
+        0.5866882,
+        0.5911727,
+        0.5837035
+      ],
+      "qps": 340.8965784551317,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652944.7910453,
+      "end": 652946.4715923,
+      "samples_seconds": [
+        0.56468,
+        0.5555705,
+        0.5602385
+      ],
+      "qps": 356.99081730370193,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652946.5006054,
+      "end": 652950.083013,
+      "samples_seconds": [
+        1.1941022,
+        1.1930711,
+        1.1951711
+      ],
+      "qps": 167.4898513711808,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652950.1008854,
+      "end": 652952.1348131,
+      "samples_seconds": [
+        0.6782089,
+        0.6826142,
+        0.6730425
+      ],
+      "qps": 294.89439020927034,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652952.1525789,
+      "end": 652953.9135763,
+      "samples_seconds": [
+        0.5857913,
+        0.5910606,
+        0.5840829
+      ],
+      "qps": 341.4185222621094,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652953.924558,
+      "end": 652954.8646338,
+      "samples_seconds": [
+        0.3113138,
+        0.3171854,
+        0.3115259
+      ],
+      "qps": 642.0011947642234,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652954.8752924,
+      "end": 652955.8045751,
+      "samples_seconds": [
+        0.3060592,
+        0.3143147,
+        0.3088573
+      ],
+      "qps": 647.5482366775854,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652955.81732,
+      "end": 652956.9429548,
+      "samples_seconds": [
+        0.3715801,
+        0.3779461,
+        0.3760554
+      ],
+      "qps": 531.8365325959952,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652956.955149,
+      "end": 652958.0888856,
+      "samples_seconds": [
+        0.3762806,
+        0.3823636,
+        0.3750365
+      ],
+      "qps": 531.5182339987764,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652958.101133,
+      "end": 652959.227629,
+      "samples_seconds": [
+        0.3794798,
+        0.3734005,
+        0.3735623
+      ],
+      "qps": 535.3859316103365,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652959.2398284,
+      "end": 652960.3750616,
+      "samples_seconds": [
+        0.3826857,
+        0.3761683,
+        0.3763275
+      ],
+      "qps": 531.4519932771323,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652960.3860055,
+      "end": 652961.3297787,
+      "samples_seconds": [
+        0.3179936,
+        0.3148016,
+        0.3109258
+      ],
+      "qps": 635.3207861713536,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652961.3405647,
+      "end": 652962.2710731,
+      "samples_seconds": [
+        0.3139963,
+        0.3099805,
+        0.3064825
+      ],
+      "qps": 645.2018756018524,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652962.281568,
+      "end": 652963.2265898,
+      "samples_seconds": [
+        0.3204589,
+        0.3126546,
+        0.3118587
+      ],
+      "qps": 639.6835357611882,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652963.2388289,
+      "end": 652964.3694662,
+      "samples_seconds": [
+        0.3850977,
+        0.3725509,
+        0.3729322
+      ],
+      "qps": 536.2905107148163,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652964.3803015,
+      "end": 652965.3153632,
+      "samples_seconds": [
+        0.3145892,
+        0.3114972,
+        0.3089235
+      ],
+      "qps": 642.0603459677968,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652965.3274668,
+      "end": 652966.5240479,
+      "samples_seconds": [
+        0.3807357,
+        0.4287706,
+        0.3870267
+      ],
+      "qps": 516.7602131842583,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652966.5315215,
+      "end": 652967.0315715,
+      "samples_seconds": [
+        0.1711592,
+        0.1648625,
+        0.1639796
+      ],
+      "qps": 1213.132155584199,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652967.0391351,
+      "end": 652967.5312044,
+      "samples_seconds": [
+        0.1627908,
+        0.1633253,
+        0.1659056
+      ],
+      "qps": 1224.5500237868841,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652967.5395667,
+      "end": 652968.1298048,
+      "samples_seconds": [
+        0.2001374,
+        0.195933,
+        0.1941176
+      ],
+      "qps": 1020.7570955377604,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652968.1380532,
+      "end": 652968.7264911,
+      "samples_seconds": [
+        0.1940129,
+        0.1937868,
+        0.2005865
+      ],
+      "qps": 1030.8592882225873,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652968.7345843,
+      "end": 652969.2286475,
+      "samples_seconds": [
+        0.1671039,
+        0.1635557,
+        0.1633502
+      ],
+      "qps": 1222.8250070159586,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652969.2364,
+      "end": 652969.7298572,
+      "samples_seconds": [
+        0.1622425,
+        0.1633595,
+        0.1678073
+      ],
+      "qps": 1224.2936590770662,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652969.7384466,
+      "end": 652970.3205129,
+      "samples_seconds": [
+        0.1925357,
+        0.1948695,
+        0.1946126
+      ],
+      "qps": 1027.6826885823425,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652970.3286689,
+      "end": 652970.9148655,
+      "samples_seconds": [
+        0.1932992,
+        0.1990704,
+        0.1937765
+      ],
+      "qps": 1032.1168975598177,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652970.9311312,
+      "end": 652972.6943934,
+      "samples_seconds": [
+        0.5837142,
+        0.5914665,
+        0.5880277
+      ],
+      "qps": 340.12003176040855,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652972.7101668,
+      "end": 652974.3947216,
+      "samples_seconds": [
+        0.565767,
+        0.5628277,
+        0.5559068
+      ],
+      "qps": 355.3485373943038,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652974.4127201,
+      "end": 652976.4570247,
+      "samples_seconds": [
+        0.6805596,
+        0.6834629,
+        0.6802295
+      ],
+      "qps": 293.87580455848394,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652976.4847852,
+      "end": 652980.0785217,
+      "samples_seconds": [
+        1.2026754,
+        1.1944365,
+        1.1965689
+      ],
+      "qps": 167.1445747921411,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 652980.087136,
+      "end": 652980.5766905,
+      "samples_seconds": [
+        0.1629888,
+        0.1634598,
+        0.1630441
+      ],
+      "qps": 1226.6619889956153,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 652980.5850044,
+      "end": 652981.1771043,
+      "samples_seconds": [
+        0.2001578,
+        0.1982033,
+        0.1936877
+      ],
+      "qps": 1009.0649348421545,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652981.1856604,
+      "end": 652981.7721108,
+      "samples_seconds": [
+        0.1927331,
+        0.1947808,
+        0.198885
+      ],
+      "qps": 1026.7952488130247,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "EDEN",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652981.7794126,
+      "end": 652982.2653688,
+      "samples_seconds": [
+        0.1620693,
+        0.1622797,
+        0.161556
+      ],
+      "qps": 1234.0400063429656,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 652982.2766266,
+      "end": 652983.220847,
+      "samples_seconds": [
+        0.3104635,
+        0.3193468,
+        0.314358
+      ],
+      "qps": 636.2173063831682,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 652983.2331527,
+      "end": 652984.3566477,
+      "samples_seconds": [
+        0.3764129,
+        0.3753408,
+        0.3716898
+      ],
+      "qps": 532.8490800893481,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 652984.3691178,
+      "end": 652985.5105685,
+      "samples_seconds": [
+        0.3782487,
+        0.3872719,
+        0.3758734
+      ],
+      "qps": 528.7526434327468,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "EDEN",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 652985.5217456,
+      "end": 652986.4564225,
+      "samples_seconds": [
+        0.3173773,
+        0.3094081,
+        0.3078376
+      ],
+      "qps": 646.3954886766054,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 652986.4730739,
+      "end": 652988.2278982,
+      "samples_seconds": [
+        0.587676,
+        0.5817142,
+        0.5853797
+      ],
+      "qps": 341.6585850175536,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 652988.245924,
+      "end": 652990.2905298,
+      "samples_seconds": [
+        0.6792341,
+        0.6783638,
+        0.6869519
+      ],
+      "qps": 294.4492922248751,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 652990.3066815,
+      "end": 652991.9911737,
+      "samples_seconds": [
+        0.5579601,
+        0.5645317,
+        0.5619451
+      ],
+      "qps": 355.9066535147295,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "EDEN",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 652992.0198169,
+      "end": 652995.6086223,
+      "samples_seconds": [
+        1.1977755,
+        1.1938679,
+        1.1970952
+      ],
+      "qps": 167.07109008540007,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 652995.61894,
+      "end": 652996.115775,
+      "samples_seconds": [
+        0.1630046,
+        0.1642484,
+        0.16952
+      ],
+      "qps": 1217.6678737814188,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 652996.2438423,
+      "end": 653015.1423843,
+      "samples_seconds": [
+        6.3269025,
+        6.3002851,
+        6.2712689
+      ],
+      "qps": 31.744595177129366,
+      "code_bytes": 148,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 653015.1501827,
+      "end": 653015.6422537,
+      "samples_seconds": [
+        0.1617611,
+        0.1681432,
+        0.1621165
+      ],
+      "qps": 1233.680717261969,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 653015.6512131,
+      "end": 653016.2323583,
+      "samples_seconds": [
+        0.1948714,
+        0.193198,
+        0.193025
+      ],
+      "qps": 1035.207403803352,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 653016.2480307,
+      "end": 653017.9416247,
+      "samples_seconds": [
+        0.5643151,
+        0.5637009,
+        0.5655289
+      ],
+      "qps": 354.4119234094569,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 653018.0727665,
+      "end": 653037.1590207,
+      "samples_seconds": [
+        6.3604193,
+        6.3567346,
+        6.3690181
+      ],
+      "qps": 31.444467819912436,
+      "code_bytes": 212,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 653037.1752041,
+      "end": 653038.9268405,
+      "samples_seconds": [
+        0.5814233,
+        0.5883082,
+        0.5818505
+      ],
+      "qps": 343.7309068222851,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 653038.9450017,
+      "end": 653040.9937295,
+      "samples_seconds": [
+        0.6832269,
+        0.686171,
+        0.6792747
+      ],
+      "qps": 292.72852108135675,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 653041.0118842,
+      "end": 653043.0584382,
+      "samples_seconds": [
+        0.6867175,
+        0.6782383,
+        0.6815308
+      ],
+      "qps": 293.45702351236366,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 653043.1904854,
+      "end": 653062.3755817,
+      "samples_seconds": [
+        6.3957713,
+        6.3948716,
+        6.3943759
+      ],
+      "qps": 31.275061097395607,
+      "code_bytes": 212,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 653062.391603,
+      "end": 653064.1450871,
+      "samples_seconds": [
+        0.5856243,
+        0.5896115,
+        0.5781967
+      ],
+      "qps": 341.5158831353139,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 653064.1609396,
+      "end": 653065.8509571,
+      "samples_seconds": [
+        0.5644896,
+        0.5630323,
+        0.5624439
+      ],
+      "qps": 355.2194074833717,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 653065.8618908,
+      "end": 653066.7891845,
+      "samples_seconds": [
+        0.3115139,
+        0.3054732,
+        0.3102529
+      ],
+      "qps": 644.6353926103511,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 653066.8005725,
+      "end": 653067.7379006,
+      "samples_seconds": [
+        0.3097704,
+        0.3104034,
+        0.3170958
+      ],
+      "qps": 644.3228392472505,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 653067.7503148,
+      "end": 653068.8742843,
+      "samples_seconds": [
+        0.37253,
+        0.3726391,
+        0.3787471
+      ],
+      "qps": 536.7123310463127,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 653069.0052926,
+      "end": 653088.1961426,
+      "samples_seconds": [
+        6.3933271,
+        6.4118801,
+        6.3855626
+      ],
+      "qps": 31.28261652684719,
+      "code_bytes": 276,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 653088.2072249,
+      "end": 653089.1527315,
+      "samples_seconds": [
+        0.3112447,
+        0.3143968,
+        0.3198113
+      ],
+      "qps": 636.1387902166944,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 653089.28255,
+      "end": 653108.4451807,
+      "samples_seconds": [
+        6.3872658,
+        6.4070827,
+        6.3682014
+      ],
+      "qps": 31.312302675739595,
+      "code_bytes": 276,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 653108.4559939,
+      "end": 653109.3798147,
+      "samples_seconds": [
+        0.3079505,
+        0.3072139,
+        0.3086073
+      ],
+      "qps": 649.4550260512647,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 653109.3976532,
+      "end": 653110.5214247,
+      "samples_seconds": [
+        0.373707,
+        0.3719381,
+        0.3780757
+      ],
+      "qps": 535.1786292469769,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 653110.5288347,
+      "end": 653111.0144973,
+      "samples_seconds": [
+        0.1617289,
+        0.1619134,
+        0.1619722
+      ],
+      "qps": 1235.2282145887862,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 653111.0221607,
+      "end": 653111.5160612,
+      "samples_seconds": [
+        0.1626323,
+        0.1636194,
+        0.1676017
+      ],
+      "qps": 1222.3489390622383,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 653111.524165,
+      "end": 653112.1050999,
+      "samples_seconds": [
+        0.193488,
+        0.1938798,
+        0.1935209
+      ],
+      "qps": 1033.4801047328738,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 653112.2354532,
+      "end": 653131.3716349,
+      "samples_seconds": [
+        6.3943338,
+        6.3660455,
+        6.3757236
+      ],
+      "qps": 31.36898845489475,
+      "code_bytes": 148,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 653131.387728,
+      "end": 653133.1398962,
+      "samples_seconds": [
+        0.5879535,
+        0.5778818,
+        0.5862744
+      ],
+      "qps": 341.13718763773414,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 653133.2726577,
+      "end": 653152.3129595,
+      "samples_seconds": [
+        6.3823246,
+        6.353552,
+        6.3042225
+      ],
+      "qps": 31.478454886337598,
+      "code_bytes": 212,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 653152.331755,
+      "end": 653154.3749069,
+      "samples_seconds": [
+        0.6783505,
+        0.6853858,
+        0.679355
+      ],
+      "qps": 294.39689116882926,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 653154.3909687,
+      "end": 653156.0716608,
+      "samples_seconds": [
+        0.5584253,
+        0.5658923,
+        0.5563168
+      ],
+      "qps": 358.14996204505775,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 653156.2017821,
+      "end": 653175.3466793,
+      "samples_seconds": [
+        6.4015585,
+        6.3745378,
+        6.3687239
+      ],
+      "qps": 31.374823755849405,
+      "code_bytes": 276,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 653175.3573481,
+      "end": 653176.2885591,
+      "samples_seconds": [
+        0.3090346,
+        0.3131987,
+        0.3089313
+      ],
+      "qps": 647.1767239008188,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 653176.2994494,
+      "end": 653177.2380741,
+      "samples_seconds": [
+        0.3117061,
+        0.3163692,
+        0.3104913
+      ],
+      "qps": 641.6300483051182,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 653177.2503614,
+      "end": 653178.3794849,
+      "samples_seconds": [
+        0.3773986,
+        0.3803424,
+        0.3713229
+      ],
+      "qps": 529.9436722870727,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 653178.5092023,
+      "end": 653197.5467603,
+      "samples_seconds": [
+        6.3451641,
+        6.3402793,
+        6.3520365
+      ],
+      "qps": 31.52006738486086,
+      "code_bytes": 276,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 653197.5588866,
+      "end": 653198.6829231,
+      "samples_seconds": [
+        0.3725206,
+        0.3783257,
+        0.3731398
+      ],
+      "qps": 535.9921402112559,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 653198.693566,
+      "end": 653199.6201308,
+      "samples_seconds": [
+        0.3066624,
+        0.3134852,
+        0.3063656
+      ],
+      "qps": 652.1829868937307,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 653199.6316517,
+      "end": 653200.5770895,
+      "samples_seconds": [
+        0.3130297,
+        0.3133783,
+        0.3189757
+      ],
+      "qps": 638.2062829493938,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 653200.5848975,
+      "end": 653201.073882,
+      "samples_seconds": [
+        0.1627488,
+        0.1632788,
+        0.1629079
+      ],
+      "qps": 1227.6875461533787,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 653201.0823914,
+      "end": 653201.6701276,
+      "samples_seconds": [
+        0.192079,
+        0.2023667,
+        0.1932387
+      ],
+      "qps": 1034.9893680717164,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 653201.6777144,
+      "end": 653202.1673785,
+      "samples_seconds": [
+        0.1642267,
+        0.1631542,
+        0.1622288
+      ],
+      "qps": 1225.8342108263225,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12349,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 653202.2958815,
+      "end": 653221.2655097,
+      "samples_seconds": [
+        6.2725224,
+        6.3544419,
+        6.3425882
+      ],
+      "qps": 31.532868553566193,
+      "code_bytes": 148,
+      "qualified_low_target_core_interference": true
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 653221.4006928,
+      "end": 653240.5678938,
+      "samples_seconds": [
+        6.3948768,
+        6.3831491,
+        6.3890926
+      ],
+      "qps": 31.303349711976317,
+      "code_bytes": 212,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 653240.583485,
+      "end": 653242.2704498,
+      "samples_seconds": [
+        0.5615472,
+        0.5619704,
+        0.5633933
+      ],
+      "qps": 355.89063053854795,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 653242.2869037,
+      "end": 653244.0349162,
+      "samples_seconds": [
+        0.5826133,
+        0.5844637,
+        0.5808743
+      ],
+      "qps": 343.28086914596696,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12346,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 653244.0533038,
+      "end": 653246.0996086,
+      "samples_seconds": [
+        0.6846434,
+        0.6868606,
+        0.6747299
+      ],
+      "qps": 292.12287739865747,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 653246.2345478,
+      "end": 653265.2050804,
+      "samples_seconds": [
+        6.3042843,
+        6.3425135,
+        6.3236502
+      ],
+      "qps": 31.627302851128608,
+      "code_bytes": 148,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 653265.2126856,
+      "end": 653265.708544,
+      "samples_seconds": [
+        0.1630882,
+        0.1675463,
+        0.1651741
+      ],
+      "qps": 1210.8435886740112,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 653265.7171348,
+      "end": 653266.3040814,
+      "samples_seconds": [
+        0.1992422,
+        0.1948136,
+        0.1928391
+      ],
+      "qps": 1026.6223713334182,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 653266.3116365,
+      "end": 653266.800664,
+      "samples_seconds": [
+        0.1615205,
+        0.1627761,
+        0.1646814
+      ],
+      "qps": 1228.6816062063165,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "native_full512",
+      "start": 653266.937533,
+      "end": 653286.0305697,
+      "samples_seconds": [
+        6.3480292,
+        6.3878198,
+        6.357103
+      ],
+      "qps": 31.460871406362298,
+      "code_bytes": 148,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_one_scale",
+      "start": 653286.0381988,
+      "end": 653286.5330215,
+      "samples_seconds": [
+        0.1626081,
+        0.1687527,
+        0.1634134
+      ],
+      "qps": 1223.8898401232702,
+      "code_bytes": 113,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "overlap_two_scale",
+      "start": 653286.5404751,
+      "end": 653287.0293717,
+      "samples_seconds": [
+        0.1631654,
+        0.1624251,
+        0.1631976
+      ],
+      "qps": 1225.7500671098162,
+      "code_bytes": 117,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12348,
+      "family": "RaBitQ",
+      "bits": 2,
+      "mode": "compact_full512",
+      "start": 653287.038423,
+      "end": 653287.623567,
+      "samples_seconds": [
+        0.1931324,
+        0.1993203,
+        0.19264
+      ],
+      "qps": 1035.5590258289133,
+      "code_bytes": 136,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_one_scale",
+      "start": 653287.6350268,
+      "end": 653288.5663934,
+      "samples_seconds": [
+        0.3103088,
+        0.3074135,
+        0.3135852
+      ],
+      "qps": 644.5192659698984,
+      "code_bytes": 218,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "native_full512",
+      "start": 653288.696164,
+      "end": 653307.7686176,
+      "samples_seconds": [
+        6.3249796,
+        6.3680245,
+        6.3793605
+      ],
+      "qps": 31.406914342116618,
+      "code_bytes": 276,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "compact_full512",
+      "start": 653307.7808981,
+      "end": 653308.9083091,
+      "samples_seconds": [
+        0.3734867,
+        0.3742816,
+        0.3795663
+      ],
+      "qps": 534.3570188863144,
+      "code_bytes": 264,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12347,
+      "family": "RaBitQ",
+      "bits": 4,
+      "mode": "overlap_two_scale",
+      "start": 653308.9191676,
+      "end": 653309.8628144,
+      "samples_seconds": [
+        0.3125979,
+        0.3140218,
+        0.3169754
+      ],
+      "qps": 636.8984573682463,
+      "code_bytes": 222,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_one_scale",
+      "start": 653309.878841,
+      "end": 653311.5567244,
+      "samples_seconds": [
+        0.5611237,
+        0.5619091,
+        0.5548029
+      ],
+      "qps": 356.4276468807145,
+      "code_bytes": 166,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "compact_full512",
+      "start": 653311.5750121,
+      "end": 653313.6195378,
+      "samples_seconds": [
+        0.6801226,
+        0.6828016,
+        0.6815438
+      ],
+      "qps": 293.4514260125321,
+      "code_bytes": 200,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "native_full512",
+      "start": 653313.7555364,
+      "end": 653332.7893517,
+      "samples_seconds": [
+        6.3631788,
+        6.3598116,
+        6.3107276
+      ],
+      "qps": 31.447472437705546,
+      "code_bytes": 212,
+      "qualified_low_target_core_interference": false
+    },
+    {
+      "pass_id": 1,
+      "seed": 12345,
+      "family": "RaBitQ",
+      "bits": 3,
+      "mode": "overlap_two_scale",
+      "start": 653332.8058498,
+      "end": 653334.5671025,
+      "samples_seconds": [
+        0.5902109,
+        0.5840644,
+        0.5869216
+      ],
+      "qps": 340.761014759041,
+      "code_bytes": 170,
+      "qualified_low_target_core_interference": false
+    }
+  ],
+  "overlap_strategy": 2,
+  "exit_code": 0
+}
