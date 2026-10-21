@@ -1,0 +1,112 @@
+{
+  "status": "complete",
+  "capsule_sha256": "acd9bb7c8d2eb852d4a679e9a7d105d6fc80edfba5130cfe73d5fd9c70f43431",
+  "capsule_bytes": 123976,
+  "base64_characters": 165304,
+  "files": {
+    "experimental-kernel/overlap2scale.cpp": {
+      "bytes": 5944,
+      "sha256": "0982614b7d28b99fcdb09829474da3cce8da38e045eae36d0eee1b700ab023d7"
+    },
+    "experimental-kernel/overlap256.cpp": {
+      "bytes": 5322,
+      "sha256": "ef5b30c4e35bd7e29162460e458a65644ea44ad37dd5949ab06f0ce086f613ba"
+    },
+    "experimental-kernel/block_transform_fixed64.cpp": {
+      "bytes": 10047,
+      "sha256": "250bfa37cebc110834979c599183085f8de8d2cab272831fcc8c1a30d537c0fe"
+    },
+    "native_overlap2scale.py": {
+      "bytes": 5124,
+      "sha256": "29ee949fc4914b7f1cac5eb854c1558814f7ec740a03a19b7a25393f3ea0dd2f"
+    },
+    "native_overlap256.py": {
+      "bytes": 2229,
+      "sha256": "d6a8104fc7f8821f271e00e7f691a8cbb5202744bd2ae9993a4dfaa7b03f8f43"
+    },
+    "experiment_overlap2scale.py": {
+      "bytes": 11881,
+      "sha256": "04aec18e3516757baff9864113be8f56c3492704d58537a2f71f810ce2a6d7d8"
+    },
+    "validate_overlap2scale.py": {
+      "bytes": 3682,
+      "sha256": "705185e1fa1bb89ce0fd242c48c3d856e4bdeed871276f1548ca6eb4295f0147"
+    },
+    "run_overlap2scale_experiment.py": {
+      "bytes": 5082,
+      "sha256": "d1619ca50fe3492321c752b61af8827cda9bf7977a902c811118dd23d286ddb1"
+    },
+    "pause_quality_for_overlap2.py": {
+      "bytes": 2121,
+      "sha256": "d50159047db748cc5e075ab8efef057a52f85a7285f0dc371221b6ecec48432b"
+    },
+    "resume_quality_after_overlap2.py": {
+      "bytes": 1820,
+      "sha256": "354d29a2d19d712ac970c0123145faa4112f91c1bb695ad17a8122a112f82511"
+    },
+    "summarize_overlap2scale.py": {
+      "bytes": 5685,
+      "sha256": "acc0c09c4b469801d1832a808b379a21af6e983a15e364ccfa3f141ad744192a"
+    },
+    "export_overlap2scale.py": {
+      "bytes": 3763,
+      "sha256": "464faa479b4cbe45b9de61509964eaf0053ea605d78f7623f9763d57358e6a91"
+    },
+    "audit_msong_quality.py": {
+      "bytes": 13422,
+      "sha256": "828ad59f912e11b2642dc8797018e9dd0538a671d7307b7bec7a8e836c81acfa"
+    },
+    "overlap2scale-validation.json": {
+      "bytes": 5577,
+      "sha256": "1217ceeac62857174fbbe41998b483e65a27850f6a24c70959416656c6761dde"
+    },
+    "overlap256-validation.json": {
+      "bytes": 5640,
+      "sha256": "37b0e9350bef456926430415b70b4bc4da94e9bc0a85be11f61900326ce138e8"
+    },
+    "overlap2scale-quality.json": {
+      "bytes": 1047599,
+      "sha256": "3f0f6d6f04008b6114eec617462a0c31352206908694cd1f85d52addb13f54f4"
+    },
+    "overlap2scale-speed.json": {
+      "bytes": 107577,
+      "sha256": "f1b4d9e35bf893c6af88f1b09114b3925c3ac97aa316cce66863a11f6cf273c3"
+    },
+    "overlap2scale-summary.json": {
+      "bytes": 49299,
+      "sha256": "5c3bf55e87a260b0adccc6a82dfebf2be008ff446c6aa6efbf3fa02bf3dbd000"
+    },
+    "overlap2scale-workload.json": {
+      "bytes": 42906,
+      "sha256": "1a9372ab2bb9b7f6310efec4accd792008328ce3d5b452128d346666101917cd"
+    },
+    "overlap2scale-provenance.json": {
+      "bytes": 1846,
+      "sha256": "131270366ba7af575362c53f59be087c9ab1aba7eed43b782faf75a31459e23a"
+    },
+    "overlap2scale-quality.log": {
+      "bytes": 6936,
+      "sha256": "d6fcbe0c4919a6a792e628769e8cabf127ac3caba63cd5948e3f23367047e555"
+    },
+    "overlap2scale-quality.err": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "overlap2scale-speed.log": {
+      "bytes": 11940,
+      "sha256": "f2d49d8f2401e6c4a20054cfa5d921cecbd42f6c2c5c7c9b3c222cd263daeb6d"
+    },
+    "overlap2scale-speed.err": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pilot-data/msong/manifest.json": {
+      "bytes": 973,
+      "sha256": "873805cfb34181c29b46730d180eeffbdbb00fd38a1f8e7c15125303d6f34ce2"
+    },
+    "overlap2scale-cache/shared.npz": {
+      "bytes": 162188,
+      "sha256": "df4248c473b8db6868672282e7a8bf150f9228745dbfa3c114dc262dc79764c4"
+    }
+  }
+}
